@@ -24,9 +24,9 @@ if (!defined('DIR_APPLICATION'))
 
 class Sms {
 
-    private $user = 'semitellc';
-    private $password = 'ZePFFHQAQQgQIF';
-    private $api_id = '3497179';
+    private $user = 'xxxxx'; // Your user id
+    private $password = 'xxxxxxx'; // Your password
+    private $api_id = 'xxxxxx'; // Your api id
     private $end_point = 'http://api.clickatell.com';
     private $message;
     private $mobile;
