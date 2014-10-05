@@ -82,6 +82,26 @@ class ControllerAccountDeposit extends Controller {
     }
 
     public function manual() {
+        
+        $this->language->load('account/deposit_manual');
+        
+        $this->data['heading_title'] = $this->language->get('heading_title');
+        
+        $this->document->setTitle($this->language->get('heading_title'));
+        
+        $this->data['text_select'] = $this->language->get('text_select');
+        
+        $this->data['text_manual_upload_step_2'] = $this->language->get('text_manual_upload_step_2');
+        $this->data['text_manual_step_1'] = $this->language->get('text_manual_step_1');
+        $this->data['text_manual_step_2'] = $this->language->get('text_manual_step_2');
+        
+        if ($this->customer->hasBusiness()){
+            $this->data['notice_manual_upload'] = sprintf($this->language->get('notice_manual_upload_1'),$this->customer->getUserName(),$this->customer->getBusinessName());
+        } else {
+            $this->data['notice_manual_upload'] = sprintf($this->language->get('notice_manual_upload_2'), $this->customer->getUserName());
+        }
+        
+        $this->data['button_back'] = $this->language->get('button_back');
 
         $this->load->model('opengateway/setting');
 
@@ -105,7 +125,7 @@ class ControllerAccountDeposit extends Controller {
         $this->load->model('opengateway/setting');
 
         $customer_cards = $this->model_account_customer->getCards();
-
+        
         foreach ($customer_cards as $customer_card) {
             $this->data['cards'][] = array(
                 'customer_card_id' => $customer_card['customer_card_id'],
@@ -128,8 +148,21 @@ class ControllerAccountDeposit extends Controller {
     }
 
     public function getBanks() {
+        
+        $this->language->load('account/deposit_manual');
 
         $this->load->model('opengateway/setting');
+        
+        $this->data['text_account_holder'] = $this->language->get('text_account_holder');
+        $this->data['text_bank'] = $this->language->get('text_bank');
+        $this->data['text_zone'] = $this->language->get('text_zone');
+        $this->data['text_country'] = $this->language->get('text_country');
+        $this->data['text_account_number'] = $this->language->get('text_account_number');
+        $this->data['text_swift'] = $this->language->get('text_swift');
+        $this->data['text_iban'] = $this->language->get('text_iban');
+        $this->data['text_sort_code'] = $this->language->get('text_sort_code');
+        $this->data['text_currency'] = $this->language->get('text_currency');
+        $this->data['text_reference'] = $this->language->get('text_reference');
 
         $currency_id = $this->request->get['currency_id'];
 
@@ -153,7 +186,7 @@ class ControllerAccountDeposit extends Controller {
                 'iban' => $bank_info['iban'],
                 'sort_code' => $bank_info['sort_code'],
                 'currency' => $currency_info['code'],
-                'reference' => sprintf($this->language->get('text_reference_info'), $this->customer->getId())
+                'reference' => sprintf($this->language->get('text_reference_info'), $this->customer->getMerchantId())
             );
         }
 

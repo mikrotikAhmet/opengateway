@@ -55,6 +55,22 @@ class ControllerCommonFooter extends Controller {
         $this->data['button_continue'] = $this->language->get('button_continue');
 
         $this->data['text_footer'] = sprintf($this->language->get('text_footer'), _ENGINE_VER);
+        
+        $this->data['currentYear'] = date('Y');
+        $this->data['currentMonth'] = date('m');
+        
+        $this->data['month_january'] = $this->language->get('month_january');
+        $this->data['month_february'] = $this->language->get('month_february');
+        $this->data['month_march'] = $this->language->get('month_march');
+        $this->data['month_april'] = $this->language->get('month_april');
+        $this->data['month_may'] = $this->language->get('month_may');
+        $this->data['month_june'] = $this->language->get('month_june');
+        $this->data['month_july'] = $this->language->get('month_july');
+        $this->data['month_august'] = $this->language->get('month_august');
+        $this->data['month_september'] = $this->language->get('month_september');
+        $this->data['month_october'] = $this->language->get('month_october');
+        $this->data['month_november'] = $this->language->get('month_november');
+        $this->data['month_december'] = $this->language->get('month_december');
 
         if (file_exists(DIR_SYSTEM . 'config/svn/svn.ver')) {
             $this->data['text_footer'] .= '.r' . trim(file_get_contents(DIR_SYSTEM . 'config/svn/svn.ver'));

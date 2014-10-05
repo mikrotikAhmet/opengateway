@@ -18,7 +18,7 @@ $(document).ready(function() {
         $(id + ' h2').html(title);
         
         
-        $('.modal-content').html('Add Card form will be called here by ajax');
+//        $('.modal-content').html('Add Card form will be called here by ajax');
         
         
         $(id).fadeIn(500); 

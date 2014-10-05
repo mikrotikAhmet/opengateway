@@ -59,6 +59,8 @@ class Customer {
     private $address_id;
     private $merchant_id;
     private $api_key;
+    private $business_id;
+    private $business;
 
     public function __construct($registry) {
         $this->config = $registry->get('config');
@@ -82,8 +84,13 @@ class Customer {
                 $this->address_id = $customer_query->row['address_id'];
                 $this->merchant_id = $customer_query->row['merchant_id'];
                 $this->api_key = $customer_query->row['api_key'];
+                $this->business_id = $customer_query->row['business_id'];
                 
                 $this->setApiCridentials();
+                
+                if ($this->business_id){
+                    $this->setCustomerBusiness();
+                }
                 
 
                 $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer_ip WHERE customer_id = '" . (int) $this->session->data['customer_id'] . "' AND ip = '" . $this->db->escape($this->request->server['REMOTE_ADDR']) . "'");
@@ -118,8 +125,13 @@ class Customer {
             $this->address_id = $customer_query->row['address_id'];
             $this->merchant_id = $customer_query->row['merchant_id'];
             $this->api_key = $customer_query->row['api_key'];
+            $this->business_id = $customer_query->row['business_id'];
             
             $this->setApiCridentials();
+            
+            if ($this->business_id){
+                    $this->setCustomerBusiness();
+                }
 
             $this->db->query("UPDATE " . DB_PREFIX . "customer SET ip = '" . $this->db->escape($this->request->server['REMOTE_ADDR']) . "' WHERE customer_id = '" . (int) $this->customer_id . "'");
 
@@ -143,9 +155,14 @@ class Customer {
         $this->address_id = '';
         $this->merchant_id = '';
         $this->api_key = '';
+        $this->business_id = '';
         
         $this->removeApiCridentials();
         
+    }
+    
+    public function hasBusiness() {
+        return $this->business_id;
     }
 
     public function isLogged() {
@@ -221,6 +238,18 @@ class Customer {
         $this->_api->setMerchant('');
         $this->_api->setApiKey('');
         $this->_api->setCustomerId('');
+    }
+    
+    public function setCustomerBusiness(){
+        $business = $this->db->query("SELECT * FROM ".DB_PREFIX."business WHERE customer_id = '".(int) $this->customer_id."'");
+        
+        $this->business = $business->row;
+        
+        return $this->business;
+    }
+    
+    public function getBusinessName(){
+        return $this->business['company_name'];
     }
 
 }

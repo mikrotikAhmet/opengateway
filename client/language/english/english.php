@@ -28,6 +28,7 @@ $_['thousand_point']                = ',';
 
 // Text
 $_['text_no_result'] = 'No results could found!';
+$_['text_select'] = '--Please select--';
 
 // Button
 $_['button_back'] = 'Back';
@@ -40,6 +41,20 @@ $_['button_send'] = 'Send money';
 
 
 // Tab
+
+// Months
+$_['month_january'] = 'January';
+$_['month_february'] = 'February';
+$_['month_march'] = 'March';
+$_['month_april'] = 'April';
+$_['month_may'] = 'May';
+$_['month_june'] = 'June';
+$_['month_july'] = 'July';
+$_['month_august'] = 'August';
+$_['month_september'] = 'September';
+$_['month_october'] = 'October';
+$_['month_november'] = 'November';
+$_['month_december'] = 'December';
 
 // Error
 $_['error_upload_1']                = 'Warning: The uploaded file exceeds the upload_max_filesize directive in php.ini!';
