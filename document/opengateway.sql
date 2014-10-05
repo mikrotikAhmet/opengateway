@@ -270,7 +270,7 @@ CREATE TABLE `engine4_customer_card` (
 
 LOCK TABLES `engine4_customer_card` WRITE;
 /*!40000 ALTER TABLE `engine4_customer_card` DISABLE KEYS */;
-INSERT INTO `engine4_customer_card` VALUES (4,4,'Ahmet GOUDENOGLU','5313***3988','kJ3KmrXnR8kD4acs_ez5Uv3l_PKKmBXbAWPZcoURIuU,','2017-02',713,'mastercard',0,0),(11,4,'Ahmet GOUDENOGLU','4841***4198','JVjc9PdJtNqJCdYyCXkCLGD01n-oB35wwiMG-1KFh7w,','2017-06',928,'visa',0,0);
+INSERT INTO `engine4_customer_card` VALUES (4,4,'Ahmet GOUDENOGLU','5313***3988','kJ3KmrXnR8kD4acs_ez5Uv3l_PKKmBXbAWPZcoURIuU,','2017-02',713,'mastercard',1,0),(11,4,'Ahmet GOUDENOGLU','4841***4198','JVjc9PdJtNqJCdYyCXkCLGD01n-oB35wwiMG-1KFh7w,','2017-06',928,'visa',0,0);
 /*!40000 ALTER TABLE `engine4_customer_card` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -326,7 +326,6 @@ CREATE TABLE `engine4_customer_transaction` (
 
 LOCK TABLES `engine4_customer_transaction` WRITE;
 /*!40000 ALTER TABLE `engine4_customer_transaction` DISABLE KEYS */;
-INSERT INTO `engine4_customer_transaction` VALUES (4,4,112233,'ahmet',250.0000,'0000-00-00 00:00:00'),(5,4,445566,'ahmet',500.0000,'0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `engine4_customer_transaction` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -380,7 +379,7 @@ CREATE TABLE `engine4_setting` (
   PRIMARY KEY (`setting_id`),
   KEY `APPLICATION_ID` (`application_id`),
   KEY `GROUP` (`group`)
-) ENGINE=InnoDB AUTO_INCREMENT=858 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=860 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -389,7 +388,7 @@ CREATE TABLE `engine4_setting` (
 
 LOCK TABLES `engine4_setting` WRITE;
 /*!40000 ALTER TABLE `engine4_setting` DISABLE KEYS */;
-INSERT INTO `engine4_setting` VALUES (854,1,'config','config_error_display','1',0),(855,1,'config','config_language','en',0),(856,1,'config','config_auto_capture','1',0),(857,0,'config','config_owner','Semite LLC.',0);
+INSERT INTO `engine4_setting` VALUES (854,1,'config','config_error_display','1',0),(855,1,'config','config_language','en',0),(856,1,'config','config_auto_capture','1',0),(857,0,'config','config_owner','Semite LLC.',0),(858,0,'config','config_currency','USD',0),(859,0,'config','config_mincard_deposit','10',0);
 /*!40000 ALTER TABLE `engine4_setting` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -422,7 +421,7 @@ CREATE TABLE `engine4_transaction_order` (
   `date_modified` datetime NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`transaction_order_id`,`invoice_no`)
-) ENGINE=MyISAM AUTO_INCREMENT=203 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=227 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -470,4 +469,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-05 17:21:50
+-- Dump completed on 2014-10-06  0:25:06
