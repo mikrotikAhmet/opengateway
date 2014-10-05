@@ -180,12 +180,12 @@ label {
     right: 15px;
     width: 5px;
     height: 3px;
-    background: url('images/box-open.gif') no-repeat;
+    background: url('../images/box-open.gif') no-repeat;
 }
 .box.closed .box-toggle {
     top: 13px;
     height: 10px;
-    background: url('images/box-closed.gif') no-repeat;
+    background: url('../images/box-closed.gif') no-repeat;
 }
 .box.closed .box-content {
     display: none;
@@ -233,7 +233,7 @@ label {
     top: 0;
     right: 17px;
     padding-right: 20px;
-    background: url('images/remove-btn.png') no-repeat center right;
+    background: url('../images/remove-btn.png') no-repeat center right;
     color: #333 !important;
 }
 .remove-btn:hover {

@@ -38,6 +38,8 @@ $_['button_refund'] = 'Refund';
 $_['button_deposit'] = 'Deposit';
 $_['button_withdraw'] = 'Withdraw';
 $_['button_send'] = 'Send money';
+$_['button_add_card'] = 'Add new Card';
+
 
 
 // Tab
@@ -55,6 +57,9 @@ $_['month_september'] = 'September';
 $_['month_october'] = 'October';
 $_['month_november'] = 'November';
 $_['month_december'] = 'December';
+
+// Notification buttons
+$_['notification_remove'] = '<a href="#" title="Remove" class="remove-btn">Remove</a>';
 
 // Error
 $_['error_upload_1']                = 'Warning: The uploaded file exceeds the upload_max_filesize directive in php.ini!';

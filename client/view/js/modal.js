@@ -18,7 +18,7 @@ $(document).ready(function() {
         $(id + ' h2').html(title);
         
         
-//        $('.modal-content').html('Add Card form will be called here by ajax');
+        //        $('.modal-content').html('Add Card form will be called here by ajax');
         
         
         $(id).fadeIn(500); 
@@ -34,3 +34,13 @@ $(document).ready(function() {
         $('.modal-container').hide();
     });
 });
+
+function showMask(){
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+    $('#mask').css({
+        'width':maskWidth,
+        'height':maskHeight
+    });
+    $('#mask').fadeTo(800,0.95);
+}

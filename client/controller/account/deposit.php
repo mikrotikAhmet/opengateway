@@ -51,20 +51,20 @@ class ControllerAccountDeposit extends Controller {
     private $error = array();
 
     public function index() {
-        
+
         $this->language->load('account/deposit');
-        
+
         $this->data['heading_title'] = $this->language->get('heading_title');
-        
+
         $this->document->setTitle($this->language->get('heading_title'));
-        
+
         $this->data['text_money_upload_step_1'] = $this->language->get('text_money_upload_step_1');
         $this->data['text_card_upload'] = $this->language->get('text_card_upload');
         $this->data['text_manual_upload'] = $this->language->get('text_manual_upload');
         $this->data['text_card_upload_info_1'] = $this->language->get('text_card_upload_info_1');
         $this->data['text_card_upload_info_2'] = $this->language->get('text_card_upload_info_2');
         $this->data['text_manual_upload_info_1'] = $this->language->get('text_manual_upload_info_1');
-        
+
         $this->data['button_continue'] = $this->language->get('button_continue');
         $this->data['button_back'] = $this->language->get('button_back');
 
@@ -82,25 +82,25 @@ class ControllerAccountDeposit extends Controller {
     }
 
     public function manual() {
-        
+
         $this->language->load('account/deposit_manual');
-        
+
         $this->data['heading_title'] = $this->language->get('heading_title');
-        
+
         $this->document->setTitle($this->language->get('heading_title'));
-        
+
         $this->data['text_select'] = $this->language->get('text_select');
-        
+
         $this->data['text_manual_upload_step_2'] = $this->language->get('text_manual_upload_step_2');
         $this->data['text_manual_step_1'] = $this->language->get('text_manual_step_1');
         $this->data['text_manual_step_2'] = $this->language->get('text_manual_step_2');
-        
-        if ($this->customer->hasBusiness()){
-            $this->data['notice_manual_upload'] = sprintf($this->language->get('notice_manual_upload_1'),$this->customer->getUserName(),$this->customer->getBusinessName());
+
+        if ($this->customer->hasBusiness()) {
+            $this->data['notice_manual_upload'] = sprintf($this->language->get('notice_manual_upload_1'), $this->customer->getUserName(), $this->customer->getBusinessName());
         } else {
             $this->data['notice_manual_upload'] = sprintf($this->language->get('notice_manual_upload_2'), $this->customer->getUserName());
         }
-        
+
         $this->data['button_back'] = $this->language->get('button_back');
 
         $this->load->model('opengateway/setting');
@@ -120,23 +120,58 @@ class ControllerAccountDeposit extends Controller {
 
     public function card() {
 
-        $this->load->model('account/customer');
+        $this->language->load('account/deposit_card');
+
         $this->load->model('tool/image');
         $this->load->model('opengateway/setting');
 
-        $customer_cards = $this->model_account_customer->getCards();
-        
-        foreach ($customer_cards as $customer_card) {
-            $this->data['cards'][] = array(
-                'customer_card_id' => $customer_card['customer_card_id'],
-                'type' => $customer_card['type'],
-                'card_number' => $customer_card['card_number'],
-                'cardholder' => $customer_card['cardholder'],
-                'image' => $this->model_tool_image->resize($customer_card['image'], 40, 40)
-            );
-        }
+        $this->data['heading_title'] = $this->language->get('heading_title');
+
+        $this->document->setTitle($this->language->get('heading_title'));
+
+        $this->data['text_amount_help'] = $this->language->get('text_amount_help');
+        $this->data['text_card_upload_step_2'] = $this->language->get('text_card_upload_step_2');
+
+        $this->data['entry_amount'] = $this->language->get('entry_amount');
+
+        $this->data['error_no_card'] = sprintf($this->language->get('error_no_card'), $this->url->link('account/account', 'token=' . $this->session->data['token'], 'SSL'));
+
+        $this->data['button_back'] = $this->language->get('button_back');
+        $this->data['button_continue'] = $this->language->get('button_continue');
+        $this->data['button_add_card'] = $this->language->get('button_add_card');
+        $this->data['notification_remove'] = $this->language->get('notification_remove');
 
         $this->data['back'] = $this->url->link('account/deposit', 'token=' . $this->session->data['token'], 'SSL');
+
+        if (isset($this->error['warning'])) {
+            $this->data['error_warning'] = $this->error['warning'];
+        } else {
+            $this->data['error_warning'] = '';
+        }
+
+
+        $this->data['action'] = $this->url->link('account/deposit/addcard', 'token=' . $this->session->data['token'], 'SSL');
+
+        // Get Customer Cards
+        $api_response = $this->_api->apiGet('v1/customer/getCards');
+
+        $data = json_decode($api_response);
+
+        $this->data['cards'] = array();
+
+
+        if ($data->status == "OK") {
+
+            foreach ($data->data as $customer_card) {
+                $this->data['cards'][] = array(
+                    'customer_card_id' => $customer_card->customer_card_id,
+                    'type' => $customer_card->type,
+                    'card_number' => $customer_card->card_number,
+                    'cardholder' => $customer_card->cardholder,
+                    'image' => $this->model_tool_image->resize($customer_card->image, 40, 40)
+                );
+            }
+        }
 
         $this->template = 'account/deposit_card.tpl';
         $this->children = array(
@@ -147,12 +182,30 @@ class ControllerAccountDeposit extends Controller {
         $this->response->setOutput($this->render());
     }
 
+    public function addcard() {
+        $this->language->load('account/deposit_card');
+
+        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+                
+                // Make Deposit
+                $api_response = $this->_api->apiPost('v1/payment/pay', $this->request->post);
+
+                $data = json_decode($api_response);
+                
+                if ($data->status == "Accepted") {
+                    print_r($data);
+                }
+         }
+
+        $this->card();
+    }
+
     public function getBanks() {
-        
+
         $this->language->load('account/deposit_manual');
 
         $this->load->model('opengateway/setting');
-        
+
         $this->data['text_account_holder'] = $this->language->get('text_account_holder');
         $this->data['text_bank'] = $this->language->get('text_bank');
         $this->data['text_zone'] = $this->language->get('text_zone');
@@ -195,6 +248,23 @@ class ControllerAccountDeposit extends Controller {
         $this->template = 'opengateway/banks.tpl';
 
         $this->response->setOutput($this->render());
+    }
+
+    protected function validateForm() {
+
+        if (utf8_strlen($this->request->post['amount']) < 2) {
+            $this->error['warning'] = sprintf($this->language->get('error_amount'), $this->currency->format($this->config->get('config_mincard_deposit'), $this->config->get('config_currency')));
+        }
+
+        if (!isset($this->request->post['card']) || !$this->request->post['card']) {
+            $this->error['warning'] = $this->language->get('error_card');
+        }
+
+        if (!$this->error) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

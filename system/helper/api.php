@@ -34,25 +34,41 @@ class Api {
     public function apiGet($api_func) {
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->end_point.$api_func."&merchant_id=".$this->merchant."&api_key=".$this->api_key."&customer_id=".$this->getCustomerId());
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_HEADER, 0);
 
-// execute the request
+        curl_setopt($ch, CURLOPT_URL, $this->end_point . $api_func . "&merchant_id=" . $this->merchant . "&api_key=" . $this->api_key . "&customer_id=" . $this->getCustomerId());
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+        curl_setopt($ch, CURLOPT_MAXREDIRS, 2); //only 2 redirects
+//  curl_setopt($ch,CURLOPT_HEADER, false); 
 
         $output = curl_exec($ch);
 
-// output the profile information - includes the header
-
-        return ($output) . PHP_EOL;
-
-// close curl resource to free up system resources
-
         curl_close($ch);
+        return $output;
     }
 
-    public function apiPost() {
-        
+    public function apiPost($api_func, $params) {
+$postData = '';
+        //create name value pairs seperated by &
+        foreach ($params as $k => $v) {
+            $postData .= $k . '=' . $v . '&';
+        }
+        rtrim($postData, '&');
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, $this->end_point . $api_func . "&merchant_id=" . $this->merchant . "&api_key=" . $this->api_key . "&customer_id=" . $this->getCustomerId());
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+        curl_setopt($ch, CURLOPT_MAXREDIRS, 2); //only 2 redirects
+        curl_setopt($ch, CURLOPT_POST, count($postData));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+
+        $output = curl_exec($ch);
+
+        curl_close($ch);
+        return $output;
     }
 
     public function apiPut() {
@@ -80,11 +96,12 @@ class Api {
     public function getApiKey() {
         return $this->api_key;
     }
-    
-    public function setCustomerId($customer_id){
+
+    public function setCustomerId($customer_id) {
         $this->customer_id = $customer_id;
     }
-    public function getCustomerId(){
+
+    public function getCustomerId() {
         return $this->customer_id;
     }
 
