@@ -109,6 +109,7 @@ $classes['library'] = array(
     'config',
     'document',
     'currency',
+    'customer',
     'image',
     'language',
     'log',

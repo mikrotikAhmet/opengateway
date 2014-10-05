@@ -19,47 +19,73 @@ if (!defined('DIR_APPLICATION'))
 /**
  * OGCA - Open Gateway Core Application
  * Description of api.php Class
-**/
+ * */
+class Api {
 
-
-class Api extends REST {
-
-
+    private $merchant;
+    private $api_key;
+    private $customer_id;
+    private $end_point = "http://lapi.semitepayment.com/";
 
     public function __construct($registry) {
-
-        $this->db = $registry->get('db');
+        
     }
 
-    public function processApi($data, $status) {
+    public function apiGet($api_func) {
 
-        if (isset($data) && !empty($data)) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $this->end_point.$api_func."&merchant_id=".$this->merchant."&api_key=".$this->api_key."&customer_id=".$this->getCustomerId());
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
 
-            $data['code'] = $status;
-            $data['stat'] = $this->getStatusMessage($status);
+// execute the request
 
-            $this->response($this->json($data), $status);
+        $output = curl_exec($ch);
 
-        } else {
+// output the profile information - includes the header
 
-            $error['code'] = $status;
-            $error['stat'] = $this->getStatusMessage($status);
+        return ($output) . PHP_EOL;
 
-            $this->response($this->json($error), $status);
-        }
+// close curl resource to free up system resources
+
+        curl_close($ch);
     }
 
-    public function getStatusMessage($code) {
-
-        $status = require_once (DIR_SYSTEM.'config/api_response.php');
-        return ($status[$code]) ? $status[$code] : $status[500];
+    public function apiPost() {
+        
     }
 
-    private function json($data) {
+    public function apiPut() {
+        
+    }
 
-        if (is_array($data)) {
-            return json_encode($data);
-        }
+    public function apiDelete() {
+        
+    }
+
+    public function setMerchant($merchant) {
+
+        $this->merchant = $merchant;
+    }
+
+    public function getMerchant() {
+        return $this->merchant;
+    }
+
+    public function setApiKey($api_key) {
+
+        $this->api_key = $api_key;
+    }
+
+    public function getApiKey() {
+        return $this->api_key;
+    }
+    
+    public function setCustomerId($customer_id){
+        $this->customer_id = $customer_id;
+    }
+    public function getCustomerId(){
+        return $this->customer_id;
     }
 
 }

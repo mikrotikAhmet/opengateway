@@ -1,0 +1,27 @@
+a, a:link, a:visited {
+	color: #4b87c4;
+}
+	a:hover {
+		color: #3b6b9c;
+	}
+input[type=button], input[type=submit], input[type=reset], #sidebar ul.box-content li.active {
+	background: #3b6b9c;
+	border: 1px solid #3a6897;
+}
+	input[type=button]:hover, input[type=submit]:hover {
+		background: #4b87c4;
+	}
+#mainnav .active { 
+	background: #3b6b9c;
+	border: 1px solid #4175aa;
+}
+#sidebar .calendar table th {
+	background: #3b6b9c;
+}
+#sidebar .action-links a, #sidebar ul.box-content a:hover {
+	color: #3a6897;	
+}
+
+.expand {
+    cursor: pointer;
+}

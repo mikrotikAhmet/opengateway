@@ -19,13 +19,4 @@
 
 // Version
 define('VERSION', '1.5.6.4');
-
-// Basic setup
-
-defined('DS') || define('DS', DIRECTORY_SEPARATOR);
-defined('PS') || define('PS', PATH_SEPARATOR);
-defined('_ENGINE') || define('_ENGINE', true);
-defined('_ENGINE_REQUEST_START') ||
-define('_ENGINE_REQUEST_START', microtime(true));
-defined('APPLICATION_PATH_COR') ||
-define('APPLICATION_PATH_COR', realpath(dirname(__DIR__)) . '/');
+echo VERSION;

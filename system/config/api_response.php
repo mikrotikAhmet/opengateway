@@ -60,11 +60,6 @@ return array(
     503 => 'Service Unavailable',
     504 => 'Gateway Timeout',
     505 => 'HTTP Version Not Supported',
-    900 => 'Card Number Error',
-    901 => 'CVV2 Error',
-    902 => 'Expiry Date Error',
-    903 => 'Key Signature Error',
-    904 => 'We could not find Merchant in our system',
-    905 => 'Insufficient Balance',
-    906 => 'Card Expire Date Error',
+    506 => 'Merchant ID not found',
+    507 => 'API key is invalid',
 );

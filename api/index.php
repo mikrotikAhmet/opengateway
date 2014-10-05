@@ -18,15 +18,31 @@
  **/
 
 // Version
-define('VERSION', '1.5.6.4');
+define('_ENGINE_VER','1.5.5.1');
 
 // Basic setup
 
 defined('DS') || define('DS', DIRECTORY_SEPARATOR);
 defined('PS') || define('PS', PATH_SEPARATOR);
+
+
 defined('_ENGINE') || define('_ENGINE', true);
 defined('_ENGINE_REQUEST_START') ||
-define('_ENGINE_REQUEST_START', microtime(true));
+        define('_ENGINE_REQUEST_START', microtime(true));
 defined('APPLICATION_PATH_COR') ||
-define('APPLICATION_PATH_COR', realpath(dirname(__DIR__)) . '/');
+        define('APPLICATION_PATH_COR', realpath(dirname(__DIR__)) . '/');
+
+// Configuration
+if (file_exists ($_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR . 'system/config/app.php')){
+    require_once ($_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR .'system/config/app.php');
+} else {
+    trigger_error('Configuration file could not be located!');
+}
+
+// Startup
+if (file_exists ($_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR . 'system/startup.php')){
+    require_once ($_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR .'system/startup.php');
+} else {
+    trigger_error('Start Up file could not be located!');
+}
  
