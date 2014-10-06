@@ -193,7 +193,7 @@ class ControllerAccountDeposit extends Controller {
                 $data = json_decode($api_response);
                 
                 if ($data->status == "Accepted") {
-                    print_r($data);
+                    $this->redirect($this->url->link('account/deposit/success', 'token=' . $this->session->data['token'], 'SSL'));
                 }
          }
 
@@ -246,6 +246,31 @@ class ControllerAccountDeposit extends Controller {
 
 
         $this->template = 'opengateway/banks.tpl';
+
+        $this->response->setOutput($this->render());
+    }
+    
+    public function success(){
+        
+        $this->language->load('account/deposit_success');
+        
+        $this->data['heading_title'] = $this->language->get('heading_title');
+        
+        $this->document->setTitle($this->language->get('heading_title'));
+        
+        $this->data['text_deposit_success'] = $this->language->get('text_deposit_success');
+        $this->data['text_success_message'] = $this->language->get('text_success_message');
+        
+        $this->data['continue'] = $this->url->link('common/home','token='.$this->session->data['token'],'SSL');
+        
+        $this->data['button_continue'] = $this->language->get('button_continue');
+        
+        
+        $this->template = 'account/deposit_success.tpl';
+        $this->children = array(
+            'common/header',
+            'common/footer'
+        );
 
         $this->response->setOutput($this->render());
     }

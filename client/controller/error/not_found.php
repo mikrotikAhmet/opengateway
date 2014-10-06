@@ -10,6 +10,10 @@ class ControllerErrorNotFound extends Controller {
         $this->data['heading_title'] = $this->language->get('heading_title');
 
         $this->data['text_not_found'] = $this->language->get('text_not_found');
+        
+        $this->data['continue'] = $this->url->link('common/home','token='.$this->session->data['token'],'SSL');
+        
+        $this->data['button_continue'] = $this->language->get('button_continue');
 
         $this->data['breadcrumbs'] = array();
 

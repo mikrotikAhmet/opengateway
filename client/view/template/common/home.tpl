@@ -24,16 +24,24 @@
                     <?php foreach ($transactions as $transaction) {  ?>
                     <tr>
                         <td><?php echo $transaction['transaction_id']?></td>
-                        <td>Deposit</td>
-                        <td>$55.00</td>
-                        <td>2014-11-03</td>
-                        <td>Pending</td>
+                        <td><?php echo $transaction['action']?></td>
+                        <td><?php echo $transaction['total']?></td>
+                        <td><?php echo $transaction['date']?></td>
+                        <td><?php echo $transaction['status']?></td>
                         <td><i class="expand icon-plus"></i></td>
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <?php echo $transaction['transaction_id']?>
-                            <button onclick="alert('Captured')">Capture</button>
+                            <div class="transaction-details">
+                                <ul>
+                                    <li>
+                                        <strong>Invoice # :</strong> <?php echo $transaction['invoice_no']?>
+                                    </li>
+                                    <li>
+                                        <strong>IDescription :</strong> <?php echo $transaction['description']?>
+                                    </li>
+                                </ul>
+                            </div>
                         </td>
                     </tr>
                     <?php } ?>

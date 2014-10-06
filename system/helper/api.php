@@ -48,7 +48,7 @@ class Api {
     }
 
     public function apiPost($api_func, $params) {
-$postData = '';
+        $postData = '';
         //create name value pairs seperated by &
         foreach ($params as $k => $v) {
             $postData .= $k . '=' . $v . '&';
@@ -57,9 +57,20 @@ $postData = '';
 
         $ch = curl_init();
 
+        curl_setopt($ch, CURLOPT_HEADERFUNCTION, 'read_header');
+
+        $headers = array(
+            'HTTP_ACCEPT' => $_SERVER['HTTP_ACCEPT'],
+            'HTTP_ACCEPT_LANGUAGE' => $_SERVER['HTTP_ACCEPT_LANGUAGE'],
+            'HTTP_KEEP_ALIVE' => '300',
+            'HTTP_CONNECTION' => $_SERVER['HTTP_CONNECTION']
+        );
+
         curl_setopt($ch, CURLOPT_URL, $this->end_point . $api_func . "&merchant_id=" . $this->merchant . "&api_key=" . $this->api_key . "&customer_id=" . $this->getCustomerId());
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
         curl_setopt($ch, CURLOPT_MAXREDIRS, 2); //only 2 redirects
         curl_setopt($ch, CURLOPT_POST, count($postData));
@@ -105,4 +116,34 @@ $postData = '';
         return $this->customer_id;
     }
 
+}
+
+function read_header($ch, $string) {
+    global $location; #keep track of location/redirects
+    global $cookiearr; #store cookies here
+    global $ch;
+    # ^overrides the function param $ch  this is okay because 
+    # we need to update the global $ch with new cookies
+
+    $length = strlen($string);
+    if (!strncmp($string, "Location:", 9)) { #keep track of last redirect
+        $location = trim(substr($string, 9, -1));
+    }
+
+    if (!strncmp($string, "Set-Cookie:", 11)) { #get the cookie
+        $cookiestr = trim(substr($string, 11, -1));
+        $cookie = explode(';', $cookiestr);
+        $cookie = explode('=', $cookie[0]);
+        $cookiename = trim(array_shift($cookie));
+        $cookiearr[$cookiename] = trim(implode('=', $cookie));
+    }
+    $cookie = "";
+    if (trim($string) == "") { #execute only at end of header
+        foreach ($cookiearr as $key => $value) {
+            $cookie .= "$key=$value; ";
+        }
+//        curl_setopt($ch, CURLOPT_COOKIE, $cookie);
+    }
+
+    return $length;
 }

@@ -193,6 +193,8 @@ class ControllerCommonHome extends Controller {
 
         $this->data['token'] = $this->session->data['token'];
 
+        $this->load->model('opengateway/setting');
+        
         if ($this->config->get('config_currency_auto')) {
             $this->load->model('localisation/currency');
 
@@ -219,14 +221,25 @@ class ControllerCommonHome extends Controller {
 
 
         if ($data->status == "OK") {
+            
+            
 
             foreach ($data->data as $transactions) {
+                
+                $status = $this->model_opengateway_setting->getStatus($transactions->status);
+                
                 $this->data['transactions'][] = array(
-                    'transaction_id' => $transactions->transaction_id
+                    'transaction_id' => $transactions->transaction_id,
+                    'action'=>$transactions->action_type,
+                    'description'=>$transactions->description,
+                    'invoice_no'=>$this->config->get('config_invoice_prefix').$transactions->invoice_no,
+                    'total'=>$this->currency->format($transactions->amount,$this->config->get('config_currency')),
+                    'date'=>date($this->language->get('date_format_short'), strtotime($transactions->date_added)),
+                    'status'=>$status['name']
                 );
             }
         }
-
+        
         $this->template = 'common/home.tpl';
         $this->children = array(
             'common/header',
