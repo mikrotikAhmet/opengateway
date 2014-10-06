@@ -121,4 +121,8 @@ $(document).ready(function() {
         $('a[href*=\'' + url + '\']').parents('li[id]').addClass('selected');
     }
     
+//    $('button').bind('click', function(){
+//        showMask();
+//    });
+    
 });
