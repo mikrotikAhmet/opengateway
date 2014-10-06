@@ -316,7 +316,7 @@ CREATE TABLE `engine4_customer_transaction` (
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`transaction_id`),
   KEY `Customer` (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -325,7 +325,7 @@ CREATE TABLE `engine4_customer_transaction` (
 
 LOCK TABLES `engine4_customer_transaction` WRITE;
 /*!40000 ALTER TABLE `engine4_customer_transaction` DISABLE KEYS */;
-INSERT INTO `engine4_customer_transaction` VALUES (31,4,285,10.0000,'2014-10-06 14:34:08'),(32,4,286,20.0000,'2014-10-06 14:42:32');
+INSERT INTO `engine4_customer_transaction` VALUES (37,4,291,200.0000,'2014-10-06 16:52:56'),(38,4,292,50.0000,'2014-10-06 16:53:05');
 /*!40000 ALTER TABLE `engine4_customer_transaction` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -478,6 +478,7 @@ CREATE TABLE `engine4_transaction_order` (
   `customer_id` int(11) NOT NULL DEFAULT '0',
   `total` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `commission` decimal(15,4) NOT NULL,
+  `commission_net` decimal(15,4) NOT NULL,
   `language_id` int(11) NOT NULL,
   `currency_id` int(11) NOT NULL,
   `currency_code` varchar(3) NOT NULL,
@@ -493,7 +494,7 @@ CREATE TABLE `engine4_transaction_order` (
   `date_modified` datetime NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`transaction_order_id`,`invoice_no`)
-) ENGINE=MyISAM AUTO_INCREMENT=287 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=293 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -502,7 +503,7 @@ CREATE TABLE `engine4_transaction_order` (
 
 LOCK TABLES `engine4_transaction_order` WRITE;
 /*!40000 ALTER TABLE `engine4_transaction_order` DISABLE KEYS */;
-INSERT INTO `engine4_transaction_order` VALUES (285,78640984,'SPG-2014-',4,10.0000,0.0400,1,1,'USD',1.00000000,'Transaction','Deposit','Upload (Deposit) to account via Credit / Debit Card - 5313***3988','127.0.0.1','','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36','','2014-10-06 14:34:08','0000-00-00 00:00:00',31),(286,80530398,'SPG-2014-',4,20.0000,0.0400,1,1,'USD',1.00000000,'Transaction','Deposit','Upload (Deposit) to account via Credit / Debit Card - 4841***4198','127.0.0.1','','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36','','2014-10-06 14:42:32','0000-00-00 00:00:00',31);
+INSERT INTO `engine4_transaction_order` VALUES (291,36159104,'SPG-2014-',4,200.0800,0.0400,0.0800,1,1,'USD',1.00000000,'Transaction','Deposit','Upload (Deposit) to account via Credit / Debit Card - 5313***3988','127.0.0.1','','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36','','2014-10-06 16:52:56','0000-00-00 00:00:00',31),(292,19588213,'SPG-2014-',4,50.0200,0.0400,0.0200,1,1,'USD',1.00000000,'Transaction','Deposit','Upload (Deposit) to account via Credit / Debit Card - 4841***4198','127.0.0.1','','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36','','2014-10-06 16:53:05','0000-00-00 00:00:00',31);
 /*!40000 ALTER TABLE `engine4_transaction_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -542,4 +543,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-06 14:52:01
+-- Dump completed on 2014-10-06 16:58:39
