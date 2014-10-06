@@ -104,6 +104,7 @@ function getURLVar(key) {
 } 
 
 $(document).ready(function() {
+    
     route = getURLVar('route');
 	
     if (!route) {
@@ -118,5 +119,6 @@ $(document).ready(function() {
         }
 		
         $('a[href*=\'' + url + '\']').parents('li[id]').addClass('selected');
-    }	
+    }
+    
 });

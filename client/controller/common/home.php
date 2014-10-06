@@ -228,12 +228,15 @@ class ControllerCommonHome extends Controller {
                 
                 $status = $this->model_opengateway_setting->getStatus($transactions->status);
                 
+                
                 $this->data['transactions'][] = array(
                     'transaction_id' => $transactions->transaction_id,
                     'action'=>$transactions->action_type,
                     'description'=>$transactions->description,
                     'invoice_no'=>$this->config->get('config_invoice_prefix').$transactions->invoice_no,
                     'total'=>$this->currency->format($transactions->amount,$this->config->get('config_currency')),
+                    'converted'=>$this->currency->format($transactions->amount, $this->customer->getCustomerCurrencyCode()),
+                    'convertion_rate'=>  sprintf($this->language->get('text_convertion_rate'),$this->config->get('config_currency'),$this->currency->getValue($this->customer->getCustomerCurrencyCode()),$this->customer->getCustomerCurrencyCode()),
                     'date'=>date($this->language->get('date_format_short'), strtotime($transactions->date_added)),
                     'status'=>$status['name']
                 );

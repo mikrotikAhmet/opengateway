@@ -36,7 +36,12 @@
 
     </head>
     <body>
-        <div id="spinner"></div>
+        <div id="spinner">
+            <div class="loading">
+                <i class="icon-spinner7 spin panel-icon"></i>
+                <p>Please wait.</p>
+            </div>
+        </div>
         <div id="header">
             <h1 id="logo"><a href="<?php echo $home?>" title="Semite :: Merchat Panel"><img src="view/images/logo.gif" title="Semite :: Merchat Panel" alt="Semite :: Merchat Panel" /></a></h1>
         </div>

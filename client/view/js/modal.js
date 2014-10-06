@@ -28,6 +28,10 @@ $(document).ready(function() {
         $(this).hide();
         $('.modal-container').hide();
     });
+    
+     $('#spinner').click(function () {
+        $(this).hide(); // remove this later
+    });
         
     $('[data-dismiss]').click(function(){
         $('#mask').hide();
@@ -38,9 +42,9 @@ $(document).ready(function() {
 function showMask(){
     var maskHeight = $(document).height();
     var maskWidth = $(window).width();
-    $('#mask').css({
+    $('#spinner').css({
         'width':maskWidth,
         'height':maskHeight
     });
-    $('#mask').fadeTo(800,0.95);
+    $('#spinner').fadeTo(800,0.95);
 }

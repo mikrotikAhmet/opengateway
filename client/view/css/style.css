@@ -932,9 +932,66 @@ border-top: 1px solid #DDD;
     left:0;
     background: url('../images/mask.gif');
     z-index:9000;
+    text-align: center;
 }
 
 .loading {
+    margin: 40px auto;
+    padding: 25px;
+    width: 255px;
     background: #fff;
+    border: 7px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.spin {
+  display: inline-block;
+  -webkit-animation: rotation 2s linear infinite;
+  -moz-animation: rotation 1s ease infinite;
+  -ms-animation: rotation 1s ease infinite;
+  -o-animation: rotation 1s ease infinite;
+  animation: rotation 1s ease infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(359deg);}
+}
+
+@-moz-keyframes indicator {
+  0% {-moz-transform: rotate(0deg);}
+  100% {-moz-transform: rotate(359deg);}
+}
+
+@-ms-keyframes indicator {
+  0% {-ms-transform: rotate(0deg);}
+  100% {-ms-transform: rotate(359deg);}
+}
+
+@-o-keyframes indicator {
+  0% {-o-transform: rotate(0deg);}
+  100% {-o-transform: rotate(359deg);}
+}
+
+@keyframes indicator {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(359deg);}
 }
 /********** End spinner *******/
+
+/********** Lable *************/
+.control-lable{
+    font-weight: 600;
+    display: block;
+}
+/********** End lable *************/
+table.details{
+    cursor: pointer;
+}
+ul#details li{
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+    padding: 10px 0;
+}

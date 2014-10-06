@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="box-content tabular-view">
-            <table id="last-transactions">
+            <table id="last-transactions" class="details">
                 <thead>
                     <tr>
                         <th><?php echo $column_transaction?></th>
@@ -32,13 +32,28 @@
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <div class="transaction-details">
-                                <ul>
+                            <div class="transaction-details" style="width: 135%; margin :0 auto;">
+                                <ul id="details">
                                     <li>
-                                        <strong>Invoice # :</strong> <?php echo $transaction['invoice_no']?>
+                                        <label class="control-lable"><strong>Invoice # :</strong></label> <?php echo $transaction['invoice_no']?>
                                     </li>
                                     <li>
-                                        <strong>IDescription :</strong> <?php echo $transaction['description']?>
+                                        <label class="control-lable"><strong>Amount :</strong></label> <?php echo $transaction['total']?>
+                                    </li>
+                                    <li>
+                                        <label class="control-lable"><strong>Currency conversation :</strong></label> <?php echo $transaction['total']?> => <?php echo $transaction['converted']?>
+                                    </li>
+                                    <li>
+                                        <label class="control-lable"><strong>Convertion rate :</strong></label> <?php echo $transaction['convertion_rate']?>
+                                    </li>
+                                    <li>
+                                        <label class="control-lable"><strong>Description :</strong></label> <?php echo $transaction['description']?>
+                                    </li>
+                                    <li>
+                                        <label class="control-lable"><strong>Transaction status :</strong></label> <?php echo $transaction['status']?>
+                                    </li><br/>
+                                    <li>
+                                        <label class="control-lable"><strong>Transaction action :</strong></label> <button type="button" class="btn"><i class="icon-undo"></i> Refund</button>
                                     </li>
                                 </ul>
                             </div>

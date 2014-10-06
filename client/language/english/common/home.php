@@ -33,6 +33,7 @@ $_['heading_title']                 = 'Dashboard';
 $_['text_last_transaction'] = 'Last Transactions';
 $_['text_general_balance'] = 'General Balance';
 $_['text_balance'] = 'Your available balance :';
+$_['text_convertion_rate'] = '1 %s = %s %s';
 
 // Column 
 $_['column_transaction']                 = 'Transaction #';

@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.27, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.35, for Linux (x86_64)
 --
 -- Host: localhost    Database: opengateway
 -- ------------------------------------------------------
--- Server version	5.5.27
+-- Server version	5.5.35
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -270,7 +270,7 @@ CREATE TABLE `engine4_customer_card` (
 
 LOCK TABLES `engine4_customer_card` WRITE;
 /*!40000 ALTER TABLE `engine4_customer_card` DISABLE KEYS */;
-INSERT INTO `engine4_customer_card` VALUES (4,4,'Ahmet GOUDENOGLU','5313***3988','kJ3KmrXnR8kD4acs_ez5Uv3l_PKKmBXbAWPZcoURIuU,','2017-02',713,'mastercard',1,0),(11,4,'Ahmet GOUDENOGLU','4841***4198','JVjc9PdJtNqJCdYyCXkCLGD01n-oB35wwiMG-1KFh7w,','2017-06',928,'visa',0,0);
+INSERT INTO `engine4_customer_card` VALUES (4,4,'Ahmet GOUDENOGLU','5313***3988','kJ3KmrXnR8kD4acs_ez5Uv3l_PKKmBXbAWPZcoURIuU,','2017-02',713,'mastercard',1,0),(11,4,'Ahmet GOUDENOGLU','4841***4198','JVjc9PdJtNqJCdYyCXkCLGD01n-oB35wwiMG-1KFh7w,','2017-06',928,'visa',1,0);
 /*!40000 ALTER TABLE `engine4_customer_card` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -312,12 +312,11 @@ CREATE TABLE `engine4_customer_transaction` (
   `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
   `transaction_order_id` int(11) NOT NULL,
-  `description` text NOT NULL,
   `amount` decimal(15,4) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`transaction_id`),
   KEY `Customer` (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -326,7 +325,32 @@ CREATE TABLE `engine4_customer_transaction` (
 
 LOCK TABLES `engine4_customer_transaction` WRITE;
 /*!40000 ALTER TABLE `engine4_customer_transaction` DISABLE KEYS */;
+INSERT INTO `engine4_customer_transaction` VALUES (31,4,285,10.0000,'2014-10-06 14:34:08'),(32,4,286,20.0000,'2014-10-06 14:42:32');
 /*!40000 ALTER TABLE `engine4_customer_transaction` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `engine4_formation`
+--
+
+DROP TABLE IF EXISTS `engine4_formation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `engine4_formation` (
+  `formation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `country_id` int(11) NOT NULL,
+  `title` varchar(96) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`formation_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=282 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `engine4_formation`
+--
+
+LOCK TABLES `engine4_formation` WRITE;
+/*!40000 ALTER TABLE `engine4_formation` DISABLE KEYS */;
+/*!40000 ALTER TABLE `engine4_formation` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -363,6 +387,29 @@ INSERT INTO `engine4_language` VALUES (1,'English','en','en_US.UTF-8,en_US,en-gb
 UNLOCK TABLES;
 
 --
+-- Table structure for table `engine4_representative_class`
+--
+
+DROP TABLE IF EXISTS `engine4_representative_class`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `engine4_representative_class` (
+  `representative_class_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(32) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`representative_class_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `engine4_representative_class`
+--
+
+LOCK TABLES `engine4_representative_class` WRITE;
+/*!40000 ALTER TABLE `engine4_representative_class` DISABLE KEYS */;
+/*!40000 ALTER TABLE `engine4_representative_class` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `engine4_setting`
 --
 
@@ -379,7 +426,7 @@ CREATE TABLE `engine4_setting` (
   PRIMARY KEY (`setting_id`),
   KEY `APPLICATION_ID` (`application_id`),
   KEY `GROUP` (`group`)
-) ENGINE=InnoDB AUTO_INCREMENT=860 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1471 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -388,8 +435,33 @@ CREATE TABLE `engine4_setting` (
 
 LOCK TABLES `engine4_setting` WRITE;
 /*!40000 ALTER TABLE `engine4_setting` DISABLE KEYS */;
-INSERT INTO `engine4_setting` VALUES (854,1,'config','config_error_display','1',0),(855,1,'config','config_language','en',0),(856,1,'config','config_auto_capture','1',0),(857,0,'config','config_owner','Semite LLC.',0),(858,0,'config','config_currency','USD',0),(859,0,'config','config_mincard_deposit','10',0);
+INSERT INTO `engine4_setting` VALUES (854,1,'config','config_error_display','1',0),(855,1,'config','config_language','en',0),(856,1,'config','config_auto_capture','1',0),(857,0,'config','config_owner','Semite LLC.',0),(858,0,'config','config_currency','USD',0),(859,0,'config','config_mincard_deposit','10',0),(860,0,'config','config_invoice_prefix','SPG-2014-',0),(861,0,'config','config_transaction_status_id','24',0),(862,0,'config','config_complete_status_id','31',0),(863,0,'config','config_admin_language','en',0),(1454,0,'config','config_mail_protocol','mail',0),(1455,0,'config','config_mail_parameter','',0),(1456,0,'config','config_smtp_host','',0),(1457,0,'config','config_smtp_username','',0),(1458,0,'config','config_smtp_password','',0),(1459,0,'config','config_smtp_port','25',0),(1460,0,'config','config_smtp_timeout','5',0),(1470,0,'config','config_maintenance','0',0);
 /*!40000 ALTER TABLE `engine4_setting` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `engine4_status`
+--
+
+DROP TABLE IF EXISTS `engine4_status`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `engine4_status` (
+  `status_id` int(11) NOT NULL AUTO_INCREMENT,
+  `language_id` int(11) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  PRIMARY KEY (`status_id`,`language_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `engine4_status`
+--
+
+LOCK TABLES `engine4_status` WRITE;
+/*!40000 ALTER TABLE `engine4_status` DISABLE KEYS */;
+INSERT INTO `engine4_status` VALUES (17,1,'Canceled'),(18,1,'Canceled Reversal'),(19,1,'Chargeback'),(20,1,'Complete'),(21,1,'Denied'),(22,1,'Expired'),(23,1,'Failed'),(24,1,'Pending'),(25,1,'Processed'),(26,1,'Processing'),(27,1,'Refunded'),(28,1,'Reversed'),(29,1,'Shipped'),(30,1,'Voided'),(31,1,'Captured');
+/*!40000 ALTER TABLE `engine4_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -421,7 +493,7 @@ CREATE TABLE `engine4_transaction_order` (
   `date_modified` datetime NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`transaction_order_id`,`invoice_no`)
-) ENGINE=MyISAM AUTO_INCREMENT=227 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=287 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -430,6 +502,7 @@ CREATE TABLE `engine4_transaction_order` (
 
 LOCK TABLES `engine4_transaction_order` WRITE;
 /*!40000 ALTER TABLE `engine4_transaction_order` DISABLE KEYS */;
+INSERT INTO `engine4_transaction_order` VALUES (285,78640984,'SPG-2014-',4,10.0000,0.0400,1,1,'USD',1.00000000,'Transaction','Deposit','Upload (Deposit) to account via Credit / Debit Card - 5313***3988','127.0.0.1','','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36','','2014-10-06 14:34:08','0000-00-00 00:00:00',31),(286,80530398,'SPG-2014-',4,20.0000,0.0400,1,1,'USD',1.00000000,'Transaction','Deposit','Upload (Deposit) to account via Credit / Debit Card - 4841***4198','127.0.0.1','','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36','','2014-10-06 14:42:32','0000-00-00 00:00:00',31);
 /*!40000 ALTER TABLE `engine4_transaction_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -469,4 +542,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-06  0:25:06
+-- Dump completed on 2014-10-06 14:52:01
