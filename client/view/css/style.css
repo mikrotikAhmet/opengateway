@@ -923,3 +923,18 @@ border-top: 1px solid #DDD;
   border-right: 1px solid #ddd;
 }
 /********** End Table *********/
+
+/********** Spinner ***********/
+#spinner{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    background: url('../images/mask.gif');
+    z-index:9000;
+}
+
+.loading {
+    background: #fff;
+}
+/********** End spinner *******/

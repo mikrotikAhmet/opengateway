@@ -23,4 +23,8 @@
         <div class="clear"></div>
     </div>
 </form>
+<script>
+
+    
+</script>
 <?php echo $footer?>

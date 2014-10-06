@@ -46,5 +46,9 @@
 </div>
 <script type="text/javascript"><!--
     $('select[name=\'currency_code\']').trigger('change');
+    
+    $('#continue').bind('click',function(){
+        showMask();
+    });
     //--></script> 
 <?php echo $footer?>
