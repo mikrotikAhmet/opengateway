@@ -139,10 +139,9 @@ function addcard(id, title, target) {
             $('.modal-content').html(html);
             $(id + ' h2').html(title);
             $(id).fadeIn(500);
-            var data = $('form[id=\'addcard\']').serialize();
-            
+           
                 $('.addnewcard').bind('click',function(){
-                                       
+                            var data = $('form[id=\'addcard\']').serialize();            
                     $.ajax({
                         url: 'index.php?route=account/deposit/validateCard&token=' + token,
                         type:'post',

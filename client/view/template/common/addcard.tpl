@@ -3,7 +3,7 @@
 <h2></h2>
 <h3><?php echo $entry_card_number?></h3>
 <p>
-    <input type="text" name="card_number" value="378282246310005">
+    <input type="text" name="card_number" value="">
 </p>
 <h3><?php echo $entry_expiry?></h3>
 <p>
@@ -36,7 +36,7 @@
 </p>
 <h3><?php echo $entry_cvv?></h3>
 <p>
-    <input type="text" name="cvv" style="width: 50px">
+    <input type="text" name="cvv"  style="width: 50px">
 </p>
 </form>
     <button type="button" class="btn close" data-dismiss="modal" aria-hidden="true"><i class="icon-arrow-left5"></i> <?php echo $button_back?></button>

@@ -317,9 +317,11 @@ class ControllerAccountDeposit extends Controller {
         
         $json = array();
         
+        $params = $this->request->post;
+        
         // Add Card via API
         
-        $api_response = $this->_api->apiPost('v1/customer/addCard',$params = array());
+        $api_response = $this->_api->apiPost('v1/customer/addCard',$params);
         
         $data = json_decode($api_response);
 
