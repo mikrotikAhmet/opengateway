@@ -25,3 +25,8 @@ input[type=button], input[type=submit], input[type=reset], #sidebar ul.box-conte
 .expand {
     cursor: pointer;
 }
+.selected{
+    background :#4b87c4;
+    font-weight: 600;
+    color : #FFF;
+}

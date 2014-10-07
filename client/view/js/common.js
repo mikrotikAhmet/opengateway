@@ -39,15 +39,19 @@ $(document).ready(function() {
     $("#last-transactions tr:odd").addClass("master");
     $("#last-transactions tr:not(.master)").hide();
     $("#last-transactions tr:first-child").show();
+    
     $("#last-transactions tr.master").click(function() {
         $(this).next("tr").toggle();
         $(this).find(".expand").toggleClass("icon-minus");
+        $(this).toggleClass("selected");
+        
 
     });
 
     $('#last-transactions a').bind('click', function() {
         $(this).next("tr").toggle();
         $(this).find(".expand").toggleClass("icon-minus");
+         $(this).toggleClass("selected");
     });
 
     // Add new card
