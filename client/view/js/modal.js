@@ -48,7 +48,28 @@ function addcard(id, title, target) {
             $(id).fadeIn(500);
             
                 $('.addnewcard').bind('click',function(){
-                    alert('adding...');
+                    
+                    $.ajax({
+                        url: 'index.php?route=account/deposit/validateCard&token=' + token,
+                        type:'post',
+                        dataType : 'json',
+                        beforeSend : function(){
+                            
+                            html ='<div class="wait">';
+                            html +='<i class="icon-spinner7 spin panel-icon"></i>';
+                            html +='<p>Please wait.</p>';
+                            html +='</div>';
+                            $('.modal-content').html(html);
+                        },
+                        complete : function(){
+//                            $('.wait').remove();
+                        },
+                        success : function(json){
+//                            $('#mask').hide();
+//                            $('.modal-container').hide();
+                        }
+                    });
+                    
                     $('[data-dismiss]').trigger('click');
                 });
 

@@ -209,6 +209,12 @@ class ControllerAccountDeposit extends Controller {
         $this->data['month_november'] = $this->language->get('month_november');
         $this->data['month_december'] = $this->language->get('month_december');
         
+        if (isset($this->error['warning'])) {
+            $this->data['error_warning'] = $this->error['warning'];
+        } else {
+            $this->data['error_warning'] = '';
+        }
+        
         $this->template = 'common/addcard.tpl';
 
         $this->response->setOutput($this->render());
@@ -305,6 +311,14 @@ class ControllerAccountDeposit extends Controller {
         );
 
         $this->response->setOutput($this->render());
+    }
+    
+    public function validateCard(){
+        
+        $json = array();
+        
+        
+        $this->response->setOutput(json_encode($json));
     }
 
     protected function validateForm() {

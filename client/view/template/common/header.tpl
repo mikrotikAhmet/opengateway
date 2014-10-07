@@ -23,12 +23,12 @@
         <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
         <?php } ?>
         <script type="text/javascript" src="view/js/jquery.js"></script>
-        <script type="text/javascript" src="view/js/modal.js"></script>
         <?php if (isset($this->session->data['token'])) { ?>
         <script>
             var token = '<?php echo $this->session->data['token']?>';
         </script>
         <?php } ?>
+        <script type="text/javascript" src="view/js/modal.js"></script>
         <script type="text/javascript" src="view/js/common.js"></script>
         <?php foreach ($scripts as $script) { ?>
         <script type="text/javascript" src="<?php echo $script; ?>"></script>

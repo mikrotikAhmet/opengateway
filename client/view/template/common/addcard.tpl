@@ -1,4 +1,6 @@
-<div id="error-tag"></div>
+<?php if ($error_warning) { ?>
+<div class="msg-error">asd</div>
+<?php } ?>
 <h2></h2>
 <h3><?php echo $entry_card_number?></h3>
 <p>
