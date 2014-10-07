@@ -121,12 +121,62 @@ $(document).ready(function() {
         $('a[href*=\'' + url + '\']').parents('li[id]').addClass('active');
     }
 
-//    $('ul#mainnav li').bind('mouseover', function() {
-//        $(this).addClass('active');
-//    });
-//
-//    $('ul#mainnav li').bind('mouseout', function() {
-//        $(this).removeClass('active');
-//    });
+
 
 });
+
+function addcard(id, title, target) {
+
+    $.ajax({
+        url: 'index.php?route=account/deposit/addcard&token=' + token,
+        type: 'post',
+        dataType: 'html',
+        beforeSend: function() {
+        },
+        complete: function() {
+        },
+        success: function(html) {
+            $('.modal-content').html(html);
+            $(id + ' h2').html(title);
+            $(id).fadeIn(500);
+            var data = $('form[id=\'addcard\']').serialize();
+            
+                $('.addnewcard').bind('click',function(){
+                                       
+                    $.ajax({
+                        url: 'index.php?route=account/deposit/validateCard&token=' + token,
+                        type:'post',
+                        data : data,
+                        dataType : 'json',
+                        beforeSend : function(){
+                            
+                            html ='<div class="wait">';
+                            html +='<i class="icon-spinner7 spin panel-icon"></i>';
+                            html +='</div>';
+                            $('.modal-content').html(html);
+                        },
+                        complete : function(){
+                            $('.wait').remove();
+                        },
+                        success : function(json){
+                            if (json.status == 'OK'){
+                                $('#mask').hide();
+                                $('.modal-container').hide();  
+
+                            } else {
+                                $('.modal-content').html(json.status);
+                            }
+                        }
+                    });
+                    
+                    $('[data-dismiss]').trigger('click');
+                });
+
+            $('[data-dismiss]').click(function() {
+                $('#mask').hide();
+                $('.modal-container').hide();
+            });
+        }
+    });
+
+}

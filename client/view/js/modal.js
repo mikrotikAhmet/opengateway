@@ -32,55 +32,6 @@ $(document).ready(function() {
     
 });
 
-function addcard(id, title, target) {
-
-    $.ajax({
-        url: 'index.php?route=account/deposit/addcard&token=' + token,
-        type: 'post',
-        dataType: 'html',
-        beforeSend: function() {
-        },
-        complete: function() {
-        },
-        success: function(html) {
-            $('.modal-content').html(html);
-            $(id + ' h2').html(title);
-            $(id).fadeIn(500);
-            
-                $('.addnewcard').bind('click',function(){
-                    
-                    $.ajax({
-                        url: 'index.php?route=account/deposit/validateCard&token=' + token,
-                        type:'post',
-                        dataType : 'json',
-                        beforeSend : function(){
-                            
-                            html ='<div class="wait">';
-                            html +='<i class="icon-spinner7 spin panel-icon"></i>';
-                            html +='<p>Please wait.</p>';
-                            html +='</div>';
-                            $('.modal-content').html(html);
-                        },
-                        complete : function(){
-//                            $('.wait').remove();
-                        },
-                        success : function(json){
-//                            $('#mask').hide();
-//                            $('.modal-container').hide();
-                        }
-                    });
-                    
-                    $('[data-dismiss]').trigger('click');
-                });
-
-            $('[data-dismiss]').click(function() {
-                $('#mask').hide();
-                $('.modal-container').hide();
-            });
-        }
-    });
-
-}
 
 function showMask() {
     var maskHeight = $(document).height();

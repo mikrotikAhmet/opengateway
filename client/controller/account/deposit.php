@@ -226,7 +226,7 @@ class ControllerAccountDeposit extends Controller {
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 
             // Make Deposit
-            $api_response = $this->_api->apiPost('v1/payment/pay', $this->request->post);
+            $api_response = $this->_api->apiPost('v1/payment/processPayment', $this->request->post);
 
             $data = json_decode($api_response);
 
@@ -317,6 +317,17 @@ class ControllerAccountDeposit extends Controller {
         
         $json = array();
         
+        // Add Card via API
+        
+        $api_response = $this->_api->apiPost('v1/customer/addCard',$params = array());
+        
+        $data = json_decode($api_response);
+
+        if ($data->status == "OK") {
+            $json = $data;
+        } 
+        
+        $json = $data; 
         
         $this->response->setOutput(json_encode($json));
     }

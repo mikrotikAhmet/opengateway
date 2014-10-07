@@ -1,10 +1,9 @@
-<?php if ($error_warning) { ?>
-<div class="msg-error">asd</div>
-<?php } ?>
+<div class="msg-error"></div>
+<form id="addcard">
 <h2></h2>
 <h3><?php echo $entry_card_number?></h3>
 <p>
-    <input type="text" name="cardnumber" value="">
+    <input type="text" name="card_number" value="378282246310005">
 </p>
 <h3><?php echo $entry_expiry?></h3>
 <p>
@@ -37,7 +36,8 @@
 </p>
 <h3><?php echo $entry_cvv?></h3>
 <p>
-    <input type="text" name="cvv" value="" style="width: 50px">
+    <input type="text" name="cvv" style="width: 50px">
 </p>
+</form>
     <button type="button" class="btn close" data-dismiss="modal" aria-hidden="true"><i class="icon-arrow-left5"></i> <?php echo $button_back?></button>
     <button type="button" class="btn addnewcard" aria-hidden="true"><?php echo $button_continue?> <i class="icon-arrow-right5"></i></button>
