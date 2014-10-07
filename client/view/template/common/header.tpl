@@ -48,7 +48,7 @@
         <?php if($logged) { ?>
         <div id="menubar" class="wrapper box-title"><div>
                 <ul id="mainnav">
-                    <li id="home"class="active"><a href="<?php echo $home?>" title=""><?php echo $text_dashboard?></a></li>
+                    <li id="dashboard"><a href="<?php echo $home?>" title=""><?php echo $text_dashboard?></a></li>
                     <li id="transaction"><a href="<?php echo $transaction?>" title=""><?php echo $text_transaction?></a></li>
                     <li id="account"><a href="<?php echo $account?>" title=""><?php echo $text_account?></a></li>
                     <li id="semite"><a href="<?php echo $semite?>" title=""><?php echo $text_semite?></a></li>

@@ -150,7 +150,7 @@ class ControllerAccountDeposit extends Controller {
         }
 
 
-        $this->data['action'] = $this->url->link('account/deposit/addcard', 'token=' . $this->session->data['token'], 'SSL');
+        $this->data['action'] = $this->url->link('account/deposit/completepayment', 'token=' . $this->session->data['token'], 'SSL');
 
         // Get Customer Cards
         $api_response = $this->_api->apiGet('v1/customer/getCards');
@@ -183,19 +183,51 @@ class ControllerAccountDeposit extends Controller {
     }
 
     public function addcard() {
+
+        $this->language->load('common/addcard');
+        
+        $this->data['entry_card_number'] = $this->language->get('entry_card_number');
+        $this->data['entry_expiry'] = $this->language->get('entry_expiry');
+        $this->data['entry_cvv'] = $this->language->get('entry_cvv');
+
+        $this->data['button_back'] = $this->language->get('button_back');
+        $this->data['button_continue'] = $this->language->get('button_continue');
+
+        $this->data['currentYear'] = date('Y');
+        $this->data['currentMonth'] = date('m');
+
+        $this->data['month_january'] = $this->language->get('month_january');
+        $this->data['month_february'] = $this->language->get('month_february');
+        $this->data['month_march'] = $this->language->get('month_march');
+        $this->data['month_april'] = $this->language->get('month_april');
+        $this->data['month_may'] = $this->language->get('month_may');
+        $this->data['month_june'] = $this->language->get('month_june');
+        $this->data['month_july'] = $this->language->get('month_july');
+        $this->data['month_august'] = $this->language->get('month_august');
+        $this->data['month_september'] = $this->language->get('month_september');
+        $this->data['month_october'] = $this->language->get('month_october');
+        $this->data['month_november'] = $this->language->get('month_november');
+        $this->data['month_december'] = $this->language->get('month_december');
+        
+        $this->template = 'common/addcard.tpl';
+
+        $this->response->setOutput($this->render());
+    }
+
+    public function completepayment() {
         $this->language->load('account/deposit_card');
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-                
-                // Make Deposit
-                $api_response = $this->_api->apiPost('v1/payment/pay', $this->request->post);
 
-                $data = json_decode($api_response);
-                
-                if ($data->status == "Accepted") {
-                    $this->redirect($this->url->link('account/deposit/success', 'token=' . $this->session->data['token'], 'SSL'));
-                }
-         }
+            // Make Deposit
+            $api_response = $this->_api->apiPost('v1/payment/pay', $this->request->post);
+
+            $data = json_decode($api_response);
+
+            if ($data->status == "Accepted") {
+                $this->redirect($this->url->link('account/deposit/success', 'token=' . $this->session->data['token'], 'SSL'));
+            }
+        }
 
         $this->card();
     }
@@ -249,23 +281,23 @@ class ControllerAccountDeposit extends Controller {
 
         $this->response->setOutput($this->render());
     }
-    
-    public function success(){
-        
+
+    public function success() {
+
         $this->language->load('account/deposit_success');
-        
+
         $this->data['heading_title'] = $this->language->get('heading_title');
-        
+
         $this->document->setTitle($this->language->get('heading_title'));
-        
+
         $this->data['text_deposit_success'] = $this->language->get('text_deposit_success');
         $this->data['text_success_message'] = $this->language->get('text_success_message');
-        
-        $this->data['continue'] = $this->url->link('common/home','token='.$this->session->data['token'],'SSL');
-        
+
+        $this->data['continue'] = $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL');
+
         $this->data['button_continue'] = $this->language->get('button_continue');
-        
-        
+
+
         $this->template = 'account/deposit_success.tpl';
         $this->children = array(
             'common/header',
@@ -293,4 +325,3 @@ class ControllerAccountDeposit extends Controller {
     }
 
 }
-
