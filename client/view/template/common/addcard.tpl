@@ -1,4 +1,3 @@
-<div class="msg-error"></div>
 <form id="addcard">
 <h2></h2>
 <h3><?php echo $entry_card_number?></h3>
