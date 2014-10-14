@@ -196,9 +196,8 @@ class ControllerCommonHome extends Controller {
         $this->load->model('opengateway/setting');
         
         if ($this->config->get('config_currency_auto')) {
-            $this->load->model('localisation/currency');
 
-            $this->model_localisation_currency->updateCurrencies();
+            $this->model_opengateway_setting->updateCurrencies();
         }
 
         $this->data['deposit'] = $this->url->link('account/deposit', 'token=' . $this->session->data['token'], 'SSL');
@@ -209,7 +208,8 @@ class ControllerCommonHome extends Controller {
         $data = json_decode($api_response);
 
         if ($data->status == "OK") {
-            $this->data['balance'] = $this->currency->format($data->data->balance, $this->customer->getCustomerCurrencyCode());
+            $this->data['balance'] = $this->currency->format($data->data->balance, $this->customer->getCustomerCurrencyCode(),1);
+            $this->config->set('customer_balance',$this->data['balance']);
         }
 
         // Get Customer Transactions
@@ -234,9 +234,9 @@ class ControllerCommonHome extends Controller {
                     'action'=>$transactions->action_type,
                     'description'=>$transactions->description,
                     'invoice_no'=>$this->config->get('config_invoice_prefix').$transactions->invoice_no,
-                    'total'=>$this->currency->format($transactions->amount,$this->config->get('config_currency')),
-                    'converted'=>$this->currency->format($transactions->amount, $this->customer->getCustomerCurrencyCode()),
-                    'convertion_rate'=>  sprintf($this->language->get('text_convertion_rate'),$this->config->get('config_currency'),$this->currency->getValue($this->customer->getCustomerCurrencyCode()),$this->customer->getCustomerCurrencyCode()),
+                    'total'=>$this->currency->format_settlement($transactions->amount,$this->config->get('config_currency')),
+                    'converted'=>$this->currency->format($transactions->amount, $this->customer->getCustomerCurrencyCode(),$transactions->conversion_value),
+                    'convertion_rate'=>  sprintf($this->language->get('text_convertion_rate'),$this->config->get('config_currency'),$transactions->conversion_value,$this->customer->getCustomerCurrencyCode()),
                     'date'=>date($this->language->get('date_format_short'), strtotime($transactions->date_added)),
                     'status'=>$status['name']
                 );

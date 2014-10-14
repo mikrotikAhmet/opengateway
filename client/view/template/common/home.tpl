@@ -64,7 +64,7 @@
                 <?php } else { ?>
                 <tfoot>
                     <tr>
-                        <td colspan="4"><?php echo $text_no_result?>.</td>
+                        <td colspan="6"><?php echo $text_no_result?>.</td>
                     </tr>
                 </tfoot>
                 <?php }?>
