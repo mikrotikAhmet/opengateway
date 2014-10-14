@@ -16,4 +16,9 @@
  * OGCA - Open Gateway Core Application
  * Description of transaction.php
  **/
- 
+
+// Heading Title
+$_['heading_title'] = 'All Transactions';
+
+// Text
+$_['text_search'] = 'Search';

@@ -222,8 +222,6 @@ class ControllerCommonHome extends Controller {
 
         if ($data->status == "OK") {
             
-            
-
             foreach ($data->data as $transactions) {
                 
                 $status = $this->model_opengateway_setting->getStatus($transactions->status);

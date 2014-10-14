@@ -51,12 +51,51 @@ class ControllerAccountTransaction extends Controller{
     private $error = array();
     
     public function index(){
+
+        $this->language->load('account/transaction');
         
         $this->getList();
     }
     
     protected function getList(){
-        
+
+        $this->load->model('opengateway/setting');
+
+        $this->data['heading_title'] = $this->language->get('heading_title');
+
+        $this->document->setTitle($this->language->get('heading_title'));
+
+        $this->data['text_search'] = $this->language->get('text_search');
+
+        $params = array();
+
+        // Get Customer Transactions
+        $api_response = $this->_api->apiPost('v1/customer/getAllTransactions',$params);
+
+        $data = json_decode($api_response);
+
+        $this->data['transactions'] = array();
+
+        if ($data->status == "OK") {
+
+            foreach ($data->data as $transactions) {
+
+                $status = $this->model_opengateway_setting->getStatus($transactions->status);
+
+
+                $this->data['transactions'][] = array(
+                    'transaction_id' => $transactions->transaction_id,
+                    'action'=>$transactions->action_type,
+                    'description'=>$transactions->description,
+                    'invoice_no'=>$this->config->get('config_invoice_prefix').$transactions->invoice_no,
+                    'total'=>$this->currency->format_settlement($transactions->amount,$this->config->get('config_currency')),
+                    'converted'=>$this->currency->format($transactions->amount, $this->customer->getCustomerCurrencyCode(),$transactions->conversion_value),
+                    'convertion_rate'=>  sprintf($this->language->get('text_convertion_rate'),$this->config->get('config_currency'),$transactions->conversion_value,$this->customer->getCustomerCurrencyCode()),
+                    'date'=>date($this->language->get('date_format_short'), strtotime($transactions->date_added)),
+                    'status'=>$status['name']
+                );
+            }
+        }
         
         $this->template = 'account/transaction_list.tpl';
         $this->children = array(

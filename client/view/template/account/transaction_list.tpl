@@ -4,7 +4,7 @@
     <div class="box open">
         <div class="box-title">
             <div>
-                <i class="icon-transmission"></i> All Transactions
+                <i class="icon-transmission"></i> <?php echo $heading_title?>
             </div>
         </div>
         <div class="box-content tabular-view">
@@ -18,8 +18,12 @@
 <!-- Side content -->
 <div id="sidebar">
     <div class="box open">
+        <div class="box-title">
+            <div>
+                <i class="icon-search2"></i> <?php echo $text_search?>
+            </div>
+        </div>
         <div class="box-content tabular-view">
-            Search Box
         </div>
     </div>
 </div>
