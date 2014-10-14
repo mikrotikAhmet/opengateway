@@ -29,4 +29,6 @@ defined('_ENGINE_REQUEST_START') ||
 define('_ENGINE_REQUEST_START', microtime(true));
 defined('APPLICATION_PATH_COR') ||
 define('APPLICATION_PATH_COR', realpath(dirname(__DIR__)) . '/');
+
+echo 'Hello';
  
