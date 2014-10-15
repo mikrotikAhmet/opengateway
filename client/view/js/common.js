@@ -33,9 +33,13 @@ $(document).ready(function() {
         } else {
             $('#banks').html('');
         }
+
     });
 
-    // JExpand
+    // Date Picker
+    $('.date').datepicker({ dateFormat: 'yy-mm-dd'});
+
+    // Last Transactions
     $("#last-transactions tr:odd").addClass("master");
     $("#last-transactions tr:not(.master)").hide();
     $("#last-transactions tr:first-child").show();
@@ -52,6 +56,25 @@ $(document).ready(function() {
         $(this).next("tr").toggle();
         $(this).find(".expand").toggleClass("icon-minus");
          $(this).toggleClass("selected");
+    });
+
+    // All Transactions
+    $("#all-transactions tr:odd").addClass("master");
+    $("#all-transactions tr:not(.master)").hide();
+    $("#all-transactions tr:first-child").show();
+
+    $("#all-transactions tr.master").click(function() {
+        $(this).next("tr").toggle();
+        $(this).find(".expand").toggleClass("icon-minus");
+        $(this).toggleClass("selected");
+
+
+    });
+
+    $('#last-transactions a').bind('click', function() {
+        $(this).next("tr").toggle();
+        $(this).find(".expand").toggleClass("icon-minus");
+        $(this).toggleClass("selected");
     });
 
     // Add new card

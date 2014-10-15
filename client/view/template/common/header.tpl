@@ -19,10 +19,12 @@
         <link href="view/css/color.css" rel="stylesheet" type="text/css">
         <link href="view/css/icons.css" rel="stylesheet" type="text/css">
         <link href="view/fonts/csscc26.css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
         <?php foreach ($styles as $style) { ?>
         <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
         <?php } ?>
-        <script type="text/javascript" src="view/js/jquery.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
         <?php if (isset($this->session->data['token'])) { ?>
         <script>
             var token = '<?php echo $this->session->data['token']?>';

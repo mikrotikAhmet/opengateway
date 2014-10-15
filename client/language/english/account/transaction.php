@@ -22,3 +22,19 @@ $_['heading_title'] = 'All Transactions';
 
 // Text
 $_['text_search'] = 'Search';
+
+// Column
+$_['column_transaction']                 = 'Transaction #';
+$_['column_type']                 = 'Type';
+$_['column_total']                 = 'Total';
+$_['column_date']                 = 'Date';
+$_['column_status']                 = 'Status';
+
+// Transaction Details
+$_['details_invoice_no'] = 'Invoice # :';
+$_['details_amount'] = 'Amount :';
+$_['details_conversation'] = 'Currency conversation :';
+$_['details_rate'] = 'Convertion rate :';
+$_['details_description'] = 'Description :';
+$_['details_status'] = 'Transaction status :';
+$_['details_action'] = 'Transaction action :';

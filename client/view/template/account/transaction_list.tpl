@@ -9,7 +9,65 @@
         </div>
         <div class="box-content tabular-view">
             <table id="all-transactions" class="details">
-                
+                <thead>
+                <tr>
+                    <th><?php echo $column_transaction?></th>
+                    <th><?php echo $column_type?></th>
+                    <th><?php echo $column_total?></th>
+                    <th><?php echo $column_date?></th>
+                    <th><?php echo $column_status?></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <?php if ($transactions) { ?>
+                <tbody>
+                <?php foreach ($transactions as $transaction) {  ?>
+                <tr>
+                    <td><?php echo $transaction['transaction_id']?></td>
+                    <td><?php echo $transaction['action']?></td>
+                    <td><?php echo $transaction['total']?></td>
+                    <td><?php echo $transaction['date']?></td>
+                    <td><?php echo $transaction['status']?></td>
+                    <td><i class="expand icon-plus"></i></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="transaction-details" style="width: 135%; margin :0 auto;">
+                            <ul id="details">
+                                <li>
+                                    <label class="control-lable"><strong><?php echo $details_invoice_no?></strong></label> <?php echo $transaction['invoice_no']?>
+                                </li>
+                                <li>
+                                    <label class="control-lable"><strong><?php echo $details_amount?></strong></label> <?php echo $transaction['total']?>
+                                </li>
+                                <li>
+                                    <label class="control-lable"><strong><?php echo $details_conversation?></strong></label> <?php echo $transaction['total']?> => <?php echo $transaction['converted']?>
+                                </li>
+                                <li>
+                                    <label class="control-lable"><strong><?php echo $details_rate?></strong></label> <?php echo $transaction['convertion_rate']?>
+                                </li>
+                                <li>
+                                    <label class="control-lable"><strong><?php echo $details_description?></strong></label> <?php echo $transaction['description']?>
+                                </li>
+                                <li>
+                                    <label class="control-lable"><strong><?php echo $details_status?></strong></label> <?php echo $transaction['status']?>
+                                </li><br/>
+                                <li>
+                                    <label class="control-lable"><strong><?php echo $details_action?></strong></label> <button type="button" class="btn"><i class="icon-undo"></i> <?php echo $button_refund?></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <?php } ?>
+                </tbody>
+                <?php } else { ?>
+                <tfoot>
+                <tr>
+                    <td colspan="6"><?php echo $text_no_result?>.</td>
+                </tr>
+                </tfoot>
+                <?php }?>
             </table>
         </div>
     </div>
@@ -24,6 +82,18 @@
             </div>
         </div>
         <div class="box-content tabular-view">
+                <h2>Date range:</h2>
+                <p>
+                    <input type="text" name="fromDate" value="" placeholder="Date from" class="date" style="width: 100px">
+                    <input type="text" name="fromDate" value="" placeholder="Date to" class="date" style="width: 100px">
+                </p>
+                <h2>Transaction Status:</h2>
+                <p>
+                    <input type="radio" name="trx_status"> <strong>Captured</strong>
+                    <input type="radio" name="trx_status"> <strong>Refunded</strong>
+
+                </p>
+                <p><a href="javascript::void()" class="btn" type="button"><i class="icon-search2"></i> Search</a></p>
         </div>
     </div>
 </div>

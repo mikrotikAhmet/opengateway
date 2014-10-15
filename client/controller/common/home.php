@@ -68,6 +68,14 @@ class ControllerCommonHome extends Controller {
         $this->data['column_date'] = $this->language->get('column_date');
         $this->data['column_status'] = $this->language->get('column_status');
 
+        $this->data['details_invoice_no'] = $this->language->get('details_invoice_no');
+        $this->data['details_amount'] = $this->language->get('details_amount');
+        $this->data['details_conversation'] = $this->language->get('details_conversation');
+        $this->data['details_rate'] = $this->language->get('details_rate');
+        $this->data['details_description'] = $this->language->get('details_description');
+        $this->data['details_status'] = $this->language->get('details_status');
+        $this->data['details_action'] = $this->language->get('details_action');
+
         $this->data['button_deposit'] = $this->language->get('button_deposit');
         $this->data['button_withdraw'] = $this->language->get('button_withdraw');
         $this->data['button_send'] = $this->language->get('button_send');

@@ -41,7 +41,6 @@ $_['button_send'] = 'Send money';
 $_['button_add_card'] = 'Add new Card';
 
 
-
 // Tab
 
 // Months

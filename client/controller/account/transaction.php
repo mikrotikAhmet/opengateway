@@ -67,6 +67,25 @@ class ControllerAccountTransaction extends Controller{
 
         $this->data['text_search'] = $this->language->get('text_search');
 
+        $this->data['column_transaction'] = $this->language->get('column_transaction');
+        $this->data['column_type'] = $this->language->get('column_type');
+        $this->data['column_total'] = $this->language->get('column_total');
+        $this->data['column_date'] = $this->language->get('column_date');
+        $this->data['column_status'] = $this->language->get('column_status');
+
+        $this->data['details_invoice_no'] = $this->language->get('details_invoice_no');
+        $this->data['details_amount'] = $this->language->get('details_amount');
+        $this->data['details_conversation'] = $this->language->get('details_conversation');
+        $this->data['details_rate'] = $this->language->get('details_rate');
+        $this->data['details_description'] = $this->language->get('details_description');
+        $this->data['details_status'] = $this->language->get('details_status');
+        $this->data['details_action'] = $this->language->get('details_action');
+
+        $this->data['button_capture'] = $this->language->get('button_capture');
+        $this->data['button_refund'] = $this->language->get('button_refund');
+
+
+
         $params = array();
 
         // Get Customer Transactions

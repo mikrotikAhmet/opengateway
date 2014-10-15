@@ -42,6 +42,16 @@ $_['column_total']                 = 'Total';
 $_['column_date']                 = 'Date';
 $_['column_status']                 = 'Status';
 
+// Transaction Details
+$_['details_invoice_no'] = 'Invoice # :';
+$_['details_amount'] = 'Amount :';
+$_['details_conversation'] = 'Currency conversation :';
+$_['details_rate'] = 'Convertion rate :';
+$_['details_description'] = 'Description :';
+$_['details_status'] = 'Transaction status :';
+$_['details_action'] = 'Transaction action :';
+
+
 // Entry
 
 // Error
