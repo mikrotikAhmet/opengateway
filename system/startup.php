@@ -130,7 +130,8 @@ $classes['helper'] = array(
     'api',
     'utf8',
     'json',
-    'vat'
+    'vat',
+    'csv'
 );
 
 if ((isset($classes)) && is_array($classes)) {

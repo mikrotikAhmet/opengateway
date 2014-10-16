@@ -22,6 +22,9 @@ $_['heading_title'] = 'All Transactions';
 
 // Text
 $_['text_search'] = 'Search';
+$_['text_date_range'] = 'Date range';
+$_['text_export_csv'] = 'Export to CSV';
+$_['text_convertion_rate'] = '1 %s = %s %s';
 
 // Column
 $_['column_transaction']                 = 'Transaction #';

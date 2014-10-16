@@ -37,7 +37,9 @@ $(document).ready(function() {
     });
 
     // Date Picker
-    $('.date').datepicker({ dateFormat: 'yy-mm-dd'});
+    $('.date').datepicker({
+        dateFormat: 'yy-mm-dd'
+    });
 
     // Last Transactions
     $("#last-transactions tr:odd").addClass("master");
@@ -55,7 +57,7 @@ $(document).ready(function() {
     $('#last-transactions a').bind('click', function() {
         $(this).next("tr").toggle();
         $(this).find(".expand").toggleClass("icon-minus");
-         $(this).toggleClass("selected");
+        $(this).toggleClass("selected");
     });
 
     // All Transactions
@@ -152,6 +154,38 @@ $(document).ready(function() {
 
 });
 
+function DateAdd(date, type, amount){
+    var y = date.getFullYear(),
+    m = date.getMonth(),
+    d = date.getDate();
+    if(type === 'y'){
+        y += amount;
+    };
+    if(type === 'm'){
+        m += amount;
+    };
+    if(type === 'd'){
+        d += amount;
+    };
+    return new Date(y, m, d);
+}
+
+function DateRemove(date, type, amount){
+    var y = date.getFullYear(),
+    m = date.getMonth(),
+    d = date.getDate();
+    if(type === 'y'){
+        y -= amount;
+    };
+    if(type === 'm'){
+        m -= amount;
+    };
+    if(type === 'd'){
+        d -= amount;
+    };
+    return new Date(y, m, d);
+}
+
 function addcard(id, title, target) {
 
     $.ajax({
@@ -167,36 +201,36 @@ function addcard(id, title, target) {
             $(id + ' h2').html(title);
             $(id).fadeIn(500);
            
-                $('.addnewcard').bind('click',function(){
-                            var data = $('form[id=\'addcard\']').serialize();            
-                    $.ajax({
-                        url: 'index.php?route=account/deposit/validateCard&token=' + token,
-                        type:'post',
-                        data : data,
-                        dataType : 'json',
-                        beforeSend : function(){
+            $('.addnewcard').bind('click',function(){
+                var data = $('form[id=\'addcard\']').serialize();            
+                $.ajax({
+                    url: 'index.php?route=account/deposit/validateCard&token=' + token,
+                    type:'post',
+                    data : data,
+                    dataType : 'json',
+                    beforeSend : function(){
                             
-                            html ='<div class="wait">';
-                            html +='<i class="icon-spinner7 spin panel-icon"></i>';
-                            html +='</div>';
-                            $('.modal-content').html(html);
-                        },
-                        complete : function(){
-                            $('.wait').remove();
-                        },
-                        success : function(json){
-                            if (json.status == 'OK'){
-                                $('#mask').hide();
-                                $('.modal-container').hide();  
+                        html ='<div class="wait">';
+                        html +='<i class="icon-spinner7 spin panel-icon"></i>';
+                        html +='</div>';
+                        $('.modal-content').html(html);
+                    },
+                    complete : function(){
+                        $('.wait').remove();
+                    },
+                    success : function(json){
+                        if (json.status == 'OK'){
+                            $('#mask').hide();
+                            $('.modal-container').hide();  
 
-                            } else {
-                                $('.modal-content').html(json.status);
-                            }
+                        } else {
+                            $('.modal-content').html(json.status);
                         }
-                    });
-                    
-                    $('[data-dismiss]').trigger('click');
+                    }
                 });
+                    
+                $('[data-dismiss]').trigger('click');
+            });
 
             $('[data-dismiss]').click(function() {
                 $('#mask').hide();

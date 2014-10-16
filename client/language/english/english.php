@@ -29,6 +29,7 @@ $_['thousand_point']                = ',';
 // Text
 $_['text_no_result'] = 'No results could found!';
 $_['text_select'] = '--Please select--';
+$_['text_pagination']               = 'Showing {start} to {end} of {total} ({pages} Pages)';
 
 // Button
 $_['button_back'] = 'Back';
@@ -39,6 +40,7 @@ $_['button_deposit'] = 'Deposit';
 $_['button_withdraw'] = 'Withdraw';
 $_['button_send'] = 'Send money';
 $_['button_add_card'] = 'Add new Card';
+$_['button_search'] = 'Search';
 
 
 // Tab
@@ -56,6 +58,12 @@ $_['month_september'] = 'September';
 $_['month_october'] = 'October';
 $_['month_november'] = 'November';
 $_['month_december'] = 'December';
+
+// Interval
+$_['interval_m_30'] = '30 days';
+$_['interval_m_60'] = '60 days';
+$_['interval_m_90'] = '90 days';
+$_['interval_m_180'] = '180 days';
 
 // Notification buttons
 $_['notification_remove'] = '<a href="#" title="Remove" class="remove-btn">Remove</a>';

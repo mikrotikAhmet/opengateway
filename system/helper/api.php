@@ -31,11 +31,21 @@ class Api {
         
     }
 
-    public function apiGet($api_func) {
+    public function apiGet($api_func, $params = array()) {
 
+        $getData = '';
+        
+        if ($params){
+            foreach ($params as $k => $v) {
+                $getData .= $k . '=' . $v . '&';
+            }
+        }
+        
+        rtrim($getData, '&');
+        
         $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL, $this->end_point . $api_func . "&merchant_id=" . $this->merchant . "&api_key=" . $this->api_key . "&customer_id=" . $this->getCustomerId());
+        curl_setopt($ch, CURLOPT_URL, $this->end_point . $api_func . "&merchant_id=" . $this->merchant . "&api_key=" . $this->api_key . "&customer_id=" . $this->getCustomerId().($getData ? '&'.$getData : null));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
         curl_setopt($ch, CURLOPT_MAXREDIRS, 2); //only 2 redirects

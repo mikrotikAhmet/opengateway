@@ -997,3 +997,35 @@ ul#details li{
     margin-right: 10px;
     padding: 10px 0;
 }
+
+.pagination {
+	border-top: 1px solid #DDDDDD;
+	display: inline-block;
+	width: 100%;
+	padding: 10px;
+}
+.pagination .links {
+	float: left;
+	padding-top: 6px;
+}
+.pagination .links a {
+	border: 1px solid #DDDDDD;
+	padding: 4px 10px;
+	font-size: 12px;
+	text-decoration: none;
+	color: #A3A3A3;
+}
+.pagination .links b {
+	border: 1px solid #269BC6;
+	padding: 4px 10px;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	color: #269BC6;
+	background: #FFFFFF;
+}
+.pagination .results {
+	float: right;
+	padding: 10px;
+	font-size: 12px;
+}

@@ -4,47 +4,23 @@ if (!defined('DIR_APPLICATION'))
     exit('No direct script access allowed');
 
 /**
- * OGCA
  *
  * An open source application development framework for PHP 5.1.6 or newer
  *
  * @package		Open Gateway Core Application
- * @author		Semite LLC Team
- * @copyright	Copyright (c) 2013 - 10/3/14, Semite LLC..
+ * @author		Semite LLC. Dev Team
+ * @copyright	Copyright (c) 2013 - 10/3/14, Semite LLC.
  * @license		http://www.semiteproject.com/user_guide/license.html
  * @link		http://www.semiteproject.com
- * @since		Version 1.0
- * @filesource
+ * @version		Version 1.0.1
  */
 // ------------------------------------------------------------------------
 
 /**
- * @package     Semite LLC
- * @version     $Id: pagination.php Oct 16, 2014 ahmet
- */
-
-/**
  * OGCA - Open Gateway Core Application
- * Description of pagination  Class
- *
- * @author ahmet
- */
-/*
- * Copyright (C) 2014 ahmet
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
+ * Description of pagination.php Class
+**/
+
 
 class Pagination {
 
@@ -58,7 +34,7 @@ class Pagination {
     public $text_last = '&gt;|';
     public $text_next = '&gt;';
     public $text_prev = '&lt;';
-    public $style_links = 'links';
+    public $style_links = 'pagination';
     public $style_results = 'results';
 
     public function render() {
@@ -82,7 +58,7 @@ class Pagination {
         $output = '';
 
         if ($page > 1) {
-            $output .= ' <a href="' . str_replace('{page}', 1, $this->url) . '">' . $this->text_first . '</a> <a href="' . str_replace('{page}', $page - 1, $this->url) . '">' . $this->text_prev . '</a> ';
+            $output .= ' <li><a href="' . str_replace('{page}', 1, $this->url) . '">' . $this->text_first . '</a></li><li> <a href="' . str_replace('{page}', $page - 1, $this->url) . '">' . $this->text_prev . '</a></li> ';
         }
 
         if ($num_pages > 1) {
@@ -110,9 +86,9 @@ class Pagination {
 
             for ($i = $start; $i <= $end; $i++) {
                 if ($page == $i) {
-                    $output .= ' <b>' . $i . '</b> ';
+                    $output .= ' <li class="active"><a>' . $i . '</a></li> ';
                 } else {
-                    $output .= ' <a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a> ';
+                    $output .= ' <li><a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li> ';
                 }
             }
 
@@ -122,7 +98,7 @@ class Pagination {
         }
 
         if ($page < $num_pages) {
-            $output .= ' <a href="' . str_replace('{page}', $page + 1, $this->url) . '">' . $this->text_next . '</a> <a href="' . str_replace('{page}', $num_pages, $this->url) . '">' . $this->text_last . '</a> ';
+            $output .= ' <li><a href="' . str_replace('{page}', $page + 1, $this->url) . '">' . $this->text_next . '</a></li> <li> <a href="' . str_replace('{page}', $num_pages, $this->url) . '">' . $this->text_last . '</a></li> ';
         }
 
         $find = array(
@@ -139,8 +115,7 @@ class Pagination {
             $num_pages
         );
 
-        return ($output ? '<div class="' . $this->style_links . '">' . $output . '</div>' : '') . '<div class="' . $this->style_results . '">' . str_replace($find, $replace, $this->text) . '</div>';
+        return ($output ? '<ul class="' . $this->style_links . '">' . $output . '</ul>' : '') . '<div class="' . $this->style_results . '">' . str_replace($find, $replace, $this->text) . '</div>';
     }
 
 }
-

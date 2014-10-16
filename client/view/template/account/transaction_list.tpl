@@ -69,6 +69,7 @@
                 </tfoot>
                 <?php }?>
             </table>
+            <div class="pagination"><?php echo $pagination; ?></div>
         </div>
     </div>
 </div>
@@ -82,23 +83,60 @@
             </div>
         </div>
         <div class="box-content tabular-view">
-                <h2>Date range:</h2>
+                <h2><?php echo $text_date_range?></h2>
                 <p>
-                    <input type="text" name="fromDate" value="" placeholder="Date from" class="date" style="width: 100px">
-                    <input type="text" name="fromDate" value="" placeholder="Date to" class="date" style="width: 100px">
+                    <select name="date_interval" style="width: 235px">
+                        <option value="30"><?php echo $interval_m_30?></option>
+                        <option value="60"><?php echo $interval_m_60?></option>
+                        <option value="90"><?php echo $interval_m_90?></option>
+                        <option value="180"><?php echo $interval_m_180?></option>
+                    </select>
+                    <input type="text" name="filter_date_start" value="<?php echo $filter_date_start?>" placeholder="Date from" class="date" style="width: 100px">
+                    <input type="text" name="filter_date_end" value="<?php echo $filter_date_end?>" placeholder="Date to" class="date" style="width: 100px">
                 </p>
-                <h2>Transaction Status:</h2>
-                <p>
-                    <input type="radio" name="trx_status"> <strong>Captured</strong>
-                    <input type="radio" name="trx_status"> <strong>Refunded</strong>
-
-                </p>
-                <p><a href="javascript::void()" class="btn" type="button"><i class="icon-search2"></i> Search</a></p>
+                <p><a onclick="filter();" class="btn" type="button"><i class="icon-search2"></i> <?php echo $button_search?></a></p>
+                <p><a href="<?php echo $export?>"> <?php echo $text_export_csv?></a></p>
         </div>
     </div>
 </div>
 <!-- /side content-->
+<script type="text/javascript"><!--
+function filter() {
+    url = 'index.php?route=account/transaction&token=<?php echo $token; ?>';
+
+    var filter_date_start = $('input[name=\'filter_date_start\']').val();
+
+    if (filter_date_start) {
+            url += '&filter_date_start=' + encodeURIComponent(filter_date_start);
+    }
+
+    var filter_date_end = $('input[name=\'filter_date_end\']').val();
+
+    if (filter_date_end) {
+            url += '&filter_date_end=' + encodeURIComponent(filter_date_end);
+    }
+    
+    var date_interval = $('select[name=\'date_interval\']').val();
+    
+    url +='&date_interval='+ encodeURIComponent(date_interval);
+
+    location = url;
+}
+
+    $('select[name=\'date_interval\']').bind('change',function(){
+        var dateEnd = $('input[name=\'filter_date_end\']').val();
+        
+        var interval = DateRemove(new Date(dateEnd),'d',this.value)
+        
+        $('input[name=\'filter_date_start\']').val(interval.toISOString().substring(0, 10));
+        
+    });
+    
+    $('select[name=\'date_interval\']').find('option[value="<?php echo $date_interval?>"]').attr("selected",true);
+//--></script>
 <script><!-- 
-    $("#all-transactions").jExpand();
+    <?php if ($transactions) { ?>
+        $("#all-transactions").jExpand();
+    <?php }?>
     //--></script>
 <?php echo $footer?>

@@ -94,6 +94,8 @@
 </div>
 <!-- /side content-->
 <script><!-- 
-    $("#last-transactions").jExpand();
+    <?php if ($transactions) { ?>
+        $("#last-transactions").jExpand();
+    <?php } ?>
     //--></script>
 <?php echo $footer?>
