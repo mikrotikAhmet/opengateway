@@ -163,6 +163,7 @@ class ControllerAccountTransaction extends Controller {
 
                 $this->data['transactions'][] = array(
                     'transaction_id' => $transactions->transaction_id,
+					'transaction_order_id' => $transactions->transaction_order_id,
                     'action' => $transactions->action_type,
                     'description' => $transactions->description,
                     'invoice_no' => $this->config->get('config_invoice_prefix') . $transactions->invoice_no,
@@ -170,7 +171,8 @@ class ControllerAccountTransaction extends Controller {
                     'converted' => $this->currency->format($transactions->amount, $this->customer->getCustomerCurrencyCode(), $transactions->conversion_value),
                     'convertion_rate' => sprintf($this->language->get('text_convertion_rate'), $this->config->get('config_currency'), $transactions->conversion_value, $this->customer->getCustomerCurrencyCode()),
                     'date' => date($this->language->get('date_format_short'), strtotime($transactions->date_added)),
-                    'status' => $status['name']
+                    'status' => $status['name'],
+					'transaction_status' => $transactions->status
                 );
             }
         }
@@ -213,6 +215,26 @@ class ControllerAccountTransaction extends Controller {
 
         $this->response->setOutput($this->render());
     }
+
+	public function refund(){
+
+		$json = array();
+		$data = array();
+
+		$params = $this->request->get;
+
+		$data = array(
+			'transaction'=>$this->request->post['transaction'],
+			'transaction_status'=>$this->request->post['status']
+		);
+
+		// Refund Transactions
+		$api_response = $this->_api->apiGet('v1/payment/processRefund',$data);
+
+		$json = json_decode($api_response);
+
+		$this->response->setOutput(json_encode($json));
+	}
     
     public function export(){
         $export = new Csv();

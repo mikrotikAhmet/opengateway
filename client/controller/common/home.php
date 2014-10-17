@@ -237,6 +237,7 @@ class ControllerCommonHome extends Controller {
                 
                 $this->data['transactions'][] = array(
                     'transaction_id' => $transactions->transaction_id,
+					'transaction_order_id' => $transactions->transaction_order_id,
                     'action'=>$transactions->action_type,
                     'description'=>$transactions->description,
                     'invoice_no'=>$this->config->get('config_invoice_prefix').$transactions->invoice_no,
@@ -244,7 +245,8 @@ class ControllerCommonHome extends Controller {
                     'converted'=>$this->currency->format($transactions->amount, $this->customer->getCustomerCurrencyCode(),$transactions->conversion_value),
                     'convertion_rate'=>  sprintf($this->language->get('text_convertion_rate'),$this->config->get('config_currency'),$transactions->conversion_value,$this->customer->getCustomerCurrencyCode()),
                     'date'=>date($this->language->get('date_format_short'), strtotime($transactions->date_added)),
-                    'status'=>$status['name']
+                    'status'=>$status['name'],
+					'transaction_status' => $transactions->status
                 );
             }
         }

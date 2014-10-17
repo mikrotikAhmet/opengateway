@@ -42,3 +42,8 @@ function showMask() {
     });
     $('#spinner').fadeTo(800, 0.95);
 }
+
+function hideMask() {
+	$('#mask').hide();
+	$('.modal-container').hide();
+}

@@ -27,7 +27,7 @@
                         <td><?php echo $transaction['action']?></td>
                         <td><?php echo $transaction['total']?></td>
                         <td><?php echo $transaction['date']?></td>
-                        <td><?php echo $transaction['status']?></td>
+                        <td><span class="transaction_status<?php echo $transaction['transaction_order_id']?>"><?php echo $transaction['status']?></span></td>
                         <td><i class="expand icon-plus"></i></td>
                     </tr>
                     <tr>
@@ -50,11 +50,13 @@
                                         <label class="control-lable"><strong><?php echo $details_description?></strong></label> <?php echo $transaction['description']?>
                                     </li>
                                     <li>
-                                        <label class="control-lable"><strong><?php echo $details_status?></strong></label> <?php echo $transaction['status']?>
+                                        <label class="control-lable"><strong><?php echo $details_status?></strong></label> <span class="transaction_status<?php echo $transaction['transaction_order_id']?>"><?php echo $transaction['status']?></span>
                                     </li><br/>
-                                    <li>
-                                        <label class="control-lable"><strong><?php echo $details_action?></strong></label> <button type="button" class="btn"><i class="icon-undo"></i> <?php echo $button_refund?></button>
+                                    <?php if ($this->config->get('config_complete_status_id') == $transaction['transaction_status']) { ?>
+                                    <li class="transaction_action<?php echo $transaction['transaction_order_id']?>">
+                                        <label class="control-lable"><strong><?php echo $details_action?></strong></label> <button type="button" class="btn" onclick="refund('<?php echo $transaction['transaction_order_id']?>','<?php echo $this->config->get('config_transaction_refund')?>')"><i class="icon-undo"></i> <?php echo $button_refund?></button>
                                     </li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </td>

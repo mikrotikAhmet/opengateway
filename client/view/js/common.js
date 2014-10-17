@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+	$('ul#mainnav li a').bind('click',function(){
+		showMask();
+	});
+
     $(".box .box-toggle").bind('click', function() {
         boxToggle(this);
         return false;
@@ -109,6 +114,8 @@ function messageRemove(that) {
 }
 
 function getURLVar(key) {
+
+
     var value = [];
 
     var query = String(document.location).split('?');
@@ -130,6 +137,9 @@ function getURLVar(key) {
             return '';
         }
     }
+
+	$('#mask').hide();
+	$('.modal-container').hide();
 }
 
 $(document).ready(function() {
@@ -148,6 +158,7 @@ $(document).ready(function() {
         }
 
         $('a[href*=\'' + url + '\']').parents('li[id]').addClass('active');
+
     }
 
 

@@ -32,6 +32,7 @@
         <?php } ?>
         <script type="text/javascript" src="view/js/modal.js"></script>
         <script type="text/javascript" src="view/js/common.js"></script>
+        <script type="text/javascript" src="view/js/opengateway.js"></script>
         <?php foreach ($scripts as $script) { ?>
         <script type="text/javascript" src="<?php echo $script; ?>"></script>
         <?php } ?>
