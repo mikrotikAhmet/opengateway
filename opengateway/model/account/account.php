@@ -85,13 +85,12 @@ class ModelAccountAccount extends Model {
 		api_id = '" . $this->db->escape($data['api_id']) . "',
 		api_secret = '" . $this->db->escape($data['secret_key']) . "',
 		status = '" . (int)$data['status'] . "',
-		livemode = '" . (int)$data['livemode'] . "'
+		livemode = '" . (int)$data['livemode'] . "',
 		merchantID = '" . $this->db->escape($data['merchantID']) . "',
 		merchantGUID = '" . $this->db->escape($data['merchantGUID']) . "',
 		merchantID_amex = '" . $this->db->escape($data['merchantID_amex']) . "',
 		merchantGUID_amex = '" . $this->db->escape($data['merchantGUID_amex']) . "',
-		dynamicDescriptor = '" . $this->db->escape($data['descriptor']) . "'
-		 WHERE account_id = '" . (int)$account_id . "'");
+		dynamicDescriptor = '" . $this->db->escape($data['descriptor']) . "' WHERE account_id = '" . (int)$account_id . "'");
 
 		if ($data['password']) {
 			$this->db->query("UPDATE " . DB_PREFIX . "account SET salt = '" . $this->db->escape($salt = substr(md5(uniqid(rand(), true)), 0, 9)) . "', password = '" . $this->db->escape(sha1($salt . sha1($salt . sha1($data['password'])))) . "' WHERE account_id = '" . (int)$account_id . "'");
