@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2015-01-17 12:41:16 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/portal/controller/report/transaction.php on line 350
 2015-01-17 12:41:21 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/portal/controller/report/transaction.php on line 350
 2015-01-17 12:41:34 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/portal/controller/report/transaction.php on line 350
@@ -169,3 +170,9 @@
 		merchantGUID_amex = '',
 		dynamicDescriptor = 'GATEWAYSERVICESINC'
 		 WHERE account_id = '1002' in /var/www/html/opengateway.com/system/library/db/mysqli.php on line 40
+=======
+>>>>>>> ff8e9e7d63adf0442515b989f5077e1a957446b7
+2015-01-17 18:56:20 - PHP Notice:  Undefined variable: transactions in /var/www/html/opengateway.com/portal/controller/report/transaction.php on line 240
+2015-01-17 18:56:26 - PHP Notice:  Undefined variable: transactions in /var/www/html/opengateway.com/portal/controller/report/transaction.php on line 240
+2015-01-17 18:57:23 - PHP Notice:  Undefined variable: transactions in /var/www/html/opengateway.com/portal/controller/report/transaction.php on line 240
+2015-01-17 18:57:26 - PHP Notice:  Undefined variable: transactions in /var/www/html/opengateway.com/portal/controller/report/transaction.php on line 240

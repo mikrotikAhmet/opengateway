@@ -109,6 +109,8 @@ class ControllerAccountAccount extends Controller {
 		$this->load->model('account/account');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+
+
 			$this->model_account_account->editAccount($this->request->get['account_id'], $this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
