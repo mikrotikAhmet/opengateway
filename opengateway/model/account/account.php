@@ -57,6 +57,7 @@ class ModelAccountAccount extends Model {
 		merchantGUID = '" . $this->db->escape($data['merchantGUID']) . "',
 		merchantID_amex = '" . $this->db->escape($data['merchantID_amex']) . "',
 		merchantGUID_amex = '" . $this->db->escape($data['merchantGUID_amex']) . "',
+		dynamicDescriptor = '" . $this->db->escape($data['descriptor']) . "',
 		date_added = NOW()");
 
 		$account_id = $this->db->getLastId();
@@ -88,7 +89,8 @@ class ModelAccountAccount extends Model {
 		merchantID = '" . $this->db->escape($data['merchantID']) . "',
 		merchantGUID = '" . $this->db->escape($data['merchantGUID']) . "',
 		merchantID_amex = '" . $this->db->escape($data['merchantID_amex']) . "',
-		merchantGUID_amex = '" . $this->db->escape($data['merchantGUID_amex']) . "'
+		merchantGUID_amex = '" . $this->db->escape($data['merchantGUID_amex']) . "',
+		dynamicDescriptor = '" . $this->db->escape($data['descriptor']) . "'
 		 WHERE account_id = '" . (int)$account_id . "'");
 
 		if ($data['password']) {

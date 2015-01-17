@@ -664,6 +664,7 @@ class ControllerAccountAccount extends Controller {
         $data['entry_processor_guid'] = $this->language->get('entry_processor_guid');
         $data['entry_processor_id_amex'] = $this->language->get('entry_processor_id_amex');
         $data['entry_processor_guid_amex'] = $this->language->get('entry_processor_guid_amex');
+		$data['entry_descriptor'] = $this->language->get('entry_descriptor');
 
 		$data['help_live'] = $this->language->get('help_live');
 
@@ -1027,6 +1028,16 @@ class ControllerAccountAccount extends Controller {
         } else {
             $data['processor_guid_amex'] = '';
         }
+
+
+		if (isset($this->request->post['descriptor'])) {
+			$data['descriptor'] = $this->request->post['descriptor'];
+		} elseif (!empty($account_info)) {
+			$data['descriptor'] = $account_info['dynamicDescriptor'];
+		} else {
+			$data['descriptor'] = '';
+		}
+
 
 		if (isset($this->request->post['api_id'])) {
 			$data['api_id'] = $this->request->post['api_id'];
