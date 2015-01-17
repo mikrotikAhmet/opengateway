@@ -72,6 +72,7 @@ $_['entry_processor_id']      = 'Standard Processor ID';
 $_['entry_processor_guid']      = 'Standard Processor GUID';
 $_['entry_processor_id_amex']      = 'AMEX Processor ID';
 $_['entry_processor_guid_amex']      = 'AMEX Processor GUID';
+$_['entry_descriptor']      = 'DynamicDescriptor';
 
 // Help
 $_['help_live']             = 'Set to false to avoid this account to perform real transactions';

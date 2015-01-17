@@ -15,3 +15,33 @@
 2015-01-17 16:30:05 - PHP Notice:  Undefined property: stdClass::$total_transactions in /var/www/html/semite.com/portal/controller/report/transaction.php on line 254
 2015-01-17 16:30:05 - PHP Notice:  Undefined property: stdClass::$total_transactions in /var/www/html/semite.com/portal/controller/report/transaction.php on line 254
 2015-01-17 16:30:05 - PHP Notice:  Undefined property: stdClass::$total_transactions in /var/www/html/semite.com/portal/controller/report/transaction.php on line 254
+2015-01-17 17:11:58 - PHP Notice:  Undefined variable: entry_descriptor in /var/www/html/semite.com/opengateway/view/template/account/account_form.tpl on line 281
+2015-01-17 17:11:58 - PHP Notice:  Undefined variable: descriptor in /var/www/html/semite.com/opengateway/view/template/account/account_form.tpl on line 283
+2015-01-17 17:11:58 - PHP Notice:  Undefined variable: entry_descriptor in /var/www/html/semite.com/opengateway/view/template/account/account_form.tpl on line 283
+2015-01-17 17:14:23 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'merchantID = '1002785',
+		merchantGUID = 'A8693AA8-EEB0-43B1-8043-FF1602093C23',' at line 21<br />Error No: 1064<br />UPDATE engine4_account SET
+		account_group_id = '5',
+		username = 'demo',
+		firstname = 'Ahmet',
+		lastname = 'GOUDENOGLU',
+		email = 'ahmet.gudenoglu@semitepayment.com',
+		telephone = '+381656728972',
+		country_id = '243',
+		currency_code = 'EUR',
+		language_code = 'en',
+		address_1 = 'Kaludjerica Karadjordjeva 45',
+		address_2 = '',
+		city = 'Grocka',
+		zone_id = '3994',
+		postal_code = '11130',
+		gmt_offset = 'Europe/Belgrade',
+		api_id = '61C11B55AD',
+		api_secret = '1BCE09D1-1F9D-306D-AAE8-D546472C6FC0',
+		status = '1',
+		livemode = '0'
+		merchantID = '1002785',
+		merchantGUID = 'A8693AA8-EEB0-43B1-8043-FF1602093C23',
+		merchantID_amex = '1002791',
+		merchantGUID_amex = '8423C789-C61E-48C2-8F53-CD8CA652AC0F',
+		dynamicDescriptor = 'SEMITEPAYMENT'
+		 WHERE account_id = '1001' in /var/www/html/semite.com/system/library/db/mysqli.php on line 40

@@ -278,6 +278,12 @@
                                 <p><i class="fa fa-exclamation-circle"></i> <?php echo $warning_api_access?></p>
                             </div>
                             <div class="form-group">
+                                <label class="col-sm-2 control-label" for="input-descriptor"><?php echo $entry_descriptor; ?></label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="descriptor" value="<?php echo $descriptor; ?>" placeholder="<?php echo $entry_descriptor; ?>" id="input-descriptor" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="col-sm-2 control-label" for="input-api-id"><?php echo $entry_api_id; ?></label>
                                 <div class="col-sm-10">
                                     <input type="text" name="api_id" value="<?php echo $api_id; ?>" placeholder="<?php echo $entry_api_id; ?>" id="input-api-id" class="form-control" />
