@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f676227-d180-40e2-85cc-9f10e2445cfa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opengateway/controller/account/account.php" afterPath="$PROJECT_DIR$/opengateway/controller/account/account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opengateway/model/account/account.php" afterPath="$PROJECT_DIR$/opengateway/model/account/account.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
     </list>
     <ignored path="semite.com.iws" />
@@ -29,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="account.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/opengateway/controller/account/account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34210527" vertical-offset="1485" max-vertical-offset="22275">
-              <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
+            <state vertical-scroll-proportion="-8.125" vertical-offset="1485" max-vertical-offset="22275">
+              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,7 +41,7 @@
       <file leaf-file-name="error.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/logs/error.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4281" max-vertical-offset="5460">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -59,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="account.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/opengateway/model/account/account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.625" vertical-offset="930" max-vertical-offset="6045">
-              <caret line="87" column="52" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.2631579" vertical-offset="930" max-vertical-offset="6045">
+              <caret line="72" column="66" selection-start-line="72" selection-start-column="66" selection-end-line="72" selection-end-column="66" />
               <folding>
                 <marker date="1421515784382" expanded="true" signature="741:2474" placeholder="INSERT INTO ..." />
                 <marker date="1421515784382" expanded="true" signature="4753:4835" placeholder="DELETE FROM ..." />
@@ -148,7 +147,6 @@
         <option value="$PROJECT_DIR$/portal/controller/common/dashboard.php" />
         <option value="$PROJECT_DIR$/portal/view/javascript/app.js" />
         <option value="$PROJECT_DIR$/portal/model/account/account.php" />
-        <option value="$PROJECT_DIR$/system/logs/error.log" />
         <option value="$PROJECT_DIR$/system/library/account.php" />
         <option value="$PROJECT_DIR$/portal/view/template/report/transaction_detail.tpl" />
         <option value="$PROJECT_DIR$/opengateway/config.php" />
@@ -166,6 +164,7 @@
         <option value="$PROJECT_DIR$/opengateway/language/english/account/account.php" />
         <option value="$PROJECT_DIR$/opengateway/model/account/account.php" />
         <option value="$PROJECT_DIR$/opengateway/controller/account/account.php" />
+        <option value="$PROJECT_DIR$/system/logs/error.log" />
       </list>
     </option>
   </component>
@@ -337,7 +336,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -817,14 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opengateway/language/english/account/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.75" vertical-offset="585" max-vertical-offset="1530">
-          <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/logs/error.log">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
@@ -833,10 +824,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/opengateway/controller/account/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="1485" max-vertical-offset="22275">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opengateway/language/english/account/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.75" vertical-offset="585" max-vertical-offset="1530">
+          <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/opengateway/model/account/account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625" vertical-offset="930" max-vertical-offset="6045">
-          <caret line="87" column="52" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.2631579" vertical-offset="930" max-vertical-offset="6045">
+          <caret line="72" column="66" selection-start-line="72" selection-start-column="66" selection-end-line="72" selection-end-column="66" />
           <folding>
             <marker date="1421515784382" expanded="true" signature="741:2474" placeholder="INSERT INTO ..." />
             <marker date="1421515784382" expanded="true" signature="4753:4835" placeholder="DELETE FROM ..." />
@@ -861,14 +868,6 @@
             <marker date="1421515784382" expanded="true" signature="14785:14876" placeholder="DELETE FROM ..." />
             <marker date="1421515784382" expanded="true" signature="14956:15065" placeholder="SELECT COUNT..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opengateway/controller/account/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34210527" vertical-offset="1485" max-vertical-offset="22275">
-          <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
