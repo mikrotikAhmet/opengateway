@@ -35,7 +35,7 @@ class ControllerApiCommon extends Controller {
 
 		sleep(1);
 
-		$url = "http://api.semite.com/v1/gateway/Refund";
+		$url = "http://".API_BASE."/v1/gateway/Refund";
 
 		$post_string = '<?xml version="1.0" encoding="UTF-8"?>
 <request>
@@ -76,7 +76,7 @@ class ControllerApiCommon extends Controller {
         $params = $this->request->post;
 
 
-        $url = "http://api.semite.com/v1/gateway/Capture";
+        $url = "http://".API_BASE."/v1/gateway/Capture";
 
         $post_string = '<?xml version="1.0" encoding="UTF-8"?>
 <request>
@@ -118,7 +118,7 @@ class ControllerApiCommon extends Controller {
 
         sleep(1);
 
-        $url = "http://api.semite.com/v1/gateway/Void";
+        $url = "http://".API_BASE."/v1/gateway/Void";
 
         $post_string = '<?xml version="1.0" encoding="UTF-8"?>
 <request>
