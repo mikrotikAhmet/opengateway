@@ -28,7 +28,7 @@ class ControllerAccountAccount extends Controller {
 
     public function addCard(){
 
-        $url = "http://api.semite.com/v1/account/addCard";
+        $url = "http://".API_BASE."/v1/account/addCard";
 
         // XML Request
 
@@ -84,7 +84,7 @@ class ControllerAccountAccount extends Controller {
 
 		$amount = mt_rand (1*10, 10*10) / 10;
 
-		$url = "http://api.semite.com/v1/gateway/Verification";
+		$url = "http://".API_BASE."/v1/gateway/Verification";
 
 		// XML Request
 
@@ -159,7 +159,7 @@ class ControllerAccountAccount extends Controller {
 
 			$transaction_info = $this->model_transaction_transaction->getTransaction($this->account->getId(),$get_trx_id[1]);
 
-			$url = "http://api.semite.com/v1/gateway/Capture";
+			$url = "http://".API_BASE."/v1/gateway/Capture";
 
 			// XML Request
 
@@ -233,7 +233,7 @@ class ControllerAccountAccount extends Controller {
 
 		} else {
 
-			$url = "http://api.semite.com/v1/gateway/Send";
+			$url = "http://".API_BASE."/v1/gateway/Send";
 
 			// XML Request
 
