@@ -553,11 +553,20 @@ class ControllerV1Gateway extends Controller {
 
                 $this->model_account_activity->addActivity(TRX_CHARGE, $activityLog);
 
-
-
-
-				unset($this->params['transactionLog']);
-                $this->params['transaction_id'] = $transaction_id;
+	            $this->params = array(
+		            'transaction_id'=>$transaction_id,
+		            'enrollment_id'=>0,
+		            'transaction_state'=>$charge->getResultState(),
+		            'transaction_code'=>$charge->getResultCode(),
+		            'transaction_message'=>$charge->getResultMessage(),
+		            'transaction_guid'=>$charge->getResultTransactionGuid(),
+		            'transaction_date'=>$charge->getResultTransactionDateTime(),
+		            'tracking_code'=>$charge->getResultTrackingMemberCode(),
+		            'issuer_url'=>null,
+		            'authentication_request'=>null,
+		            'transaction_type'=>TRX_NORMAL,
+		            'cdc_data'=>serialize($charge->getResultCdcData())
+	            );
                 $this->_api->processApi($this->params, 2000);
             }
             catch (Payvision_Exception $e)
@@ -705,7 +714,7 @@ class ControllerV1Gateway extends Controller {
 
                 $card_info = $this->_validateCard->GetCardInfo();
 
-                $this->params['transaction'] = array(
+                $transaction = array(
                     'account_id'=>$account_info['account_id'],
                     'customer_id'=>$customer_id,
                     'fingerprint'=>$this->encryption->encrypt($params['credit_card']['card_num']),
@@ -742,9 +751,9 @@ class ControllerV1Gateway extends Controller {
                 // Add transaction
                 $this->load->model('transaction/transaction');
 
-                $transaction_id = $this->model_transaction_transaction->addTransaction($account_info['account_id'], $this->params['transaction']);
+                $transaction_id = $this->model_transaction_transaction->addTransaction($account_info['account_id'], $transaction);
 
-                $this->params['transactionLog'] = array(
+                $transactionLog = array(
                     'reference'=>$transaction_id,
                     'enrollment_id'=>0,
                     'transaction_state'=>$authorize->getResultState(),
@@ -760,11 +769,11 @@ class ControllerV1Gateway extends Controller {
                     'cdc_data'=>serialize($authorize->getResultCdcData())
                 );
 
-                $this->model_transaction_transaction->addTransactionLog($this->params['transactionLog'],TRX_AUTHORIZE);
+                $this->model_transaction_transaction->addTransactionLog($transactionLog,TRX_AUTHORIZE);
 
 
 
-                $this->params['activityLog'] = array(
+                $activityLog = array(
                     'account_id'=>$account_info['account_id'],
                     'key'=>TRX_AUTHORIZE,
                     'data'=>array(
@@ -781,13 +790,24 @@ class ControllerV1Gateway extends Controller {
                 // Add to activity log
                 $this->load->model('account/activity');
 
-                $this->model_account_activity->addActivity(TRX_AUTHORIZE, $this->params['activityLog']);
+                $this->model_account_activity->addActivity(TRX_AUTHORIZE, $activityLog);
 
+	            $this->params = array(
+		            'transaction_id'=> $transaction_id,
+		            'reference'=>$authorize->getResultTransactionId(),
+		            'enrollment_id'=>0,
+		            'transaction_state'=>$authorize->getResultState(),
+		            'transaction_code'=>$authorize->getResultCode(),
+		            'transaction_message'=>$authorize->getResultMessage(),
+		            'transaction_guid'=>$authorize->getResultTransactionGuid(),
+		            'transaction_date'=>$authorize->getResultTransactionDateTime(),
+		            'tracking_code'=>$authorize->getResultTrackingMemberCode(),
+		            'issuer_url'=>null,
+		            'authentication_request'=>null,
+		            'transaction_type'=>TRX_NORMAL,
+		            'cdc_data'=>serialize($authorize->getResultCdcData())
+	            );
 
-
-
-
-                $this->params['transaction_id'] = $transaction_id;
                 $this->_api->processApi($this->params, 2000);
             }
             catch (Payvision_Exception $e)
@@ -942,7 +962,7 @@ class ControllerV1Gateway extends Controller {
 
 				$card_info = $this->_validateCard->GetCardInfo();
 
-				$this->params['transaction'] = array(
+				$transaction = array(
 					'account_id'=>$account_info['account_id'],
 					'customer_id'=>$customer_id,
 					'fingerprint'=>$this->encryption->encrypt($params['credit_card']['card_num']),
@@ -979,9 +999,9 @@ class ControllerV1Gateway extends Controller {
 				// Add transaction
 				$this->load->model('transaction/transaction');
 
-				$transaction_id = $this->model_transaction_transaction->addTransaction($account_info['account_id'], $this->params['transaction']);
+				$transaction_id = $this->model_transaction_transaction->addTransaction($account_info['account_id'],$transaction);
 
-				$this->params['transactionLog'] = array(
+				$transactionLog = array(
 					'reference'=>$transaction_id,
 					'enrollment_id'=>0,
 					'transaction_state'=>$verification->getResultState(),
@@ -997,11 +1017,11 @@ class ControllerV1Gateway extends Controller {
 					'cdc_data'=>serialize($verification->getResultCdcData())
 				);
 
-				$this->model_transaction_transaction->addTransactionLog($this->params['transactionLog'],TRX_VERIFY);
+				$this->model_transaction_transaction->addTransactionLog($transactionLog,TRX_VERIFY);
 
 
 
-				$this->params['activityLog'] = array(
+				$activityLog = array(
 					'account_id'=>$account_info['account_id'],
 					'key'=>TRX_VERIFY,
 					'data'=>array(
@@ -1018,7 +1038,7 @@ class ControllerV1Gateway extends Controller {
 				// Add to activity log
 				$this->load->model('account/activity');
 
-				$this->model_account_activity->addActivity(TRX_VERIFY, $this->params['activityLog']);
+				$this->model_account_activity->addActivity(TRX_VERIFY, $activityLog);
 
 //				$this->load->model('account/card');
 //
@@ -1074,7 +1094,22 @@ class ControllerV1Gateway extends Controller {
 
 
 
-				$this->params['transaction_id'] = $transaction_id;
+				$this->params = array(
+					'transaction_id'=> $transaction_id,
+					'reference'=>$verification->getResultTransactionId(),
+					'enrollment_id'=>0,
+					'transaction_state'=>$verification->getResultState(),
+					'transaction_code'=>$verification->getResultCode(),
+					'transaction_message'=>$verification->getResultMessage(),
+					'transaction_guid'=>$verification->getResultTransactionGuid(),
+					'transaction_date'=>$verification->getResultTransactionDateTime(),
+					'tracking_code'=>$verification->getResultTrackingMemberCode(),
+					'issuer_url'=>null,
+					'authentication_request'=>null,
+					'transaction_type'=>TRX_NORMAL,
+					'cdc_data'=>serialize($verification->getResultCdcData())
+				);
+
 				$this->_api->processApi($this->params, 2000);
 			}
 			catch (Payvision_Exception $e)
@@ -1170,7 +1205,7 @@ class ControllerV1Gateway extends Controller {
                     $this->model_transaction_transaction->updateTransaction($transaction['transaction_id'],TRX_CAPTURE);
                 }
 
-                $this->params['transactionLog'] = array(
+                $transactionLog = array(
                     'reference'=>$params['transaction_id'],
                     'enrollment_id'=>0,
                     'transaction_state'=>$capture->getResultState(),
@@ -1186,11 +1221,11 @@ class ControllerV1Gateway extends Controller {
                     'cdc_data'=>serialize($capture->getResultCdcData())
                 );
 
-                $this->model_transaction_transaction->addTransactionLog($this->params['transactionLog'],TRX_CHARGE);
+                $this->model_transaction_transaction->addTransactionLog($transactionLog,TRX_CHARGE);
 
 
 
-                $this->params['activityLog'] = array(
+                $activityLog = array(
                     'account_id'=>$account_info['account_id'],
                     'key'=>TRX_CAPTURE,
                     'data'=>array(
@@ -1203,7 +1238,7 @@ class ControllerV1Gateway extends Controller {
                 // Add to activity log
                 $this->load->model('account/activity');
 
-                $this->model_account_activity->addActivity(TRX_CAPTURE, $this->params['activityLog']);
+                $this->model_account_activity->addActivity(TRX_CAPTURE, $activityLog);
 
 	            if (isset($params['card_id'])) {
 		            $this->load->model('account/card');
@@ -1211,9 +1246,21 @@ class ControllerV1Gateway extends Controller {
 		            $this->model_account_card->verifyCard($params['card_id']);
 	            }
 
-
-                $this->params['transaction_id'] = $params['transaction_id'];
-
+	            $this->params = array(
+		            'transaction_id'=>$params['transaction_id'],
+		            'enrollment_id'=>0,
+		            'transaction_state'=>$capture->getResultState(),
+		            'transaction_code'=>$capture->getResultCode(),
+		            'transaction_message'=>$capture->getResultMessage(),
+		            'reference'=>$transaction['transaction_id'],
+		            'transaction_guid'=>$capture->getResultTransactionGuid(),
+		            'transaction_date'=>$capture->getResultTransactionDateTime(),
+		            'issuer_url'=>null,
+		            'tracking_code'=>$capture->getResultTrackingMemberCode(),
+		            'authentication_request'=>null,
+		            'transaction_type'=>TRX_NORMAL,
+		            'cdc_data'=>serialize($capture->getResultCdcData())
+	            );
 
                 $this->_api->processApi($this->params, 2000);
             }
@@ -1309,7 +1356,7 @@ class ControllerV1Gateway extends Controller {
                     $this->model_transaction_transaction->updateTransaction($transaction['transaction_id'],TRX_VOID);
                 }
 
-                $this->params['transactionLog'] = array(
+                $transactionLog = array(
                     'reference'=>$params['transaction_id'],
                     'enrollment_id'=>0,
                     'transaction_state'=>$void->getResultState(),
@@ -1325,7 +1372,7 @@ class ControllerV1Gateway extends Controller {
                     'cdc_data'=>serialize($void->getResultCdcData())
                 );
 
-                $this->model_transaction_transaction->addTransactionLog($this->params['transactionLog'],TRX_VOID);
+                $this->model_transaction_transaction->addTransactionLog($transactionLog,TRX_VOID);
 
 
 
@@ -1345,8 +1392,21 @@ class ControllerV1Gateway extends Controller {
                 $this->model_account_activity->addActivity(TRX_VOID, $this->params['activityLog']);
 
 
-                $this->params['transaction_id'] = $params['transaction_id'];
-
+	            $transactionLog = array(
+		            'transaction_id'=>$params['transaction_id'],
+		            'enrollment_id'=>0,
+		            'transaction_state'=>$void->getResultState(),
+		            'transaction_code'=>$void->getResultCode(),
+		            'transaction_message'=>$void->getResultMessage(),
+		            'reference'=>$transaction['transaction_id'],
+		            'transaction_guid'=>$void->getResultTransactionGuid(),
+		            'transaction_date'=>$void->getResultTransactionDateTime(),
+		            'tracking_code'=>$void->getResultTrackingMemberCode(),
+		            'issuer_url'=>null,
+		            'authentication_request'=>null,
+		            'transaction_type'=>TRX_NORMAL,
+		            'cdc_data'=>serialize($void->getResultCdcData())
+	            );
 
                 $this->_api->processApi($this->params, 2000);
             }
@@ -1443,7 +1503,7 @@ class ControllerV1Gateway extends Controller {
                     $this->model_transaction_transaction->updateTransaction($transaction['transaction_id'],TRX_REFUND);
                 }
 
-                $this->params['transactionLog'] = array(
+                $transactionLog = array(
                     'reference'=>$params['transaction_id'],
                     'transaction_state'=>$refund->getResultState(),
                     'transaction_code'=>$refund->getResultCode(),
@@ -1459,9 +1519,7 @@ class ControllerV1Gateway extends Controller {
                     'cdc_data'=>serialize($refund->getResultCdcData())
                 );
 
-                $this->model_transaction_transaction->addTransactionLog($this->params['transactionLog'],TRX_REFUND);
-
-
+                $this->model_transaction_transaction->addTransactionLog($transactionLog,TRX_REFUND);
 
                 $this->params['activityLog'] = array(
                     'account_id'=>$account_info['account_id'],
@@ -1478,8 +1536,22 @@ class ControllerV1Gateway extends Controller {
 
                 $this->model_account_activity->addActivity(TRX_REFUND, $this->params['activityLog']);
 
+	            $this->params = array(
+		            'transaction_id'=>$params['transaction_id'],
+		            'transaction_state'=>$refund->getResultState(),
+		            'transaction_code'=>$refund->getResultCode(),
+		            'transaction_message'=>$refund->getResultMessage(),
+		            'reference'=>$transaction['transaction_id'],
+		            'transaction_guid'=>$refund->getResultTransactionGuid(),
+		            'transaction_date'=>$refund->getResultTransactionDateTime(),
+		            'tracking_code'=>$refund->getResultTrackingMemberCode(),
+		            'enrollment_id'=>0,
+		            'issuer_url'=>null,
+		            'authentication_request'=>null,
+		            'transaction_type'=>TRX_NORMAL,
+		            'cdc_data'=>serialize($refund->getResultCdcData())
+	            );
 
-                $this->params['transaction_id'] = $params['transaction_id'];
 
 
                 $this->_api->processApi($this->params, 2000);

@@ -70,7 +70,7 @@ class ControllerReportTransaction extends Controller {
         }
 
 
-            $url = "http://api.semitepayment.com/v1/report/getTransactions";
+            $url = "http://api.semite.com/v1/report/getTransactions";
 
             // XML Request
 
@@ -192,7 +192,7 @@ class ControllerReportTransaction extends Controller {
         $data['transaction_all'] = $this->url->link('report/transaction/allTransactions','token='.$this->session->data['token'], 'SSL');
 
 
-		$url = "http://api.semitepayment.com/v1/report/getTransactions";
+		$url = "http://api.semite.com/v1/report/getTransactions";
 
 		// XML Request
 
@@ -277,7 +277,7 @@ class ControllerReportTransaction extends Controller {
 			$json = false;
 		}
 
-		$url = "http://api.semitepayment.com/v1/report/getTransaction";
+		$url = "http://api.semite.com/v1/report/getTransaction";
 
 		// XML Request
 

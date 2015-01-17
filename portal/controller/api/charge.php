@@ -34,7 +34,7 @@ class ControllerApiCharge extends Controller {
 
         $params = $this->request->post;
 
-        $url = "http://api.semitepayment.com/v1/gateway/Charge";
+        $url = "http://api.semite.com/v1/gateway/Charge";
 
         $post_string = '<?xml version="1.0" encoding="UTF-8"?>
 <request>
@@ -105,7 +105,7 @@ class ControllerApiCharge extends Controller {
 		$card_info = $this->model_gateway_card->getCard($params['card_id']);
 		$exp_date = explode('-',$card_info['expire_date']);
 
-		$url = "http://api.semitepayment.com/v1/gateway/Deposit";
+		$url = "http://api.semite.com/v1/gateway/Deposit";
 
 		$post_string = '<?xml version="1.0" encoding="UTF-8"?>
 <request>

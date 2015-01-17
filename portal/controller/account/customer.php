@@ -41,7 +41,7 @@ class ControllerAccountCustomer extends Controller {
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 
-			$url = "http://api.semitepayment.com/v1/account/addCustomer";
+			$url = "http://api.semite.com/v1/account/addCustomer";
 
 			// XML Request
 
@@ -122,7 +122,7 @@ class ControllerAccountCustomer extends Controller {
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 
-            $url = "http://api.semitepayment.com/v1/account/updateCustomer";
+            $url = "http://api.semite.com/v1/account/updateCustomer";
 
             // XML Request
 
@@ -198,7 +198,7 @@ class ControllerAccountCustomer extends Controller {
 
     protected function getList() {
 
-        $url = "http://api.semitepayment.com/v1/account/getCustomers";
+        $url = "http://api.semite.com/v1/account/getCustomers";
 
         // XML Request
 
@@ -550,7 +550,7 @@ class ControllerAccountCustomer extends Controller {
 
         if (isset($this->request->get['customer_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 
-            $url = "http://api.semitepayment.com/v1/account/getCustomer";
+            $url = "http://api.semite.com/v1/account/getCustomer";
 
             $post_string = '<?xml version="1.0" encoding="UTF-8"?>
 <request>

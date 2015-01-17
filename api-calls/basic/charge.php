@@ -46,7 +46,9 @@ if(curl_errno($ch))
 else
 {
 	curl_close($ch);
-    echo $data;
+//    echo $data;
+	echo '<pre>';
+	print_r(json_decode($data));
 }
 
 
