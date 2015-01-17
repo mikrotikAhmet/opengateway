@@ -1,0 +1,40 @@
+#loading-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.5);
+	background: -webkit-radial-gradient(50% 50% , ellipse closest-corner, rgba(0, 0, 0, 0.3) 1%, rgba(0, 0, 0, 0.725) 100%) repeat scroll 0 0 transparent;
+	background: -moz-radial-gradient(50% 50% , ellipse closest-corner, rgba(0, 0, 0, 0.3) 1%, rgba(0, 0, 0, 0.725) 100%) repeat scroll 0 0 transparent;
+	background: -o-radial-gradient(50% 50% , ellipse closest-corner, rgba(0, 0, 0, 0.3) 1%, rgba(0, 0, 0, 0.725) 100%) repeat scroll 0 0 transparent;
+	background: -ms-radial-gradient(50% 50% , ellipse closest-corner, rgba(0, 0, 0, 0.3) 1%, rgba(0, 0, 0, 0.725) 100%) repeat scroll 0 0 transparent;
+	background: radial-gradient(50% 50% , ellipse closest-corner, rgba(0, 0, 0, 0.3) 1%, rgba(0, 0, 0, 0.725) 100%) repeat scroll 0 0 transparent;
+	z-index: 998;
+}
+
+#loading {
+	width: 280px;
+	height: 177px;
+	background: url('../image/loading/bg.png');
+	position: fixed;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	margin-top: -88.5px;
+	margin-left: -140px;
+	text-align: center;
+}
+
+#loading:after {
+	display: block;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	left: 50%;
+	top: 68px;
+	margin-left: -16px;
+	margin-top: -16px;
+	background: url('../image/loading/spinner.gif');
+	content: ' ';
+}
