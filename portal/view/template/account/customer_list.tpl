@@ -1,11 +1,10 @@
 <?php echo $header; ?>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3" style="display: none">
             <div class="panel panel-info">
                 <div class="panel-heading">Customer Filter</div>
                 <div class="panel-body">
-
                 </div>
             </div>
         </div>
