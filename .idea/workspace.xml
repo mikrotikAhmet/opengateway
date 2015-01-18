@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f676227-d180-40e2-85cc-9f10e2445cfa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/startup.php" afterPath="$PROJECT_DIR$/system/startup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="semite.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,18 +26,7 @@
     <favorites_list name="semite.com" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="startup.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/system/startup.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36842105" vertical-offset="360" max-vertical-offset="2310">
-              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -137,7 +126,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -226,6 +214,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,7 +281,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -456,7 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34210527" vertical-offset="1485" max-vertical-offset="22275">
           <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -471,7 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7368421" vertical-offset="690" max-vertical-offset="1575">
           <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="77" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -523,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5" vertical-offset="855" max-vertical-offset="5400">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -531,7 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1845">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -539,7 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -547,7 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13157895" vertical-offset="1710" max-vertical-offset="2805">
           <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -555,7 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7605">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -563,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -571,13 +552,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1420286614000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1420286614000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1420286614000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..DB_PREFIXpsp..." />
-            <marker date="1420286614000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXpsp..." />
-            <marker date="1420286614000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXpsp..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -585,7 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14895">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -625,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-188.8875" vertical-offset="1884" max-vertical-offset="17610">
           <caret line="1133" column="33" selection-start-line="1133" selection-start-column="33" selection-end-line="1133" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -633,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33268481" vertical-offset="7254" max-vertical-offset="15750">
           <caret line="495" column="38" selection-start-line="495" selection-start-column="38" selection-end-line="495" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5540309" vertical-offset="323" max-vertical-offset="930">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -649,14 +620,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30017152" vertical-offset="1625" max-vertical-offset="2415">
           <caret line="120" column="35" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
-          <folding>
-            <marker date="1421520963982" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421520963982" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421520963982" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421520963982" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421520963982" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421520963982" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -664,19 +628,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58947366" vertical-offset="3069" max-vertical-offset="4380">
           <caret line="227" column="160" selection-start-line="227" selection-start-column="160" selection-end-line="227" selection-end-column="160" />
-          <folding>
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6403508" vertical-offset="2810" max-vertical-offset="5790">
           <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,16 +651,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45789474" vertical-offset="4089" max-vertical-offset="6300">
           <caret line="290" column="56" selection-start-line="290" selection-start-column="56" selection-end-line="290" selection-end-column="56" />
-          <folding>
-            <marker date="1421572084272" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421572084272" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421572084272" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421572084272" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421572084272" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421572084272" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421572084272" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421572084272" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -717,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39473686" vertical-offset="1305" max-vertical-offset="3930">
           <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,16 +666,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8684211" vertical-offset="2955" max-vertical-offset="3615">
           <caret line="230" column="8" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="8" />
-          <folding>
-            <marker date="1421572803131" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXaccount..." />
-            <marker date="1421572803131" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXaccount_ip..." />
-            <marker date="1421572803131" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1421572803131" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXaccount..." />
-            <marker date="1421572803131" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXaccount..." />
-            <marker date="1421572803131" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXcard..." />
-            <marker date="1421572803131" expanded="true" signature="-1:-1" placeholder="SELECT SUM(a..DB_PREFIXtransaction..." />
-            <marker date="1421572803131" expanded="true" signature="-1:-1" placeholder="SELECT SUM(f..DB_PREFIXtransaction..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>

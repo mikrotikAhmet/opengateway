@@ -79,7 +79,7 @@ CREATE TABLE `engine4_account` (
   `dynamicDescriptor` varchar(45) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`account_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1002 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1003 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,7 +88,7 @@ CREATE TABLE `engine4_account` (
 
 LOCK TABLES `engine4_account` WRITE;
 /*!40000 ALTER TABLE `engine4_account` DISABLE KEYS */;
-INSERT INTO `engine4_account` VALUES (1000,5,'mimi','Milica','Bicanin','milica.bicanin@hotmail.com','+381656728972','cdaefe6a6','74538a77a631436328ce4ebe408fcfda50628f42',243,'USD','en','Kaludjerica Karadjordjeva 45','','Grocka',3994,'11130','Europe/Belgrade','127.0.0.1','2E5191D6-A7D9-3C39-8C7C-DAD2FEBF67A3','A28B5F6FD3','1002785','A8693AA8-EEB0-43B1-8043-FF1602093C23','1002791','8423C789-C61E-48C2-8F53-CD8CA652AC0F',1,1,0,'SEMITEPAYMENT','2015-01-12 09:51:36'),(1001,5,'demo','Ahmet','GOUDENOGLU','ahmet.gudenoglu@semitepayment.com','+381656728972','22dbccb63','2cf18483f1fb12b101f7a8fbc9666f2c2a863d63',243,'EUR','en','Kaludjerica Karadjordjeva 45','','Grocka',3994,'11130','Europe/Belgrade','127.0.0.1','1BCE09D1-1F9D-306D-AAE8-D546472C6FC0','61C11B55AD','1002785','A8693AA8-EEB0-43B1-8043-FF1602093C23','1002791','8423C789-C61E-48C2-8F53-CD8CA652AC0F',1,1,0,'','2015-01-17 12:00:38');
+INSERT INTO `engine4_account` VALUES (1002,5,'chirstos','Christos','Panayiotou','christos.panayiotou@lamdagroup.com','+5012232810','44ddcb381','8d9514e61561826ebe71d5ca2966fae31158edac',22,'EUR','en','Corner Eyre &amp; Hutson Street','Suite 102','Belize City',354,'','US/Central','127.0.0.1','55EB1468-719A-32F3-BE83-9B41A1AAA0BD','F1D50B4D82','1002785','A8693AA8-EEB0-43B1-8043-FF1602093C23','','',1,1,0,'GATEWAYSERVICESINC','2015-01-18 11:52:47');
 /*!40000 ALTER TABLE `engine4_account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,7 +107,7 @@ CREATE TABLE `engine4_account_activity` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`activity_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=495 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=512 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -167,7 +167,7 @@ CREATE TABLE `engine4_account_group` (
 
 LOCK TABLES `engine4_account_group` WRITE;
 /*!40000 ALTER TABLE `engine4_account_group` DISABLE KEYS */;
-INSERT INTO `engine4_account_group` VALUES (5,0,1,1,1,1);
+INSERT INTO `engine4_account_group` VALUES (5,0,0,0,1,1);
 /*!40000 ALTER TABLE `engine4_account_group` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +211,7 @@ CREATE TABLE `engine4_account_ip` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`account_ip_id`),
   KEY `ip` (`ip`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +220,7 @@ CREATE TABLE `engine4_account_ip` (
 
 LOCK TABLES `engine4_account_ip` WRITE;
 /*!40000 ALTER TABLE `engine4_account_ip` DISABLE KEYS */;
-INSERT INTO `engine4_account_ip` VALUES (11,'1000','127.0.0.1','2015-01-12 10:11:24'),(12,'1001','127.0.0.1','2015-01-17 12:01:02');
+INSERT INTO `engine4_account_ip` VALUES (13,'1002','127.0.0.1','2015-01-18 11:55:00');
 /*!40000 ALTER TABLE `engine4_account_ip` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -393,7 +393,6 @@ CREATE TABLE `engine4_card` (
 
 LOCK TABLES `engine4_card` WRITE;
 /*!40000 ALTER TABLE `engine4_card` DISABLE KEYS */;
-INSERT INTO `engine4_card` VALUES ('card_ce2a7cb04',1000,'4111***1111','12-2015','123','b0cnOpHHfGHT1eQew5u_--RMDy6C6Vy9-5I_7QFxTbc,','visa','',1);
 /*!40000 ALTER TABLE `engine4_card` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -453,7 +452,7 @@ CREATE TABLE `engine4_currency` (
 
 LOCK TABLES `engine4_currency` WRITE;
 /*!40000 ALTER TABLE `engine4_currency` DISABLE KEYS */;
-INSERT INTO `engine4_currency` VALUES (1,'Pound Sterling','GBP','£','','2',0.78039998,1,'2015-01-09 12:21:06'),(2,'US Dollar','USD','$','','2',1.18159997,1,'2015-01-09 12:21:06'),(3,'Euro','EUR','','€','2',1.00000000,1,'2015-01-09 12:21:06');
+INSERT INTO `engine4_currency` VALUES (1,'Pound Sterling','GBP','£','','2',0.78039998,1,'2015-01-09 12:21:06'),(2,'US Dollar','USD','$','','2',1.18159997,1,'2015-01-09 12:21:06'),(3,'Euro','EUR','','€','2',1.00000000,1,'2015-01-18 09:24:57');
 /*!40000 ALTER TABLE `engine4_currency` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -489,6 +488,7 @@ CREATE TABLE `engine4_customer` (
 
 LOCK TABLES `engine4_customer` WRITE;
 /*!40000 ALTER TABLE `engine4_customer` DISABLE KEYS */;
+INSERT INTO `engine4_customer` VALUES ('cus_59a3d2375eb9d3d',1000,'Ahmet','GOUDENOGLU','','Kaludjerica Karadjordjeva 45','',243,'Grocka',3994,'11130','+381656728972','ahmet.gudenoglu@semitepayment.com','2015-01-18 11:12:54');
 /*!40000 ALTER TABLE `engine4_customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -550,6 +550,66 @@ INSERT INTO `engine4_language` VALUES (1,'English','en','en_US.UTF-8,en_US,en-gb
 UNLOCK TABLES;
 
 --
+-- Table structure for table `engine4_location`
+--
+
+DROP TABLE IF EXISTS `engine4_location`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `engine4_location` (
+  `location_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL,
+  `address` text NOT NULL,
+  `telephone` varchar(32) NOT NULL,
+  `fax` varchar(32) NOT NULL,
+  `geocode` varchar(32) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `open` text NOT NULL,
+  `comment` text NOT NULL,
+  PRIMARY KEY (`location_id`),
+  KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `engine4_location`
+--
+
+LOCK TABLES `engine4_location` WRITE;
+/*!40000 ALTER TABLE `engine4_location` DISABLE KEYS */;
+/*!40000 ALTER TABLE `engine4_location` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `engine4_psp`
+--
+
+DROP TABLE IF EXISTS `engine4_psp`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `engine4_psp` (
+  `psp_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL,
+  `memberId` int(9) NOT NULL,
+  `memberGuid` varchar(40) NOT NULL,
+  `avsAddress` tinyint(1) NOT NULL,
+  `dynamicDescriptor` tinyint(1) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`psp_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `engine4_psp`
+--
+
+LOCK TABLES `engine4_psp` WRITE;
+/*!40000 ALTER TABLE `engine4_psp` DISABLE KEYS */;
+INSERT INTO `engine4_psp` VALUES (1,'Post Bank',1002781,'52EC5E66-6D1A-4C44-9970-B8F2D831E699',0,0,1),(2,'Borgun',1002783,'AF50F6FB-C2E6-4F68-9822-C74467137434',0,0,1),(3,'Omnipay',1002785,'A8693AA8-EEB0-43B1-8043-FF1602093C23',1,1,1),(4,'FD North',1002787,'FF3E6681-20C6-42D9-9130-F2D39198ECF8',1,1,1),(5,'Rentabiliweb',1002789,'B7409A8A-BC27-4DB3-A0E8-6D31962D85EA',0,0,0),(6,'Payon (American Express ONLY)',1002791,'8423C789-C61E-48C2-8F53-CD8CA652AC0F',1,1,1);
+/*!40000 ALTER TABLE `engine4_psp` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `engine4_setting`
 --
 
@@ -564,7 +624,7 @@ CREATE TABLE `engine4_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3406 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3467 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -573,7 +633,7 @@ CREATE TABLE `engine4_setting` (
 
 LOCK TABLES `engine4_setting` WRITE;
 /*!40000 ALTER TABLE `engine4_setting` DISABLE KEYS */;
-INSERT INTO `engine4_setting` VALUES (94,0,'voucher','voucher_sort_order','8',0),(42,0,'credit','credit_sort_order','7',0),(43,0,'credit','credit_status','1',0),(53,0,'reward','reward_sort_order','2',0),(54,0,'reward','reward_status','1',0),(146,0,'category','category_status','1',0),(158,0,'account','account_status','1',0),(3404,0,'config','config_error_filename','error.log',0),(3403,0,'config','config_error_log','1',0),(3400,0,'config','config_encryption','3acfc600a39ade93e3c05ab16dbe53c9',0),(3401,0,'config','config_compression','0',0),(3402,0,'config','config_error_display','1',0),(3398,0,'config','config_maintenance','0',0),(3399,0,'config','config_password','0',0),(3394,0,'config','config_seo_url','0',0),(3395,0,'config','config_file_max_size','300000',0),(3396,0,'config','config_file_ext_allowed','txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods',0),(41,0,'flat','flat_cost','5.00',0),(155,0,'featured','featured_product','43,40,42,30',0),(156,0,'featured','featured_status','1',0),(37,0,'flat','flat_tax_class_id','9',0),(169,0,'carousel','carousel_status','1',0),(170,0,'carousel','carousel_module','a:1:{i:0;a:5:{s:9:\"banner_id\";s:1:\"8\";s:5:\"limit\";s:2:\"10\";s:6:\"scroll\";s:1:\"3\";s:5:\"width\";s:3:\"130\";s:6:\"height\";s:3:\"100\";}}',1),(36,0,'flat','flat_geo_zone_id','0',0),(35,0,'flat','flat_status','1',0),(34,0,'flat','flat_sort_order','1',0),(28,0,'coupon','coupon_status','1',0),(27,0,'coupon','coupon_sort_order','4',0),(15,0,'shipping','shipping_estimator','1',0),(14,0,'shipping','shipping_status','1',0),(13,0,'cod','cod_status','1',0),(12,0,'cod','cod_geo_zone_id','0',0),(11,0,'cod','cod_order_status_id','1',0),(10,0,'cod','cod_total','0.01',0),(9,0,'cod','cod_sort_order','5',0),(8,0,'free_checkout','free_checkout_sort_order','1',0),(7,0,'tax','tax_sort_order','5',0),(6,0,'total','total_status','1',0),(5,0,'total','total_sort_order','9',0),(4,0,'tax','tax_status','1',0),(3,0,'sub_total','sub_total_status','1',0),(2,0,'sub_total','sub_total_sort_order','1',0),(1,0,'shipping','shipping_sort_order','3',0),(95,0,'voucher','voucher_status','1',0),(103,0,'free_checkout','free_checkout_status','1',0),(104,0,'free_checkout','free_checkout_order_status_id','1',0),(157,0,'featured','featured_module','a:1:{i:0;a:3:{s:5:\"limit\";s:1:\"4\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"200\";}}',1),(165,0,'slideshow','slideshow_status','1',0),(166,0,'slideshow','slideshow_module','a:2:{i:0;a:3:{s:9:\"banner_id\";s:1:\"7\";s:5:\"width\";s:4:\"1140\";s:6:\"height\";s:3:\"380\";}s:16:\"pol3h8iif8j2lnmi\";a:3:{s:9:\"banner_id\";s:1:\"6\";s:5:\"width\";s:3:\"300\";s:6:\"height\";s:3:\"300\";}}',1),(109,0,'banner','banner_module','a:1:{i:0;a:8:{s:9:\"banner_id\";s:1:\"6\";s:5:\"width\";s:3:\"182\";s:6:\"height\";s:3:\"182\";s:11:\"resize_type\";s:7:\"default\";s:9:\"layout_id\";s:1:\"3\";s:8:\"position\";s:11:\"column_left\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";s:1:\"3\";}}',1),(3397,0,'config','config_file_mime_allowed','text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet',0),(3393,0,'config','config_robots','abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg',0),(3392,0,'config','config_shared','0',0),(3391,0,'config','config_secure','0',0),(3387,0,'config','config_mail_alert','',0),(3388,0,'config','config_fraud_detection','0',0),(3389,0,'config','config_fraud_key','',0),(3390,0,'config','config_fraud_score','',0),(3386,0,'config','config_mail','a:7:{s:8:\"protocol\";s:4:\"mail\";s:9:\"parameter\";s:0:\"\";s:13:\"smtp_hostname\";s:0:\"\";s:13:\"smtp_username\";s:0:\"\";s:13:\"smtp_password\";s:0:\"\";s:9:\"smtp_port\";s:2:\"25\";s:12:\"smtp_timeout\";s:1:\"5\";}',1),(3384,0,'config','config_ftp_root','',0),(3385,0,'config','config_ftp_status','0',0),(676,0,'semitepayment','semitepayment_demo_url','http://api.semitepayment.com/v1/',0),(674,0,'semitepayment','semitepayment_card_storage','0',0),(675,0,'semitepayment','semitepayment_live_url','https://api.semitepayment.com/v1/',0),(669,0,'semitepayment','semitepayment_order_status_success_settled_id','5',0),(670,0,'semitepayment','semitepayment_order_status_success_unsettled_id','1',0),(671,0,'semitepayment','semitepayment_order_status_decline_id','8',0),(673,0,'semitepayment','semitepayment_auto_settle','0',0),(672,0,'semitepayment','semitepayment_order_status_void_id','16',0),(666,0,'semitepayment','semitepayment_status','1',0),(667,0,'semitepayment','semitepayment_total','10',0),(668,0,'semitepayment','semitepayment_sort_order','1',0),(665,0,'semitepayment','semitepayment_live_demo','0',0),(663,0,'semitepayment','semitepayment_api_password','Qc0LgBWZtrHEL1HQzwrc70JvxfSkqTLR0Gmaiacmm4zYqIlX4Ph4K3RCGCKYbYa4awcmwoLQSMuBJBm18DECUAr5860IWuHQ1qif2AdJwAcxiw0BFBdtFO7f548X2ns6IUauFswAqt1lw5yNtwSG55BYkZeLUQFIvKHvaoohhyLhTgG8VpHvld12Jd806HPPV4A6BIjgOe2xdZq7kidOaBGSQUuStRdnxJnn0FNIZWSh2CTxZVpzrt00fEjHCIDd',0),(664,0,'semitepayment','semitepayment_api_key','BOxvI6EWjxCPNHY7B2WJNvv2GQECZfhoMGscusX3LTMqVRwTQ8cL1wVYlCCsuRySwtiu5aWOTVRvTAG7EX45O7FuXs3pe11SgcFvBNsCA8QA1a3QOqRemcqL7jfFo3NM',0),(662,0,'semitepayment','semitepayment_api_user','hakan.semite02',0),(661,0,'semitepayment','semitepayment_merchant_id','743463352',0),(3382,0,'config','config_ftp_username','',0),(3383,0,'config','config_ftp_password','',0),(3381,0,'config','config_ftp_port','21',0),(3380,0,'config','config_ftp_hostname','develop.opengateway.com',0),(3379,0,'config','config_icon','crm/1386782289_Conversion_of_currency.png',0),(3378,0,'config','config_logo','crm/semitePAYMENT.png',0),(3377,0,'config','config_max_withdraw','1000',0),(3375,0,'config','config_max_deposit','150',0),(3376,0,'config','config_min_withdraw','100',0),(3374,0,'config','config_min_deposit','10',0),(3373,0,'config','config_refund_period','30',0),(3372,0,'config','config_transfer_percent','0.10',0),(3371,0,'config','config_transfer_fee','1',0),(3370,0,'config','config_max_transfer','500',0),(3368,0,'config','config_mpi','0',0),(3369,0,'config','config_min_transfer','10',0),(3367,0,'config','config_amex_channel_id','6',0),(3366,0,'config','config_channel_id','3',0),(3365,0,'config','config_transaction_mail','1',0),(3364,0,'config','config_complete_status','a:1:{i:0;s:2:\"15\";}',1),(3363,0,'config','config_processing_status','a:1:{i:0;s:1:\"2\";}',1),(3362,0,'config','config_transaction_status_id','5',0),(3361,0,'config','config_transaction_id','8',0),(3360,0,'config','config_company_prefix','SMTPYMNT',0),(3359,0,'config','config_account_mail','1',0),(3355,0,'config','config_account_online','1',0),(3356,0,'config','config_account_group_id','3',0),(3357,0,'config','config_account_group_display','a:1:{i:0;s:1:\"3\";}',1),(3358,0,'config','config_account_id','7',0),(3354,0,'config','config_limit_admin','20',0),(3353,0,'config','config_item_limit','15',0),(3352,0,'config','config_currency_auto','1',0),(3351,0,'config','config_currency','EUR',0),(3350,0,'config','config_admin_language','en',0),(3349,0,'config','config_language','en',0),(3348,0,'config','config_zone_id','3994',0),(3347,0,'config','config_country_id','243',0),(3346,0,'config','config_meta_keyword','',0),(3345,0,'config','config_meta_description','',0),(3344,0,'config','config_meta_title','Semite Payment Systems',0),(3343,0,'config','config_fax','',0),(3342,0,'config','config_telephone','+381 656 7289 72',0),(3341,0,'config','config_email','support@semitepayment.com',0),(3340,0,'config','config_geocode','RS',0),(3339,0,'config','config_address','Kaludjerica Karadjordjeva 45 Grocka 11130',0),(3338,0,'config','config_owner','Semite LLC',0),(3337,0,'config','config_name','Semite LLC',0),(3405,0,'config','config_google_analytics','',0);
+INSERT INTO `engine4_setting` VALUES (94,0,'voucher','voucher_sort_order','8',0),(42,0,'credit','credit_sort_order','7',0),(43,0,'credit','credit_status','1',0),(53,0,'reward','reward_sort_order','2',0),(54,0,'reward','reward_status','1',0),(146,0,'category','category_status','1',0),(158,0,'account','account_status','1',0),(3459,0,'config','config_maintenance','0',0),(41,0,'flat','flat_cost','5.00',0),(155,0,'featured','featured_product','43,40,42,30',0),(156,0,'featured','featured_status','1',0),(37,0,'flat','flat_tax_class_id','9',0),(169,0,'carousel','carousel_status','1',0),(170,0,'carousel','carousel_module','a:1:{i:0;a:5:{s:9:\"banner_id\";s:1:\"8\";s:5:\"limit\";s:2:\"10\";s:6:\"scroll\";s:1:\"3\";s:5:\"width\";s:3:\"130\";s:6:\"height\";s:3:\"100\";}}',1),(36,0,'flat','flat_geo_zone_id','0',0),(35,0,'flat','flat_status','1',0),(34,0,'flat','flat_sort_order','1',0),(28,0,'coupon','coupon_status','1',0),(27,0,'coupon','coupon_sort_order','4',0),(15,0,'shipping','shipping_estimator','1',0),(14,0,'shipping','shipping_status','1',0),(13,0,'cod','cod_status','1',0),(12,0,'cod','cod_geo_zone_id','0',0),(11,0,'cod','cod_order_status_id','1',0),(10,0,'cod','cod_total','0.01',0),(9,0,'cod','cod_sort_order','5',0),(8,0,'free_checkout','free_checkout_sort_order','1',0),(7,0,'tax','tax_sort_order','5',0),(6,0,'total','total_status','1',0),(5,0,'total','total_sort_order','9',0),(4,0,'tax','tax_status','1',0),(3,0,'sub_total','sub_total_status','1',0),(2,0,'sub_total','sub_total_sort_order','1',0),(1,0,'shipping','shipping_sort_order','3',0),(95,0,'voucher','voucher_status','1',0),(103,0,'free_checkout','free_checkout_status','1',0),(104,0,'free_checkout','free_checkout_order_status_id','1',0),(157,0,'featured','featured_module','a:1:{i:0;a:3:{s:5:\"limit\";s:1:\"4\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"200\";}}',1),(165,0,'slideshow','slideshow_status','1',0),(166,0,'slideshow','slideshow_module','a:2:{i:0;a:3:{s:9:\"banner_id\";s:1:\"7\";s:5:\"width\";s:4:\"1140\";s:6:\"height\";s:3:\"380\";}s:16:\"pol3h8iif8j2lnmi\";a:3:{s:9:\"banner_id\";s:1:\"6\";s:5:\"width\";s:3:\"300\";s:6:\"height\";s:3:\"300\";}}',1),(109,0,'banner','banner_module','a:1:{i:0;a:8:{s:9:\"banner_id\";s:1:\"6\";s:5:\"width\";s:3:\"182\";s:6:\"height\";s:3:\"182\";s:11:\"resize_type\";s:7:\"default\";s:9:\"layout_id\";s:1:\"3\";s:8:\"position\";s:11:\"column_left\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";s:1:\"3\";}}',1),(3455,0,'config','config_seo_url','0',0),(3456,0,'config','config_file_max_size','300000',0),(3457,0,'config','config_file_ext_allowed','txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods',0),(3458,0,'config','config_file_mime_allowed','text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet',0),(3452,0,'config','config_secure','0',0),(3453,0,'config','config_shared','0',0),(3454,0,'config','config_robots','abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg',0),(3451,0,'config','config_fraud_score','',0),(3450,0,'config','config_fraud_key','',0),(3449,0,'config','config_fraud_detection','0',0),(3448,0,'config','config_mail_alert','',0),(3447,0,'config','config_mail','a:7:{s:8:\"protocol\";s:4:\"mail\";s:9:\"parameter\";s:0:\"\";s:13:\"smtp_hostname\";s:0:\"\";s:13:\"smtp_username\";s:0:\"\";s:13:\"smtp_password\";s:0:\"\";s:9:\"smtp_port\";s:2:\"25\";s:12:\"smtp_timeout\";s:1:\"5\";}',1),(676,0,'semitepayment','semitepayment_demo_url','http://api.semitepayment.com/v1/',0),(674,0,'semitepayment','semitepayment_card_storage','0',0),(675,0,'semitepayment','semitepayment_live_url','https://api.semitepayment.com/v1/',0),(669,0,'semitepayment','semitepayment_order_status_success_settled_id','5',0),(670,0,'semitepayment','semitepayment_order_status_success_unsettled_id','1',0),(671,0,'semitepayment','semitepayment_order_status_decline_id','8',0),(673,0,'semitepayment','semitepayment_auto_settle','0',0),(672,0,'semitepayment','semitepayment_order_status_void_id','16',0),(666,0,'semitepayment','semitepayment_status','1',0),(667,0,'semitepayment','semitepayment_total','10',0),(668,0,'semitepayment','semitepayment_sort_order','1',0),(665,0,'semitepayment','semitepayment_live_demo','0',0),(663,0,'semitepayment','semitepayment_api_password','Qc0LgBWZtrHEL1HQzwrc70JvxfSkqTLR0Gmaiacmm4zYqIlX4Ph4K3RCGCKYbYa4awcmwoLQSMuBJBm18DECUAr5860IWuHQ1qif2AdJwAcxiw0BFBdtFO7f548X2ns6IUauFswAqt1lw5yNtwSG55BYkZeLUQFIvKHvaoohhyLhTgG8VpHvld12Jd806HPPV4A6BIjgOe2xdZq7kidOaBGSQUuStRdnxJnn0FNIZWSh2CTxZVpzrt00fEjHCIDd',0),(664,0,'semitepayment','semitepayment_api_key','BOxvI6EWjxCPNHY7B2WJNvv2GQECZfhoMGscusX3LTMqVRwTQ8cL1wVYlCCsuRySwtiu5aWOTVRvTAG7EX45O7FuXs3pe11SgcFvBNsCA8QA1a3QOqRemcqL7jfFo3NM',0),(662,0,'semitepayment','semitepayment_api_user','hakan.semite02',0),(661,0,'semitepayment','semitepayment_merchant_id','743463352',0),(3446,0,'config','config_ftp_status','0',0),(3445,0,'config','config_ftp_root','',0),(3444,0,'config','config_ftp_password','',0),(3443,0,'config','config_ftp_username','',0),(3442,0,'config','config_ftp_port','21',0),(3441,0,'config','config_ftp_hostname','develop.opengateway.com',0),(3440,0,'config','config_icon','crm/1386782289_Conversion_of_currency.png',0),(3439,0,'config','config_logo','crm/semitePAYMENT.png',0),(3438,0,'config','config_max_withdraw','1000',0),(3437,0,'config','config_min_withdraw','100',0),(3436,0,'config','config_max_deposit','150',0),(3435,0,'config','config_min_deposit','10',0),(3434,0,'config','config_refund_period','30',0),(3433,0,'config','config_transfer_percent','0.7',0),(3432,0,'config','config_transfer_fee','1',0),(3431,0,'config','config_max_transfer','500',0),(3430,0,'config','config_min_transfer','10',0),(3429,0,'config','config_mpi','0',0),(3428,0,'config','config_amex_channel_id','6',0),(3427,0,'config','config_channel_id','3',0),(3426,0,'config','config_account_mail','1',0),(3425,0,'config','config_account_group_id','5',0),(3424,0,'config','config_account_online','1',0),(3423,0,'config','config_limit_admin','20',0),(3422,0,'config','config_item_limit','15',0),(3421,0,'config','config_currency_auto','1',0),(3420,0,'config','config_currency','EUR',0),(3419,0,'config','config_admin_language','en',0),(3418,0,'config','config_language','en',0),(3417,0,'config','config_zone_id','3994',0),(3416,0,'config','config_country_id','243',0),(3415,0,'config','config_meta_keyword','',0),(3414,0,'config','config_meta_description','',0),(3413,0,'config','config_meta_title','Semite Payment Systems',0),(3412,0,'config','config_fax','',0),(3411,0,'config','config_telephone','+381 656 7289 72',0),(3410,0,'config','config_email','support@semitepayment.com',0),(3409,0,'config','config_geocode','RS',0),(3408,0,'config','config_address','Kaludjerica Karadjordjeva 45 Grocka 11130',0),(3407,0,'config','config_owner','Semite LLC',0),(3406,0,'config','config_name','Semite LLC',0),(3460,0,'config','config_password','0',0),(3461,0,'config','config_encryption','3acfc600a39ade93e3c05ab16dbe53c9',0),(3462,0,'config','config_compression','0',0),(3463,0,'config','config_error_display','1',0),(3464,0,'config','config_error_log','1',0),(3465,0,'config','config_error_filename','error.log',0),(3466,0,'config','config_google_analytics','',0);
 /*!40000 ALTER TABLE `engine4_setting` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -621,7 +681,7 @@ CREATE TABLE `engine4_transaction` (
   `livemode` int(3) NOT NULL DEFAULT '0',
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`transaction_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1160 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1178 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -657,7 +717,7 @@ CREATE TABLE `engine4_transaction_log` (
   `cdc_data` text NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=763 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=783 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -725,7 +785,7 @@ CREATE TABLE `engine4_user_group` (
 
 LOCK TABLES `engine4_user_group` WRITE;
 /*!40000 ALTER TABLE `engine4_user_group` DISABLE KEYS */;
-INSERT INTO `engine4_user_group` VALUES (1,'Administrator','a:2:{s:6:\"access\";a:8:{i:0;s:15:\"account/account\";i:1;s:21:\"account/account_group\";i:2;s:18:\"common/column_left\";i:3;s:18:\"common/filemanager\";i:4;s:11:\"common/menu\";i:5;s:14:\"common/profile\";i:6;s:9:\"user/user\";i:7;s:20:\"user/user_permission\";}s:6:\"modify\";a:8:{i:0;s:15:\"account/account\";i:1;s:21:\"account/account_group\";i:2;s:18:\"common/column_left\";i:3;s:18:\"common/filemanager\";i:4;s:11:\"common/menu\";i:5;s:14:\"common/profile\";i:6;s:9:\"user/user\";i:7;s:20:\"user/user_permission\";}}'),(10,'Demonstration','');
+INSERT INTO `engine4_user_group` VALUES (1,'Administrator','a:2:{s:6:\"access\";a:11:{i:0;s:15:\"account/account\";i:1;s:21:\"account/account_group\";i:2;s:18:\"common/column_left\";i:3;s:18:\"common/filemanager\";i:4;s:11:\"common/menu\";i:5;s:14:\"common/profile\";i:6;s:19:\"setting/application\";i:7;s:11:\"setting/psp\";i:8;s:15:\"setting/setting\";i:9;s:9:\"user/user\";i:10;s:20:\"user/user_permission\";}s:6:\"modify\";a:11:{i:0;s:15:\"account/account\";i:1;s:21:\"account/account_group\";i:2;s:18:\"common/column_left\";i:3;s:18:\"common/filemanager\";i:4;s:11:\"common/menu\";i:5;s:14:\"common/profile\";i:6;s:19:\"setting/application\";i:7;s:11:\"setting/psp\";i:8;s:15:\"setting/setting\";i:9;s:9:\"user/user\";i:10;s:20:\"user/user_permission\";}}'),(10,'Demonstration','');
 /*!40000 ALTER TABLE `engine4_user_group` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -765,4 +825,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-17 14:17:56
+-- Dump completed on 2015-01-18 11:55:27
