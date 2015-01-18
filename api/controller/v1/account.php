@@ -199,7 +199,7 @@ class ControllerV1Account extends Controller {
 
             $customer_total = $this->model_customer_customer->getTotalCustomers($filter_data);
 
-            $results = $this->model_customer_customer->getCustomers($filter_data);
+            $results = $this->model_customer_customer->getCustomers($this->account->getId(),$filter_data);
 
             $this->params['total_customers'] = 0;
 

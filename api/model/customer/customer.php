@@ -103,8 +103,8 @@ class ModelCustomerCustomer extends Model {
 		return $query->row;
 	}
 
-    public function getCustomers($data = array()) {
-        $sql = "SELECT *, CONCAT(firstname, ' ', lastname) AS name FROM " . DB_PREFIX . "customer";
+    public function getCustomers($account_id,$data = array()) {
+        $sql = "SELECT *, CONCAT(firstname, ' ', lastname) AS name FROM " . DB_PREFIX . "customer WHERE account_id = '".(int) $account_id."'";
 
         $implode = array();
 
@@ -121,7 +121,7 @@ class ModelCustomerCustomer extends Model {
         }
 
         if ($implode) {
-            $sql .= " WHERE " . implode(" AND ", $implode);
+            $sql .= " AND " . implode(" AND ", $implode);
         }
 
         $sort_data = array(
