@@ -41,7 +41,7 @@ define('TRX_ST_FAILED', 'Failed');
 define('CUSTOMER_PREFIX','cus_');
 define('CARD_PREFIX', 'card_');
 
-define('API_BASE','api.semitepayment.com');
+define('API_BASE','api.semite.com');
 
 // Check Version
 if (version_compare(phpversion(), '5.3.0', '<') == true) {

@@ -9,6 +9,33 @@ $(document).ready(function() {
 	$('.amount').mask('000000000.00', {reverse: true});
 	$('.phone').mask('+000000000000000', {reverse: false});
 
+
+	$('#button-generate').on('click', function(){
+
+		var element = this;
+
+		$.ajax({
+			url : 'index.php?route=account/setting/generateKey&token='+$.cookie("tokenize"),
+			dataType : 'json',
+			type : 'POST',
+			beforeSend: function() {
+				$(element).button('loading');
+			},
+			complete: function() {
+				$(element).button('reset');
+			},
+			success : function(json){
+				$('input[name=\'api_id\']').val(json.api_id);
+				$('textarea[name=\'secret_key\']').val(json.secret_key);
+				console.log(json);
+
+			},
+			error : function(err){
+				console.log(err);
+			}
+		});
+	});
+
 	$('#button-add-verify').on('click',function(){
 
 		var element = this;

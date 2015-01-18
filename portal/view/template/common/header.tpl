@@ -59,7 +59,7 @@
                 <li class="dropdown"><a href="javascript:void()" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
                     <ul class="dropdown-menu dropdown-menu-right">
                         <?php if ($logged) { ?>
-                        <li><a href="#"><i class="fa fa-cog"></i> <?php echo $text_setting; ?></a></li>
+                        <li><a href="<?php echo $setting?>"><i class="fa fa-cog"></i> <?php echo $text_setting; ?></a></li>
                         <li class="divider"></li>
                         <li> <a href="<?php echo $logout; ?>"><i class="fa fa-sign-out"></i> <?php echo $text_logout; ?></a></li>
                         <?php } ?>
@@ -99,7 +99,7 @@
                     </div>
                 </li>
                 <li><a href="#"><?php echo $text_card_bank?></a></li>
-                <li><a href="#"><?php echo $text_card?></a></li>
+                <!--li><a href="#"><?php echo $text_card?></a></li-->
             </ul>
         </div>
     </nav>

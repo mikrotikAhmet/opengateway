@@ -36,6 +36,11 @@ $_['text_card_unverified'] = 'Your card is unverified';
 $_['text_unverified'] = '<button class="btn btn-warning" data-loading-text="Verifying..." id="button-verify">Unverified</button>';
 $_['text_verified'] = 'Verified';
 $_['text_unverified_information'] = 'You can deposit max: %s with unverified credit / debit cards.';
+$_['text_api_access'] = 'Account API Identifier and Secret Key are your access credentials when accessing the billing engine via the Application Programming Interface (API). Account holder will need to use these in your API requests.';
+
+
+// Warning
+$_['warning_api_access'] = '<b>Notice</b> : Account holder should keep API ID and Secret Key secret and store it safely and do not share it with anyone who does not need to know it. If you believe it has been compromised, generate new access information below.';
 
 
 // Button
@@ -54,6 +59,7 @@ $_['button_save_verify'] = 'Save and verify card';
 $_['button_make_deposit'] = 'Make deposit';
 $_['button_send_money'] = 'Send money';
 $_['button_save'] = 'Save';
+$_['button_generate'] = 'Generate';
 
 // Months
 $_['month_january'] = 'January';
@@ -74,6 +80,13 @@ $_['interval_m_30'] = 'Last 30 days';
 $_['interval_m_60'] = 'Last 60 days';
 $_['interval_m_90'] = 'Last 90 days';
 $_['interval_m_180'] = 'Last 180 days';
+
+$_['tab_general'] = 'General';
+$_['tab_login'] = 'Login Details';
+$_['tab_address'] = 'Address Information';
+$_['tab_ip'] = 'IP Addresses';
+$_['tab_api'] = 'API Access';
+$_['tab_processor'] = 'Payment Processors';
 
 
 // Error
