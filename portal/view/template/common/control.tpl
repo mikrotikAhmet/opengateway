@@ -6,7 +6,7 @@
             <div class="buttons clearfix">
                 <div class="pull-left">
                     <a href="<?php echo $upload?>" class="btn btn-sm btn-primary"><i class="fa fa-arrow-up"></i> <?php echo $button_upload?></a>
-                    <a href="<?php echo $withdraw?>" class="btn btn-sm btn-primary" <?php echo ($balance < $min_withdraw ? 'disabled' : '')?>><i class="fa fa-arrow-down"></i> <?php echo $button_withdraw?></a>
+                    <a href="<?php echo $withdraw?>" class="btn btn-sm btn-primary" <?php echo (($balance < $min_withdraw && !$livemode) ? 'disabled' : '')?>><i class="fa fa-arrow-down"></i> <?php echo $button_withdraw?></a>
                 </div>
             </div>
         </div>

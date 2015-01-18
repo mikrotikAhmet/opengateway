@@ -102,6 +102,18 @@
                 <!--li><a href="#"><?php echo $text_card?></a></li-->
             </ul>
         </div>
+        <?php if (!$livemode) { ?>
+        <div class="pull-right" style="position: absolute;bottom: 0;top: 0;right: 0px;">
+            <img src="view/image/test.png" style="width: 35px"/>
+        </div>
+        <?php } ?>
     </nav>
+    <?php if (!$livemode) { ?>
+    <div class="alert alert-warning">
+        <p>Dear customer,<br/>Your account is running on TEST mode.All transactions will be processed as TEST transactions.<br/>
+        Your account will be activated and system will send you an email in 24hrs.</p>
+        <p>While your account is in TEST mode. <b>Cards & Bank Account</b> section will not be available.</p>
+    </div>
+    <?php } ?>
 </div>
 <?php }?>

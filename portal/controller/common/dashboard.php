@@ -66,6 +66,7 @@ class ControllerCommonDashboard extends Controller {
 		$data['balance'] = $this->account->getBalance();
 		$data['min_transfer'] = $this->config->get('config_min_transfer');
 		$data['min_withdraw'] = $this->config->get('config_min_withdraw');
+		$data['livemode'] = $this->account->getMode();
 
 		$data['upload'] = $this->url->link('fund/upload','token='.$this->session->data['token'],'SSL');
 		$data['send'] = $this->url->link('fund/send','token='.$this->session->data['token'],'SSL');

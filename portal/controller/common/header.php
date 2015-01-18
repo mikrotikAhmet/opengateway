@@ -85,6 +85,7 @@ class ControllerCommonHeader extends Controller {
 
 		} else {
 			$data['logged'] = true;
+			$data['livemode'] = $this->account->getMode();
 
 			$data['home'] = $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL');
 			$data['documentation'] = HTTP_APP.'api-docs/';
