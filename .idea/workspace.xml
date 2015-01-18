@@ -2,57 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f676227-d180-40e2-85cc-9f10e2445cfa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/images/logo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/controller/setting/application.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/language/english/setting/application.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/view/template/setting/application_form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/view/template/setting/application_list.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/charges.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/clients.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/library/commission.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/coupons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/customers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/datatypes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/emails.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/error-codes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/faq.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/controller/v4/gateway.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/gateways.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/glossary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/integrations.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/paypal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/plans.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/controller/setting/psp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/language/english/setting/psp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/model/setting/psp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/view/template/setting/psp_form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/view/template/setting/psp_list.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/recurring.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/controller/setting/setting.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/language/english/setting/setting.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/model/setting/setting.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opengateway/view/template/setting/setting.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-docs/css/style.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/controller/v1OLD/account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/controller/v1OLD/gateway.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/controller/v1OLD/report.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/controller/account/account.php" afterPath="$PROJECT_DIR$/portal/controller/account/account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/library/account.php" afterPath="$PROJECT_DIR$/system/library/account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opengateway/model/setting/application.php" afterPath="$PROJECT_DIR$/opengateway/model/setting/application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opengateway/config.php" afterPath="$PROJECT_DIR$/opengateway/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/config.php" afterPath="$PROJECT_DIR$/portal/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/controller/v1/gateway.php" afterPath="$PROJECT_DIR$/api/controller/v1/gateway.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/controller/common/header.php" afterPath="$PROJECT_DIR$/portal/controller/common/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/view/template/common/header.tpl" afterPath="$PROJECT_DIR$/portal/view/template/common/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opengateway/controller/common/menu.php" afterPath="$PROJECT_DIR$/opengateway/controller/common/menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opengateway/language/english/common/menu.php" afterPath="$PROJECT_DIR$/opengateway/language/english/common/menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opengateway/view/template/common/menu.tpl" afterPath="$PROJECT_DIR$/opengateway/view/template/common/menu.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/startup.php" afterPath="$PROJECT_DIR$/system/startup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/controller/report/transaction.php" afterPath="$PROJECT_DIR$/portal/controller/report/transaction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/view/template/report/json/transaction_detail.tpl" afterPath="$PROJECT_DIR$/portal/view/template/report/json/transaction_detail.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="semite.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="gateway.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/controller/v1/gateway.php">
+      <file leaf-file-name="startup.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/startup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="12.394737" vertical-offset="15390" max-vertical-offset="29415">
-              <caret line="1497" column="69" selection-start-line="1497" selection-start-column="69" selection-end-line="1497" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.36842105" vertical-offset="360" max-vertical-offset="2310">
+              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -132,7 +82,6 @@
         <option value="$PROJECT_DIR$/portal/controller/account/customer.php" />
         <option value="$PROJECT_DIR$/portal/controller/api/charge.php" />
         <option value="$PROJECT_DIR$/portal/controller/api/common.php" />
-        <option value="$PROJECT_DIR$/system/startup.php" />
         <option value="$PROJECT_DIR$/portal/config.php" />
         <option value="$PROJECT_DIR$/api-docs/index.html" />
         <option value="$PROJECT_DIR$/portal/view/template/common/header.tpl" />
@@ -151,6 +100,7 @@
         <option value="$PROJECT_DIR$/portal/controller/common/header.php" />
         <option value="$PROJECT_DIR$/system/library/commission.php" />
         <option value="$PROJECT_DIR$/api/controller/v1/gateway.php" />
+        <option value="$PROJECT_DIR$/system/startup.php" />
       </list>
     </option>
   </component>
@@ -203,6 +153,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="semite.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opengateway.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semite.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,7 +295,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -529,14 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3135">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/startup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36842105" vertical-offset="360" max-vertical-offset="2310">
-          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,8 +756,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/controller/v1/gateway.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.394737" vertical-offset="15390" max-vertical-offset="29415">
-          <caret line="1497" column="69" selection-start-line="1497" selection-start-column="69" selection-end-line="1497" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.55263156" vertical-offset="15390" max-vertical-offset="29415">
+          <caret line="1047" column="22" selection-start-line="1047" selection-start-column="22" selection-end-line="1047" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/startup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36842105" vertical-offset="360" max-vertical-offset="2310">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
           <folding />
         </state>
       </provider>
