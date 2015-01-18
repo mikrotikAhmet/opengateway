@@ -59,6 +59,8 @@ class ControllerV1Gateway extends Controller {
 
 	public function Deposit(){
 
+		$commission = new Commission();
+
 		// grab the request
 		$request = trim(file_get_contents('php://input'));
 
@@ -224,7 +226,7 @@ class ControllerV1Gateway extends Controller {
 					'card_holder'=>$card_holder,
 					'card_number'=>$card_info['substring'],
 					'card_type'=>$card_info['type'],
-					'fee'=>0,
+					'fee'=>$commission->calculateFee($params['amount'], $this->config->get('config_transfer_percent')),
 					'amount'=>$params['amount'],
 					'customer_ip_address'=>$params['customer_ip_address'],
 					'status'=>$charge->getResultState(),
@@ -316,6 +318,8 @@ class ControllerV1Gateway extends Controller {
 	}
 
     public function Charge(){
+
+	    $commission = new Commission();
 
         // grab the request
         $request = trim(file_get_contents('php://input'));
@@ -482,7 +486,7 @@ class ControllerV1Gateway extends Controller {
                     'card_holder'=>$card_holder,
                     'card_number'=>$card_info['substring'],
                     'card_type'=>$card_info['type'],
-                    'fee'=>0,
+                    'fee'=>$commission->calculateFee($params['amount'], $this->config->get('config_transfer_percent')),
                     'amount'=>$params['amount'],
                     'customer_ip_address'=>$params['customer_ip_address'],
                     'status'=>$charge->getResultState(),
@@ -585,6 +589,7 @@ class ControllerV1Gateway extends Controller {
 
     public function Authorize(){
 
+	    $commission = new Commission();
         // grab the request
         $request = trim(file_get_contents('php://input'));
 
@@ -721,7 +726,7 @@ class ControllerV1Gateway extends Controller {
                     'card_holder'=>$card_holder,
                     'card_number'=>$card_info['substring'],
                     'card_type'=>$card_info['type'],
-                    'fee'=>0,
+                    'fee'=>$commission->calculateFee($params['amount'], $this->config->get('config_transfer_percent')),
                     'amount'=>$params['amount'],
                     'customer_ip_address'=>$params['customer_ip_address'],
                     'status'=>$authorize->getResultState(),
@@ -1480,6 +1485,7 @@ class ControllerV1Gateway extends Controller {
             $transaction = $this->model_report_transaction->getTransaction($account_info['account_id'],$params['transaction_id']);
             $transaction_log = $this->model_report_transaction->getTransactionLog($params['transaction_id'],TRX_CHARGE);
 
+	        $refundAmount = $transaction['amount'] - $transaction['fee'];
 
             try {
 
@@ -1489,7 +1495,7 @@ class ControllerV1Gateway extends Controller {
                 $refund->setMember($account_info['merchantID'], $account_info['merchantGUID']);
                 $refund->setTransactionIdAndGuid($transaction_log['transaction_id'], $transaction_log['transaction_guid']);
 
-                $refund->setAmountAndCurrencyId((float) $transaction['amount'], Payvision_Translator::getCurrencyIdFromIsoCode($account_info['currency_code']));
+                $refund->setAmountAndCurrencyId((float) $refundAmount, Payvision_Translator::getCurrencyIdFromIsoCode($account_info['currency_code']));
 
                 $refund->setTrackingMemberCode(TRX_REFUND.' ' . date('His dmY'));
 
@@ -1647,7 +1653,7 @@ class ControllerV1Gateway extends Controller {
 					'card_holder'=>'',
 					'card_number'=>'',
 					'card_type'=>'',
-					'fee'=>0,
+					'fee'=>$this->config->get('config_transfer_fee'),
 					'amount'=>'-'.$params['amount'],
 					'customer_ip_address'=>$params['customer_ip_address'],
 					'status'=>1,

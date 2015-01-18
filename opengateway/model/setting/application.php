@@ -112,8 +112,8 @@ class ModelSettingApplication extends Model {
 		return $query->row['total'];
 	}
 
-	public function getTotalApplicationsByAccountGroupId($account_group_id) {
-		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "setting WHERE `key` = 'config_account_group_id' AND `value` = '" . (int)$account_group_id . "' AND application_id != '0'");
+	public function getTotalApplicationsByCustomerGroupId($customer_group_id) {
+		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "setting WHERE `key` = 'config_customer_group_id' AND `value` = '" . (int)$customer_group_id . "' AND application_id != '0'");
 
 		return $query->row['total'];
 	}

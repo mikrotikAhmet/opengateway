@@ -87,6 +87,7 @@ class ControllerCommonHeader extends Controller {
 			$data['logged'] = true;
 
 			$data['home'] = $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL');
+			$data['documentation'] = HTTP_APP.'api-docs/';
             $data['transaction'] = $this->url->link('report/transaction/allTransactions', 'token=' . $this->session->data['token'], 'SSL');
             $data['customer'] = $this->url->link('account/customer', 'token=' . $this->session->data['token'], 'SSL');
 			$data['charge'] = $this->url->link('fund/charge', 'token=' . $this->session->data['token'], 'SSL');

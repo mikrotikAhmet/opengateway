@@ -216,7 +216,20 @@ class Account {
 	}
 
 	public function getBalance() {
+
+		$balance = 0;
+
 		$query = $this->db->query("SELECT SUM(amount) AS total FROM " . DB_PREFIX . "transaction WHERE (account_id = '" .  (int) $this->account_id. "' AND status = '1' AND livemode = '".(int) $this->getMode()."') AND (charged = '1' OR captured = '1' OR received = '1' OR sent = '1')");
+
+		$fees = $this->getFees();
+
+		$balance = $query->row['total'] - $fees;
+		return $balance;
+	}
+
+	public function getFees() {
+
+		$query = $this->db->query("SELECT SUM(fee) AS total FROM " . DB_PREFIX . "transaction WHERE (account_id = '" .  (int) $this->account_id. "' AND status = '1' AND livemode = '".(int) $this->getMode()."') AND (charged = '1' OR captured = '1' OR received = '1' OR sent = '1')");
 
 		return $query->row['total'];
 	}

@@ -105,4 +105,11 @@
         <dd>: <?php echo $transaction['authorization']['tracking_code']?></dd>
     </dl>
     <?php } ?>
+
+    <?php if ($transaction['general']['received']) { ?>
+    <dl>
+        <dt>Reference TC</dt>
+        <dd>: <?php echo $transaction['authorization']['tracking_code']?></dd>
+    </dl>
+    <?php } ?>
 </fieldset>

@@ -12,6 +12,8 @@
     </li>
     <li id="system"><a class="parent"><i class="fa fa-cog fa-fw"></i> <span><?php echo $text_system; ?></span></a>
         <ul>
+            <li><a href="<?php echo $setting; ?>"><?php echo $text_setting; ?></a></li>
+            <li><a href="<?php echo $psp; ?>"><?php echo $text_psp; ?></a></li>
             <li><a class="parent"><?php echo $text_users; ?></a>
                 <ul>
                     <li><a href="<?php echo $user; ?>"><?php echo $text_user; ?></a></li>

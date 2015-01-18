@@ -36,6 +36,8 @@ class ControllerCommonMenu extends Controller {
 		$data['text_account'] = $this->language->get('text_account');
 		$data['text_account_group'] = $this->language->get('text_account_group');
 		$data['text_system'] = $this->language->get('text_system');
+		$data['text_setting'] = $this->language->get('text_setting');
+		$data['text_psp'] = $this->language->get('text_psp');
 		$data['text_user'] = $this->language->get('text_user');
 		$data['text_user_group'] = $this->language->get('text_user_group');
 		$data['text_users'] = $this->language->get('text_users');
@@ -43,6 +45,8 @@ class ControllerCommonMenu extends Controller {
 		$data['home'] = $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL');
 		$data['account'] = $this->url->link('account/account', 'token=' . $this->session->data['token'], 'SSL');
 		$data['account_group'] = $this->url->link('account/account_group', 'token=' . $this->session->data['token'], 'SSL');
+		$data['setting'] = $this->url->link('setting/application', 'token=' . $this->session->data['token'], 'SSL');
+		$data['psp'] = $this->url->link('setting/psp', 'token=' . $this->session->data['token'], 'SSL');
 		$data['user'] = $this->url->link('user/user', 'token=' . $this->session->data['token'], 'SSL');
 		$data['user_group'] = $this->url->link('user/user_permission', 'token=' . $this->session->data['token'], 'SSL');
 
