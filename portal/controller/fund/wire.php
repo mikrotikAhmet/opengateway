@@ -46,7 +46,7 @@ class ControllerFundWire extends Controller {
 		$account_group_info = $this->model_account_account_group->getAccountGroup($this->account->getAccountGroupId());
 
 		if ($account_group_info['personal']){
-			$data['text_withdraw_information'] = sprintf($this->language->get('text_withdraw_personal'),$this->account->getFirstnName().' '.strtoupper($this->account->getLastName()));
+			$data['text_withdraw_information'] = sprintf($this->language->get('text_withdraw_personal'),$this->account->getFirstName().' '.strtoupper($this->account->getLastName()));
 		} elseif ($account_group_info['business']){
 			$data['text_withdraw_information'] = sprintf($this->language->get('text_withdraw_business'),$this->account->getFirstName().' '.strtoupper($this->account->getLastName()),'Semite LLC');
 		}

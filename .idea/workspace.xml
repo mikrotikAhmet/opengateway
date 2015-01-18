@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f676227-d180-40e2-85cc-9f10e2445cfa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/controller/v1/account.php" afterPath="$PROJECT_DIR$/api/controller/v1/account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/model/customer/customer.php" afterPath="$PROJECT_DIR$/api/model/customer/customer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portal/controller/account/setting.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portal/language/english/account/setting.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portal/model/account/setting.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portal/view/template/account/setting.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/view/javascript/app.js" afterPath="$PROJECT_DIR$/portal/view/javascript/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/language/english/english.php" afterPath="$PROJECT_DIR$/portal/language/english/english.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/controller/common/header.php" afterPath="$PROJECT_DIR$/portal/controller/common/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/view/template/common/header.tpl" afterPath="$PROJECT_DIR$/portal/view/template/common/header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/startup.php" afterPath="$PROJECT_DIR$/system/startup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/controller/fund/wire.php" afterPath="$PROJECT_DIR$/portal/controller/fund/wire.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="semite.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,50 +38,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="startup.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/system/startup.php">
+      <file leaf-file-name="setting.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/portal/controller/account/setting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36842105" vertical-offset="360" max-vertical-offset="2310">
-              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.42105263" vertical-offset="4050" max-vertical-offset="5430">
+              <caret line="286" column="8" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="report.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/controller/v1/report.php">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portal/view/javascript/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="76.25" vertical-offset="3360" max-vertical-offset="3930">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6840">
+              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/controller/v1/account.php">
+      <file leaf-file-name="setting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portal/language/english/account/setting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.916666" vertical-offset="2585" max-vertical-offset="5790">
-              <caret line="201" column="92" selection-start-line="201" selection-start-column="92" selection-end-line="201" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/model/customer/customer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0" vertical-offset="1350" max-vertical-offset="3000">
-              <caret line="106" column="137" selection-start-line="106" selection-start-column="137" selection-end-line="106" selection-end-column="137" />
+            <state vertical-scroll-proportion="-61.875" vertical-offset="0" max-vertical-offset="1575">
+              <caret line="99" column="58" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
               <folding>
-                <marker date="1421578937157" expanded="true" signature="1561:2287" placeholder="INSERT INTO ..." />
-                <marker date="1421578937157" expanded="true" signature="2486:3237" placeholder="INSERT INTO ..." />
-                <marker date="1421578937157" expanded="true" signature="3343:3436" placeholder="SELECT * FRO..DB_PREFIXcustomer..." />
-                <marker date="1421578937157" expanded="true" signature="3547:3628" placeholder="SELECT *, CO..DB_PREFIXcustomer..." />
-                <marker date="1421578937157" expanded="true" signature="3547:3649" placeholder="SELECT *, CO..DB_PREFIXcustomer..." />
-                <marker date="1421578937157" expanded="true" signature="3547:3671" placeholder="SELECT *, CO..DB_PREFIXcustomer..." />
-                <marker date="1421578937157" expanded="true" signature="5220:5275" placeholder="SELECT COUNT..DB_PREFIXcustomer..." />
-                <marker date="1421578937157" expanded="true" signature="6064:6152" placeholder="SELECT * FRO..DB_PREFIXcustomer..." />
+                <element signature="e#6#85#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portal/model/account/setting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.0" vertical-offset="240" max-vertical-offset="810">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <marker date="1421608049650" expanded="true" signature="755:848" placeholder="SELECT DISTI..DB_PREFIXaccount..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setting.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portal/view/template/account/setting.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="2595">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,29 +107,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/api/controller/v1.php" />
-        <option value="$PROJECT_DIR$/api-calls/basic/authorize.php" />
-        <option value="$PROJECT_DIR$/portal/controller/fund/charge.php" />
-        <option value="$PROJECT_DIR$/portal/view/template/fund/charge.tpl" />
         <option value="$PROJECT_DIR$/portal/language/english/account/customer.php" />
         <option value="$PROJECT_DIR$/portal/view/template/account/customer_form.tpl" />
         <option value="$PROJECT_DIR$/portal/view/template/account/customer_list.tpl" />
-        <option value="$PROJECT_DIR$/portal/controller/fund/wire.php" />
         <option value="$PROJECT_DIR$/portal/language/english/fund/wire.php" />
         <option value="$PROJECT_DIR$/api/model/account/card.php" />
-        <option value="$PROJECT_DIR$/portal/language/english/english.php" />
         <option value="$PROJECT_DIR$/portal/view/stylesheet/stylesheet.css" />
         <option value="$PROJECT_DIR$/portal/view/template/common/footer.tpl" />
         <option value="$PROJECT_DIR$/api/model/transaction/transaction.php" />
         <option value="$PROJECT_DIR$/portal/model/transaction/transaction.php" />
         <option value="$PROJECT_DIR$/portal/controller/common/dashboard.php" />
-        <option value="$PROJECT_DIR$/portal/view/javascript/app.js" />
         <option value="$PROJECT_DIR$/portal/model/account/account.php" />
         <option value="$PROJECT_DIR$/portal/view/template/report/transaction_detail.tpl" />
         <option value="$PROJECT_DIR$/api/config.php" />
         <option value="$PROJECT_DIR$/portal/controller/common/MPISuccess.php" />
         <option value="$PROJECT_DIR$/api-calls/basic/charge.php" />
-        <option value="$PROJECT_DIR$/opengateway/view/template/account/account_form.tpl" />
         <option value="$PROJECT_DIR$/opengateway/language/english/account/account.php" />
         <option value="$PROJECT_DIR$/opengateway/model/account/account.php" />
         <option value="$PROJECT_DIR$/opengateway/controller/account/account.php" />
@@ -123,7 +131,6 @@
         <option value="$PROJECT_DIR$/portal/controller/api/common.php" />
         <option value="$PROJECT_DIR$/portal/config.php" />
         <option value="$PROJECT_DIR$/api-docs/index.html" />
-        <option value="$PROJECT_DIR$/portal/view/template/common/header.tpl" />
         <option value="$PROJECT_DIR$/api/controller/v4/gateway.php" />
         <option value="$PROJECT_DIR$/opengateway/controller/common/menu.php" />
         <option value="$PROJECT_DIR$/opengateway/view/template/common/menu.tpl" />
@@ -136,12 +143,21 @@
         <option value="$PROJECT_DIR$/portal/controller/report/transaction.php" />
         <option value="$PROJECT_DIR$/portal/view/template/report/json/transaction_detail.tpl" />
         <option value="$PROJECT_DIR$/system/library/account.php" />
-        <option value="$PROJECT_DIR$/portal/controller/common/header.php" />
         <option value="$PROJECT_DIR$/system/library/commission.php" />
         <option value="$PROJECT_DIR$/api/controller/v1/gateway.php" />
         <option value="$PROJECT_DIR$/api/controller/v1/account.php" />
         <option value="$PROJECT_DIR$/api/model/customer/customer.php" />
         <option value="$PROJECT_DIR$/system/startup.php" />
+        <option value="$PROJECT_DIR$/portal/controller/fund/wire.php" />
+        <option value="$PROJECT_DIR$/portal/controller/common/header.php" />
+        <option value="$PROJECT_DIR$/portal/view/template/common/header.tpl" />
+        <option value="$PROJECT_DIR$/portal/language/english/account/setting.php" />
+        <option value="$PROJECT_DIR$/opengateway/view/template/account/account_form.tpl" />
+        <option value="$PROJECT_DIR$/portal/language/english/english.php" />
+        <option value="$PROJECT_DIR$/portal/model/account/setting.php" />
+        <option value="$PROJECT_DIR$/portal/view/template/account/setting.tpl" />
+        <option value="$PROJECT_DIR$/portal/view/javascript/app.js" />
+        <option value="$PROJECT_DIR$/portal/controller/account/setting.php" />
       </list>
     </option>
   </component>
@@ -159,7 +175,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -206,7 +222,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
+              <option name="myItemId" value="portal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -220,7 +236,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
+              <option name="myItemId" value="opengateway" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -234,47 +250,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opengateway.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="semite.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="customer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opengateway.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="semite.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
+              <option name="myItemId" value="opengateway" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -292,7 +268,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
+              <option name="myItemId" value="opengateway" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -300,7 +276,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="v1" />
+              <option name="myItemId" value="account" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,11 +292,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/portal/language/english/account" />
       <recent name="$PROJECT_DIR$/opengateway/view/template" />
       <recent name="$PROJECT_DIR$/opengateway/model" />
       <recent name="$PROJECT_DIR$/opengateway/language/english" />
       <recent name="$PROJECT_DIR$/opengateway/controller" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api-calls/basic" />
@@ -420,137 +396,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/portal/view/javascript/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94949496" vertical-offset="2841" max-vertical-offset="6435">
-          <caret line="227" column="7" selection-start-line="227" selection-start-column="7" selection-end-line="227" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/logs/error">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/helper/unique.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/view/template/report/transaction_detail.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6052632" vertical-offset="270" max-vertical-offset="1950">
-          <caret line="41" column="72" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/controller/common/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6210526" vertical-offset="126" max-vertical-offset="1230">
-          <caret line="70" column="51" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/controller/common/MPISuccess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.625" vertical-offset="324" max-vertical-offset="1215">
-          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/controller/fund/wire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54744524" vertical-offset="450" max-vertical-offset="1560">
-          <caret line="50" column="181" selection-start-line="50" selection-start-column="181" selection-end-line="50" selection-end-column="193" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/controller/fund/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58833617" vertical-offset="407" max-vertical-offset="990">
-          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/controller/fund/charge.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3947369" vertical-offset="1500" max-vertical-offset="2070">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46312177" vertical-offset="0" max-vertical-offset="583">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/controller/fund/card.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65789473" vertical-offset="375" max-vertical-offset="1170">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-calls/basic/charge.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2864494" vertical-offset="0" max-vertical-offset="900">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opengateway/model/account/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2631579" vertical-offset="930" max-vertical-offset="6045">
-          <caret line="72" column="66" selection-start-line="72" selection-start-column="66" selection-end-line="72" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opengateway/language/english/account/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77186966" vertical-offset="585" max-vertical-offset="1530">
-          <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/logs/error.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opengateway/controller/account/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34210527" vertical-offset="1485" max-vertical-offset="22275">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opengateway/view/template/account/account_form.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39473686" vertical-offset="4005" max-vertical-offset="5565">
-          <caret line="282" column="175" selection-start-line="282" selection-start-column="175" selection-end-line="282" selection-end-column="175" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/third_party/payvision/client.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7368421" vertical-offset="690" max-vertical-offset="1575">
           <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="77" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/controller/account/customer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.605059" vertical-offset="2829" max-vertical-offset="11340">
-          <caret line="552" column="41" selection-start-line="552" selection-start-column="41" selection-end-line="552" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -580,14 +429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6828794" vertical-offset="1194" max-vertical-offset="2850">
           <caret line="103" column="2" selection-start-line="103" selection-start-column="2" selection-end-line="103" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/view/template/common/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36842105" vertical-offset="630" max-vertical-offset="1695">
-          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -709,14 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portal/controller/account/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58947366" vertical-offset="3069" max-vertical-offset="4380">
-          <caret line="227" column="160" selection-start-line="227" selection-start-column="160" selection-end-line="227" selection-end-column="160" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portal/view/template/report/json/transaction_detail.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.81578946" vertical-offset="1215" max-vertical-offset="1800">
@@ -737,14 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8684211" vertical-offset="2955" max-vertical-offset="3615">
           <caret line="230" column="8" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portal/controller/common/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7526316" vertical-offset="1221" max-vertical-offset="1815">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -781,27 +606,241 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/model/customer/customer.php">
+    <entry file="file://$PROJECT_DIR$/portal/controller/fund/wire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0" vertical-offset="1350" max-vertical-offset="3000">
-          <caret line="106" column="137" selection-start-line="106" selection-start-column="137" selection-end-line="106" selection-end-column="137" />
-          <folding>
-            <marker date="1421578937157" expanded="true" signature="1561:2287" placeholder="INSERT INTO ..." />
-            <marker date="1421578937157" expanded="true" signature="2486:3237" placeholder="INSERT INTO ..." />
-            <marker date="1421578937157" expanded="true" signature="3343:3436" placeholder="SELECT * FRO..DB_PREFIXcustomer..." />
-            <marker date="1421578937157" expanded="true" signature="3547:3628" placeholder="SELECT *, CO..DB_PREFIXcustomer..." />
-            <marker date="1421578937157" expanded="true" signature="3547:3649" placeholder="SELECT *, CO..DB_PREFIXcustomer..." />
-            <marker date="1421578937157" expanded="true" signature="3547:3671" placeholder="SELECT *, CO..DB_PREFIXcustomer..." />
-            <marker date="1421578937157" expanded="true" signature="5220:5275" placeholder="SELECT COUNT..DB_PREFIXcustomer..." />
-            <marker date="1421578937157" expanded="true" signature="6064:6152" placeholder="SELECT * FRO..DB_PREFIXcustomer..." />
-          </folding>
+        <state vertical-scroll-proportion="0.47368422" vertical-offset="450" max-vertical-offset="1560">
+          <caret line="48" column="128" selection-start-line="48" selection-start-column="128" selection-end-line="48" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/language/english/fund/wire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/startup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36842105" vertical-offset="360" max-vertical-offset="2310">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/model/customer/customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42105263" vertical-offset="1350" max-vertical-offset="3000">
+          <caret line="106" column="137" selection-start-line="106" selection-start-column="137" selection-end-line="106" selection-end-column="137" />
+          <folding>
+            <marker date="1421578937157" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1421578937157" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1421578937157" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXcustomer..." />
+            <marker date="1421578937157" expanded="true" signature="-1:-1" placeholder="SELECT *, CO..DB_PREFIXcustomer..." />
+            <marker date="1421578937157" expanded="true" signature="-1:-1" placeholder="SELECT *, CO..DB_PREFIXcustomer..." />
+            <marker date="1421578937157" expanded="true" signature="-1:-1" placeholder="SELECT *, CO..DB_PREFIXcustomer..." />
+            <marker date="1421578937157" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXcustomer..." />
+            <marker date="1421578937157" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXcustomer..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/view/template/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6879562" vertical-offset="538" max-vertical-offset="1695">
+          <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/controller/common/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7263158" vertical-offset="951" max-vertical-offset="1830">
+          <caret line="91" column="64" selection-start-line="91" selection-start-column="64" selection-end-line="91" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/view/template/account/customer_form.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.078947365" vertical-offset="0" max-vertical-offset="2430">
+          <caret line="3" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="156" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/controller/account/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.010526" vertical-offset="549" max-vertical-offset="4380">
+          <caret line="227" column="160" selection-start-line="227" selection-start-column="160" selection-end-line="227" selection-end-column="160" />
+          <folding>
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421571361973" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/controller/account/customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7631579" vertical-offset="0" max-vertical-offset="11340">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opengateway/language/english/account/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7941681" vertical-offset="947" max-vertical-offset="1530">
+          <caret line="99" column="58" selection-start-line="18" selection-start-column="0" selection-end-line="99" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opengateway/model/account/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7631579" vertical-offset="1200" max-vertical-offset="6045">
+          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="113" selection-end-column="5" />
+          <folding>
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..DB_PREFIXaccount..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..DB_PREFIXaccount..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..DB_PREFIXaccount..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT *, CO..DB_PREFIXaccount..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXaccount..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXaccount..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXaccount..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXaccount_transaction..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXaccount_transaction..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT SUM(a..DB_PREFIXaccount_transaction..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXaccount_transaction..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXaccount_ip..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXaccount_ip..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..DB_PREFIXaccount_ip..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1421577154470" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opengateway/language/english/english.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.25" vertical-offset="450" max-vertical-offset="1185">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="66" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/language/english/english.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68430656" vertical-offset="945" max-vertical-offset="1605">
+          <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opengateway/view/template/account/account_form.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5526316" vertical-offset="4500" max-vertical-offset="5565">
+          <caret line="241" column="36" selection-start-line="241" selection-start-column="36" selection-end-line="244" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/model/account/account_group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1421512029550" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..DB_PREFIXaccount_group..." />
+            <marker date="1421512029550" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..DB_PREFIXaccount_group..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/model/account/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1421512029550" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/model/account/setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0" vertical-offset="240" max-vertical-offset="810">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <marker date="1421608049650" expanded="true" signature="755:848" placeholder="SELECT DISTI..DB_PREFIXaccount..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/language/english/account/setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-61.875" vertical-offset="0" max-vertical-offset="1575">
+          <caret line="99" column="58" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/view/template/account/setting.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="2595">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opengateway/view/javascript/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35749587" vertical-offset="8" max-vertical-offset="705">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="39" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opengateway/controller/account/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.332696" vertical-offset="15336" max-vertical-offset="22275">
+          <caret line="1034" column="8" selection-start-line="1034" selection-start-column="8" selection-end-line="1040" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/view/javascript/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6840">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portal/controller/account/setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42105263" vertical-offset="4050" max-vertical-offset="5430">
+          <caret line="286" column="8" selection-start-line="286" selection-start-column="8" selection-end-line="286" selection-end-column="8" />
           <folding />
         </state>
       </provider>
