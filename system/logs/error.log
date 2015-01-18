@@ -176,3 +176,7 @@
 2015-01-17 18:56:26 - PHP Notice:  Undefined variable: transactions in /var/www/html/opengateway.com/portal/controller/report/transaction.php on line 240
 2015-01-17 18:57:23 - PHP Notice:  Undefined variable: transactions in /var/www/html/opengateway.com/portal/controller/report/transaction.php on line 240
 2015-01-17 18:57:26 - PHP Notice:  Undefined variable: transactions in /var/www/html/opengateway.com/portal/controller/report/transaction.php on line 240
+2015-01-17 19:03:31 - PHP Notice:  Undefined index: customer_id in /var/www/html/opengateway.com/api/controller/v1/report.php on line 103
+2015-01-18 8:04:57 - PHP Notice:  Undefined variable: currency_code in /var/www/html/opengateway.com/portal/view/template/fund/wire.tpl on line 15
+2015-01-18 8:04:57 - PHP Notice:  Undefined variable: currency_code in /var/www/html/opengateway.com/portal/view/template/fund/wire.tpl on line 15
+2015-01-18 8:04:57 - PHP Notice:  Undefined variable: currency_code in /var/www/html/opengateway.com/portal/view/template/fund/wire.tpl on line 15
