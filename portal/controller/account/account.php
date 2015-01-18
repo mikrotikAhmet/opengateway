@@ -223,7 +223,14 @@ class ControllerAccountAccount extends Controller {
 
 			$this->response->addHeader('Content-Type: application/json');
 			$this->response->setOutput(json_encode($json));
-		} elseif ($data['amount'] > $this->account->getBalance()) {
+		} elseif ($data['amount'] < $this->config->get('config_min_transfer')) {
+			$json = array(
+				'status' => 'Minimal transfer amount is '. $this->currency->format($this->config->get('config_min_transfer'),$this->account->getCurrencyCode(),1)
+			);
+
+			$this->response->addHeader('Content-Type: application/json');
+			$this->response->setOutput(json_encode($json));
+		}elseif ($data['amount'] > $this->account->getBalance()) {
 			$json = array(
 				'status' => 'Insufficient balance.'
 			);

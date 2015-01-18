@@ -343,6 +343,7 @@ class ControllerReportTransaction extends Controller {
                     'authorized' => $transaction_info->transaction->authorized,
                     'captured' => $transaction_info->transaction->captured,
                     'voided' => $transaction_info->transaction->voided,
+	                'received' => $transaction_info->transaction->received,
                     'additionalInfo' => unserialize($transaction_info->transaction->additionalInfo),
                 ),
                 'authorization' => array(

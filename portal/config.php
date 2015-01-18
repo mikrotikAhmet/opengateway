@@ -1,6 +1,7 @@
 <?php
 // HTTP
 define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/');
+define('HTTP_APP', 'http://develop.semite.com/');
 
 // HTTPS
 define('HTTPS_SERVER', 'https://'.$_SERVER['HTTP_HOST'].'/');

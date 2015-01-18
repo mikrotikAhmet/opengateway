@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2015-01-17 12:41:16 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/portal/controller/report/transaction.php on line 350
 2015-01-17 12:41:21 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/portal/controller/report/transaction.php on line 350
 2015-01-17 12:41:34 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/portal/controller/report/transaction.php on line 350
@@ -180,3 +181,91 @@
 2015-01-18 8:04:57 - PHP Notice:  Undefined variable: currency_code in /var/www/html/opengateway.com/portal/view/template/fund/wire.tpl on line 15
 2015-01-18 8:04:57 - PHP Notice:  Undefined variable: currency_code in /var/www/html/opengateway.com/portal/view/template/fund/wire.tpl on line 15
 2015-01-18 8:04:57 - PHP Notice:  Undefined variable: currency_code in /var/www/html/opengateway.com/portal/view/template/fund/wire.tpl on line 15
+=======
+2015-01-18 8:26:13 - PHP Notice:  Undefined index: authentication in /var/www/html/semite.com/api/controller/v4/gateway.php on line 88
+2015-01-18 8:26:13 - PHP Notice:  Undefined index: authentication in /var/www/html/semite.com/api/controller/v4/gateway.php on line 88
+2015-01-18 8:27:32 - PHP Notice:  Undefined index: authentication in /var/www/html/semite.com/api/controller/v4/gateway.php on line 88
+2015-01-18 8:27:32 - PHP Notice:  Undefined index: authentication in /var/www/html/semite.com/api/controller/v4/gateway.php on line 88
+2015-01-18 8:27:43 - PHP Notice:  Undefined index: authentication in /var/www/html/semite.com/api/controller/v4/gateway.php on line 88
+2015-01-18 8:27:43 - PHP Notice:  Undefined index: authentication in /var/www/html/semite.com/api/controller/v4/gateway.php on line 88
+2015-01-18 8:42:11 - PHP Notice:  Use of undefined constant HTTP_PORTAL - assumed 'HTTP_PORTAL' in /var/www/html/semite.com/opengateway/controller/setting/application.php on line 138
+2015-01-18 8:42:15 - PHP Notice:  Error: Table 'opengateway.engine4_location' doesn't exist<br />Error No: 1146<br />SELECT location_id, name, address FROM engine4_location ORDER BY name ASC in /var/www/html/semite.com/system/library/db/mysqli.php on line 40
+2015-01-18 8:42:15 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/opengateway/model/localisation/location.php on line 83
+2015-01-18 8:42:15 - PHP Notice:  Use of undefined constant DIR_PORTAL - assumed 'DIR_PORTAL' in /var/www/html/semite.com/opengateway/controller/setting/setting.php on line 496
+2015-01-18 8:42:15 - PHP Notice:  Error: Table 'opengateway.engine4_psp' doesn't exist<br />Error No: 1146<br />SELECT * FROM engine4_psp ORDER BY name ASC in /var/www/html/semite.com/system/library/db/mysqli.php on line 40
+2015-01-18 8:42:15 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/opengateway/model/setting/psp.php on line 108
+2015-01-18 8:42:15 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 366
+2015-01-18 8:42:15 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 381
+2015-01-18 8:42:15 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 512
+2015-01-18 8:42:15 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 518
+2015-01-18 8:42:15 - PHP Notice:  Undefined variable: order_statuses in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:42:15 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:42:15 - PHP Notice:  Use of undefined constant HTTP_PORTAL - assumed 'HTTP_PORTAL' in /var/www/html/semite.com/opengateway/controller/setting/setting.php on line 1010
+2015-01-18 8:42:37 - PHP Notice:  Use of undefined constant HTTP_PORTAL - assumed 'HTTP_PORTAL' in /var/www/html/semite.com/opengateway/controller/setting/application.php on line 138
+2015-01-18 8:42:43 - PHP Notice:  Error: Table 'opengateway.engine4_location' doesn't exist<br />Error No: 1146<br />SELECT location_id, name, address FROM engine4_location ORDER BY name ASC in /var/www/html/semite.com/system/library/db/mysqli.php on line 40
+2015-01-18 8:42:43 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/opengateway/model/localisation/location.php on line 83
+2015-01-18 8:42:43 - PHP Notice:  Use of undefined constant DIR_PORTAL - assumed 'DIR_PORTAL' in /var/www/html/semite.com/opengateway/controller/setting/setting.php on line 496
+2015-01-18 8:42:43 - PHP Notice:  Error: Table 'opengateway.engine4_psp' doesn't exist<br />Error No: 1146<br />SELECT * FROM engine4_psp ORDER BY name ASC in /var/www/html/semite.com/system/library/db/mysqli.php on line 40
+2015-01-18 8:42:43 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/opengateway/model/setting/psp.php on line 108
+2015-01-18 8:42:43 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 366
+2015-01-18 8:42:43 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 381
+2015-01-18 8:42:43 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 512
+2015-01-18 8:42:43 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 518
+2015-01-18 8:42:43 - PHP Notice:  Undefined variable: order_statuses in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:42:43 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:42:43 - PHP Notice:  Use of undefined constant HTTP_PORTAL - assumed 'HTTP_PORTAL' in /var/www/html/semite.com/opengateway/controller/setting/setting.php on line 1010
+2015-01-18 8:42:55 - PHP Notice:  Use of undefined constant HTTP_PORTAL - assumed 'HTTP_PORTAL' in /var/www/html/semite.com/opengateway/controller/setting/application.php on line 138
+2015-01-18 8:44:59 - PHP Notice:  Use of undefined constant HTTP_PORTAL - assumed 'HTTP_PORTAL' in /var/www/html/semite.com/opengateway/controller/setting/application.php on line 138
+2015-01-18 8:45:33 - PHP Notice:  Use of undefined constant HTTP_PORTAL - assumed 'HTTP_PORTAL' in /var/www/html/semite.com/opengateway/controller/setting/application.php on line 138
+2015-01-18 8:46:05 - PHP Notice:  Error: Table 'opengateway.engine4_location' doesn't exist<br />Error No: 1146<br />SELECT location_id, name, address FROM engine4_location ORDER BY name ASC in /var/www/html/semite.com/system/library/db/mysqli.php on line 40
+2015-01-18 8:46:05 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/opengateway/model/localisation/location.php on line 83
+2015-01-18 8:46:05 - PHP Notice:  Use of undefined constant DIR_SERVER - assumed 'DIR_SERVER' in /var/www/html/semite.com/opengateway/controller/setting/setting.php on line 496
+2015-01-18 8:46:05 - PHP Notice:  Error: Table 'opengateway.engine4_psp' doesn't exist<br />Error No: 1146<br />SELECT * FROM engine4_psp ORDER BY name ASC in /var/www/html/semite.com/system/library/db/mysqli.php on line 40
+2015-01-18 8:46:05 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/opengateway/model/setting/psp.php on line 108
+2015-01-18 8:46:05 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 366
+2015-01-18 8:46:05 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 381
+2015-01-18 8:46:05 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 512
+2015-01-18 8:46:05 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 518
+2015-01-18 8:46:05 - PHP Notice:  Undefined variable: order_statuses in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:46:05 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:46:55 - PHP Notice:  Use of undefined constant DIR_SERVER - assumed 'DIR_SERVER' in /var/www/html/semite.com/opengateway/controller/setting/setting.php on line 496
+2015-01-18 8:46:55 - PHP Notice:  Error: Table 'opengateway.engine4_psp' doesn't exist<br />Error No: 1146<br />SELECT * FROM engine4_psp ORDER BY name ASC in /var/www/html/semite.com/system/library/db/mysqli.php on line 40
+2015-01-18 8:46:55 - PHP Notice:  Trying to get property of non-object in /var/www/html/semite.com/opengateway/model/setting/psp.php on line 108
+2015-01-18 8:46:55 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 366
+2015-01-18 8:46:55 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 381
+2015-01-18 8:46:55 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 512
+2015-01-18 8:46:55 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 518
+2015-01-18 8:46:55 - PHP Notice:  Undefined variable: order_statuses in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:46:55 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:48:28 - PHP Notice:  Use of undefined constant DIR_SERVER - assumed 'DIR_SERVER' in /var/www/html/semite.com/opengateway/controller/setting/setting.php on line 496
+2015-01-18 8:48:28 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 512
+2015-01-18 8:48:28 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 518
+2015-01-18 8:48:28 - PHP Notice:  Undefined variable: order_statuses in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:48:28 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:48:49 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 512
+2015-01-18 8:48:49 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 518
+2015-01-18 8:48:49 - PHP Notice:  Undefined variable: order_statuses in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 8:48:49 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 9:07:20 - PHP Notice:  Undefined index: received in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 109
+2015-01-18 9:09:51 - PHP Notice:  Undefined index: customer in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 116
+2015-01-18 9:10:15 - PHP Notice:  Undefined index: customer in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 116
+2015-01-18 9:12:59 - PHP Notice:  Undefined index: customer in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 116
+2015-01-18 9:13:31 - PHP Notice:  Undefined index: general in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 4
+2015-01-18 9:13:31 - PHP Notice:  Undefined index: general in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 4
+2015-01-18 9:13:31 - PHP Notice:  Undefined index: general in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 8
+2015-01-18 9:13:31 - PHP Notice:  Undefined index: general in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 36
+2015-01-18 9:13:31 - PHP Notice:  Undefined index: general in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 66
+2015-01-18 9:13:31 - PHP Notice:  Undefined index: general in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 94
+2015-01-18 9:13:31 - PHP Notice:  Undefined index: general in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 102
+2015-01-18 9:13:31 - PHP Notice:  Undefined index: general in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 109
+2015-01-18 9:14:02 - PHP Notice:  Undefined index: customer in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 116
+2015-01-18 9:14:30 - PHP Notice:  Undefined index: customer in /var/www/html/semite.com/portal/view/template/report/json/transaction_detail.tpl on line 116
+2015-01-18 9:23:24 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 512
+2015-01-18 9:23:24 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 518
+2015-01-18 9:23:24 - PHP Notice:  Undefined variable: order_statuses in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 9:23:24 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 9:24:59 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 512
+2015-01-18 9:24:59 - PHP Notice:  Undefined variable: placeholder in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 518
+2015-01-18 9:24:59 - PHP Notice:  Undefined variable: order_statuses in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+2015-01-18 9:24:59 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/semite.com/opengateway/view/template/setting/setting.tpl on line 691
+>>>>>>> 63d6e36144b21fbc6f2383f37a581a0a381e8594

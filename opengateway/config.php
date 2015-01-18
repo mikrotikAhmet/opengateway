@@ -37,6 +37,7 @@ define('DIR_DOCUMENT', APPLICATION_PATH_COR.'system/document/');
 define('DIR_UPLOAD', APPLICATION_PATH_COR.'system/upload/');
 define('DIR_LOGS', APPLICATION_PATH_COR.'system/logs/');
 define('DIR_MODIFICATION', APPLICATION_PATH_COR.'system/modification/');
+define('DIR_PORTAL', APPLICATION_PATH_COR);
 
 // DB
 define('DB_DRIVER', 'mysqli');

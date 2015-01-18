@@ -54,7 +54,7 @@
         <div id="top-links" class="nav pull-right">
             <ul class="list-inline">
                 <li><a href="<?php echo $home?>" id="dashboard" title=""><span class="hidden-xs hidden-sm hidden-md"><i class="fa fa-dashboard"></i> <?php echo $text_dashboard; ?></span></a></li>
-                <li><a href="#" title=""><span class="hidden-xs hidden-sm hidden-md"><i class="fa fa-archive"></i> <?php echo $text_documentation; ?></span></a></li>
+                <li><a href="<?php //echo $documentation?>" title="" target="_blank"><span class="hidden-xs hidden-sm hidden-md"><i class="fa fa-archive"></i> <?php echo $text_documentation; ?></span></a></li>
                 <li><a href="#" title=""><span class="hidden-xs hidden-sm hidden-md"><i class="fa fa-support"></i> <?php echo $text_help; ?></span></a></li>
                 <li class="dropdown"><a href="javascript:void()" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
                     <ul class="dropdown-menu dropdown-menu-right">
