@@ -284,7 +284,7 @@ class ControllerAccountSetting extends Controller {
 		} else {
 			$data['descriptor'] = '';
 		}
-		
+
 
 		if (isset($this->request->post['api_id'])) {
 			$data['api_id'] = $this->request->post['api_id'];
