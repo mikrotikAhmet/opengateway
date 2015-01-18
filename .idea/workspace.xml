@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f676227-d180-40e2-85cc-9f10e2445cfa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portal/view/image/test.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/view/template/common/control.tpl" afterPath="$PROJECT_DIR$/portal/view/template/common/control.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/controller/common/dashboard.php" afterPath="$PROJECT_DIR$/portal/controller/common/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/controller/common/header.php" afterPath="$PROJECT_DIR$/portal/controller/common/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/view/template/common/header.tpl" afterPath="$PROJECT_DIR$/portal/view/template/common/header.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/startup.php" afterPath="$PROJECT_DIR$/system/startup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="semite.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,10 +27,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="startup.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/startup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6052632" vertical-offset="225" max-vertical-offset="2310">
+              <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portal/view/template/common/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94736844" vertical-offset="1170" max-vertical-offset="1875">
+            <state vertical-scroll-proportion="-22.5" vertical-offset="1170" max-vertical-offset="1875">
               <caret line="114" column="74" selection-start-line="114" selection-start-column="74" selection-end-line="114" selection-end-column="74" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -105,11 +109,11 @@
         <option value="$PROJECT_DIR$/portal/view/javascript/app.js" />
         <option value="$PROJECT_DIR$/portal/controller/account/setting.php" />
         <option value="$PROJECT_DIR$/portal/view/template/account/customer_list.tpl" />
-        <option value="$PROJECT_DIR$/system/startup.php" />
         <option value="$PROJECT_DIR$/portal/controller/common/dashboard.php" />
         <option value="$PROJECT_DIR$/portal/view/template/common/control.tpl" />
         <option value="$PROJECT_DIR$/portal/controller/common/header.php" />
         <option value="$PROJECT_DIR$/portal/view/template/common/header.tpl" />
+        <option value="$PROJECT_DIR$/system/startup.php" />
       </list>
     </option>
   </component>
@@ -161,6 +165,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="semite.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opengateway.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semite.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -764,14 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/startup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6052632" vertical-offset="225" max-vertical-offset="2310">
-          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portal/controller/common/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.25" vertical-offset="630" max-vertical-offset="1245">
@@ -815,12 +825,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portal/view/template/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94736844" vertical-offset="1170" max-vertical-offset="1875">
+        <state vertical-scroll-proportion="-22.5" vertical-offset="1170" max-vertical-offset="1875">
           <caret line="114" column="74" selection-start-line="114" selection-start-column="74" selection-end-line="114" selection-end-column="74" />
           <folding>
             <element signature="n#style#0;n#div#2;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#2;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/startup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6052632" vertical-offset="225" max-vertical-offset="2310">
+          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
