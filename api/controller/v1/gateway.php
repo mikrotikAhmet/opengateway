@@ -1045,56 +1045,57 @@ class ControllerV1Gateway extends Controller {
 
 				$this->model_account_activity->addActivity(TRX_VERIFY, $activityLog);
 
-//				$this->load->model('account/card');
-//
-//				$this->model_account_card->updateToken($this->encryption->encrypt($token), $params['card_id']);
+                // Write this Key to Database as Encrypted
+                $this->load->model('account/card');
+
+                $this->model_account_card->updateToken($this->encryption->encrypt($token.'-'.$transaction_id), $params['card_id']);
 
 
 /////////////////////////////////////////////////////////
-				$user = "semitellc";
-				$password = "ZePFFHQAQQgQIF";
-				$api_id = "3497179";
-				$baseurl ="http://api.clickatell.com";
-
-				$text = urlencode($this->config->get('config_company_prefix').$token);
-				$to = $account_info['telephone'];
-
-				// auth call
-				$url = "$baseurl/http/auth?user=$user&password=$password&api_id=$api_id";
-
-				// do auth call
-				$ret = file($url);
-
-				// explode our response. return string is on first line of the data returned
-				$sess = explode(":",$ret[0]);
-				if ($sess[0] == "OK") {
-
-					$sess_id = trim($sess[1]); // remove any whitespace
-					$url = "$baseurl/http/sendmsg?session_id=$sess_id&to=$to&text=$text";
-
-					// do sendmsg call
-					$ret = file($url);
-					$send = explode(":",$ret[0]);
-
-					if ($send[0] == "ID") {
-
-						// Write this Key to Database as Encrypted
-						$this->load->model('account/card');
-
-						$this->model_account_card->updateToken($this->encryption->encrypt($token.'-'.$transaction_id), $params['card_id']);
-
-						$json = array(
-							'status' => 'OK',
-						);
-
-//                        echo "successnmessage ID: ". $send[1];
-					} else {
-//                        echo "send message failed";
-						$json = array(
-							'status' => 'Error',
-						);
-					}
-				}
+//				$user = "semitellc";
+//				$password = "ZePFFHQAQQgQIF";
+//				$api_id = "3497179";
+//				$baseurl ="http://api.clickatell.com";
+//
+//				$text = urlencode($this->config->get('config_company_prefix').$token);
+//				$to = $account_info['telephone'];
+//
+//				// auth call
+//				$url = "$baseurl/http/auth?user=$user&password=$password&api_id=$api_id";
+//
+//				// do auth call
+//				$ret = file($url);
+//
+//				// explode our response. return string is on first line of the data returned
+//				$sess = explode(":",$ret[0]);
+//				if ($sess[0] == "OK") {
+//
+//					$sess_id = trim($sess[1]); // remove any whitespace
+//					$url = "$baseurl/http/sendmsg?session_id=$sess_id&to=$to&text=$text";
+//
+//					// do sendmsg call
+//					$ret = file($url);
+//					$send = explode(":",$ret[0]);
+//
+//					if ($send[0] == "ID") {
+//
+//						// Write this Key to Database as Encrypted
+//						$this->load->model('account/card');
+//
+//						$this->model_account_card->updateToken($this->encryption->encrypt($token.'-'.$transaction_id), $params['card_id']);
+//
+//						$json = array(
+//							'status' => 'OK',
+//						);
+//
+////                        echo "successnmessage ID: ". $send[1];
+//					} else {
+////                        echo "send message failed";
+//						$json = array(
+//							'status' => 'Error',
+//						);
+//					}
+//				}
 				////////////////////////////////
 
 

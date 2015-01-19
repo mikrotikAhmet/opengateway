@@ -65,6 +65,7 @@ $_['tab_address'] = 'Address Information';
 $_['tab_ip'] = 'IP Addresses';
 $_['tab_api'] = 'API Access';
 $_['tab_processor'] = 'Payment Processors';
+$_['tab_transaction'] = 'Transactions';
 
 
 // Error

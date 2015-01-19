@@ -679,6 +679,7 @@ class ControllerAccountAccount extends Controller {
 		$data['tab_login'] = $this->language->get('tab_login');
         $data['tab_processor'] = $this->language->get('tab_processor');
 		$data['tab_api'] = $this->language->get('tab_api');
+        $data['tab_transaction'] = $this->language->get('tab_transaction');
 		$data['tab_ip'] = $this->language->get('tab_ip');
 
 		$data['token'] = $this->session->data['token'];
@@ -1257,17 +1258,29 @@ class ControllerAccountAccount extends Controller {
 
 		$data['transactions'] = array();
 
-		$results = $this->model_account_account->getTransactions($this->request->get['account_id'], ($page - 1) * 10, 10);
+
+        $this->load->model('account/account');
+        $account_info = $this->model_account_account->getAccount($this->request->get['account_id']);
+
+        $results = $this->model_account_account->getTransactions($this->request->get['account_id'],$account_info['livemode'], ($page - 1) * 10, 10);
 
 		foreach ($results as $result) {
+
+            $additionalInfo = unserialize(unserialize($result['additionalInfo']));
+
+            if (isset($additionalInfo['description'])){
+                $description = $additionalInfo['description'];
+            }
+
 			$data['transactions'][] = array(
 				'amount'      => $this->currency->format($result['amount'], $this->config->get('config_currency')),
-				'description' => $result['description'],
-				'date_added'  => date($this->language->get('date_format_short'), strtotime($result['date_added']))
+				'description' => $description = $additionalInfo['description'].' ['.$result['tracking_code'].']',
+				'date_added'  => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
+                'transaction_id'      => $result['transaction'],
 			);
 		}
 
-		$data['balance'] = $this->currency->format($this->model_account_account->getTransactionTotal($this->request->get['account_id']), $this->config->get('config_currency'));
+		$data['balance'] = $this->currency->format($this->model_account_account->getTransactionTotal($this->request->get['account_id'],$account_info['livemode']), $this->config->get('config_currency'));
 
 		$transaction_total = $this->model_account_account->getTotalTransactions($this->request->get['account_id']);
 

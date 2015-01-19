@@ -298,38 +298,38 @@ class ModelAccountAccount extends Model {
 	}
 
 	public function addTransaction($account_id, $description = '', $amount = '', $order_id = 0) {
-		$account_info = $this->getAccount($account_id);
-
-		if ($account_info) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "account_transaction SET account_id = '" . (int)$account_id . "', order_id = '" . (int)$order_id . "', description = '" . $this->db->escape($description) . "', amount = '" . (float)$amount . "', date_added = NOW()");
-
-			$this->load->language('mail/account');
-
-			$this->load->model('setting/store');
-
-			$store_info = $this->model_setting_store->getStore($account_info['store_id']);
-
-			if ($store_info) {
-				$store_name = $store_info['name'];
-			} else {
-				$store_name = $this->config->get('config_name');
-			}
-
-			$message  = sprintf($this->language->get('text_transaction_received'), $this->currency->format($amount, $this->config->get('config_currency'))) . "\n\n";
-			$message .= sprintf($this->language->get('text_transaction_total'), $this->currency->format($this->getTransactionTotal($account_id)));
-
-			$mail = new Mail($this->config->get('config_mail'));
-			$mail->setTo($account_info['email']);
-			$mail->setFrom($this->config->get('config_email'));
-			$mail->setSender($store_name);
-			$mail->setSubject(sprintf($this->language->get('text_transaction_subject'), $this->config->get('config_name')));
-			$mail->setText(html_entity_decode($message, ENT_QUOTES, 'UTF-8'));
-			$mail->send();
-		}
+//		$account_info = $this->getAccount($account_id);
+//
+//		if ($account_info) {
+//			$this->db->query("INSERT INTO " . DB_PREFIX . "account_transaction SET account_id = '" . (int)$account_id . "', order_id = '" . (int)$order_id . "', description = '" . $this->db->escape($description) . "', amount = '" . (float)$amount . "', date_added = NOW()");
+//
+//			$this->load->language('mail/account');
+//
+//			$this->load->model('setting/store');
+//
+//			$store_info = $this->model_setting_store->getStore($account_info['store_id']);
+//
+//			if ($store_info) {
+//				$store_name = $store_info['name'];
+//			} else {
+//				$store_name = $this->config->get('config_name');
+//			}
+//
+//			$message  = sprintf($this->language->get('text_transaction_received'), $this->currency->format($amount, $this->config->get('config_currency'))) . "\n\n";
+//			$message .= sprintf($this->language->get('text_transaction_total'), $this->currency->format($this->getTransactionTotal($account_id)));
+//
+//			$mail = new Mail($this->config->get('config_mail'));
+//			$mail->setTo($account_info['email']);
+//			$mail->setFrom($this->config->get('config_email'));
+//			$mail->setSender($store_name);
+//			$mail->setSubject(sprintf($this->language->get('text_transaction_subject'), $this->config->get('config_name')));
+//			$mail->setText(html_entity_decode($message, ENT_QUOTES, 'UTF-8'));
+//			$mail->send();
+//		}
 	}
 
 	public function deleteTransaction($order_id) {
-		$this->db->query("DELETE FROM " . DB_PREFIX . "account_transaction WHERE order_id = '" . (int)$order_id . "'");
+		$this->db->query("DELETE FROM " . DB_PREFIX . "transaction WHERE order_id = '" . (int)$order_id . "'");
 	}
 
 	public function getTransactions($account_id, $start = 0, $limit = 10) {
@@ -341,28 +341,34 @@ class ModelAccountAccount extends Model {
 			$limit = 10;
 		}
 
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "account_transaction WHERE account_id = '" . (int)$account_id . "' ORDER BY date_added DESC LIMIT " . (int)$start . "," . (int)$limit);
+		$query = $this->db->query("SELECT *,(t.transaction_id) AS transaction FROM " . DB_PREFIX . "transaction t LEFT JOIN ".DB_PREFIX."transaction_log tl ON (t.transaction_id = tl.reference) WHERE t.account_id = '" . (int)$account_id . "' ORDER BY t.date_added DESC LIMIT " . (int)$start . "," . (int)$limit);
 
 		return $query->rows;
 	}
 
 	public function getTotalTransactions($account_id) {
-		$query = $this->db->query("SELECT COUNT(*) AS total  FROM " . DB_PREFIX . "account_transaction WHERE account_id = '" . (int)$account_id . "'");
+		$query = $this->db->query("SELECT COUNT(*) AS total  FROM " . DB_PREFIX . "transaction WHERE account_id = '" . (int)$account_id . "'");
 
 		return $query->row['total'];
 	}
 
-	public function getTransactionTotal($account_id) {
-		$query = $this->db->query("SELECT SUM(amount) AS total FROM " . DB_PREFIX . "account_transaction WHERE account_id = '" . (int)$account_id . "'");
+	public function getTransactionTotal($account_id,$livemode) {
+        $query = $this->db->query("SELECT SUM(amount) AS total FROM " . DB_PREFIX . "transaction WHERE (account_id = '" .  (int) $account_id. "' AND status = '1' AND livemode = '".(int) $livemode."') AND (charged = '1' OR captured = '1' OR received = '1' OR sent = '1')");
 
-		return $query->row['total'];
+        $fees = $this->getFees($account_id,$livemode);
+
+        $balance = $query->row['total'] - $fees;
+
+        return $balance;
 	}
 
-	public function getTotalTransactionsByOrderId($order_id) {
-		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "account_transaction WHERE order_id = '" . (int)$order_id . "'");
+    public function getFees($account_id,$livemode) {
 
-		return $query->row['total'];
-	}
+        $query = $this->db->query("SELECT SUM(fee) AS total FROM " . DB_PREFIX . "transaction WHERE (account_id = '" .  (int) $account_id. "' AND status = '1' AND livemode = '".(int) $livemode."') AND (charged = '1' OR captured = '1' OR received = '1' OR sent = '1')");
+
+        return $query->row['total'];
+    }
+
 
 	public function getIps($account_id) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "account_ip WHERE account_id = '" . (int)$account_id . "'");

@@ -34,6 +34,7 @@
                         <li><a href="#tab-login" data-toggle="tab"><?php echo $tab_login; ?></a></li>
                         <li><a href="#tab-processor" data-toggle="tab"><?php echo $tab_processor; ?></a></li>
                         <li><a href="#tab-api" data-toggle="tab"><?php echo $tab_api; ?></a></li>
+                        <li><a href="#tab-transaction" data-toggle="tab"><?php echo $tab_transaction; ?></a></li>
                         <li><a href="#tab-ip" data-toggle="tab"><?php echo $tab_ip; ?></a></li>
                     </ul>
                     <div class="tab-content">
@@ -298,6 +299,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane" id="tab-transaction">
+                            <div id="transaction"></div>
+                        </div>
                         <div class="tab-pane" id="tab-ip">
                             <div id="ip"></div>
                         </div>
@@ -353,6 +357,40 @@
     });
 
     $('select[name=\'customer_group_id\']').trigger('change');
+    //--></script>
+<script type="text/javascript"><!--
+    $('#transaction').delegate('.pagination a', 'click', function(e) {
+        e.preventDefault();
+
+        $('#transaction').load(this.href);
+    });
+
+    $('#transaction').load('index.php?route=account/account/transaction&token=<?php echo $token; ?>&account_id=<?php echo $account_id; ?>');
+
+    $('#button-transaction').on('click', function(e) {
+        e.preventDefault();
+
+//        $.ajax({
+//            url: 'index.php?route=sale/customer/transaction&token=<?php echo $token; ?>&customer_id=<?php echo $customer_id; ?>',
+//            type: 'post',
+//            dataType: 'html',
+//            data: 'description=' + encodeURIComponent($('#tab-transaction input[name=\'description\']').val()) + '&amount=' + encodeURIComponent($('#tab-transaction input[name=\'amount\']').val()),
+//            beforeSend: function() {
+//                $('#button-transaction').button('loading');
+//            },
+//            complete: function() {
+//                $('#button-transaction').button('reset');
+//            },
+//            success: function(html) {
+//                $('.alert').remove();
+//
+//                $('#transaction').html(html);
+//
+//                $('#tab-transaction input[name=\'amount\']').val('');
+//                $('#tab-transaction input[name=\'description\']').val('');
+//            }
+//        });
+    });
     //--></script>
 <script type="text/javascript"><!--
     $('#ip').delegate('.pagination a', 'click', function(e) {
